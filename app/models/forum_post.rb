@@ -1,3 +1,4 @@
 class ForumPost < ApplicationRecord
-  belongs_to :FormThread
+  belongs_to :forum_thread
+  belongs_to :user
 end
