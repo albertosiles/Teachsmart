@@ -1,5 +1,5 @@
 class AddUserResources < ActiveRecord::Migration[7.1]
   def change
-    add_column :resources, :user, :integer
+    add_column :resources, :user.id, :integer
   end
 end
