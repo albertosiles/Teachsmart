@@ -9,7 +9,6 @@ class ResourcesController < ApplicationController
   def create
     @resource = Resource.new(resource_params)
     @resource.user = current_user
-    raise
     if @resource.save
       redirect_to resource_path(@resource)
     else
