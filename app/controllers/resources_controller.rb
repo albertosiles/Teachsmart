@@ -1,5 +1,5 @@
 class ResourcesController < ApplicationController
-
+  skip_before_action :authenticate_user!, only: [:index]
   before_action :set_resource, only: [:show, :edit, :update, :destroy]
 
   def new
@@ -7,8 +7,10 @@ class ResourcesController < ApplicationController
   end
 
   def create
-    resource = Resource.new(resource_params)
-    if resource.save
+    @resource = Resource.new(resource_params)
+    @resource.user = current_user
+    raise
+    if @resource.save
       redirect_to resource_path(@resource)
     else
       render :new, status: :unprocessable_entity
