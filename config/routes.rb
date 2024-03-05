@@ -12,4 +12,6 @@ Rails.application.routes.draw do
 
   resources :resources
 
+  resource :profile, only: [:new, :create, :show, :edit, :update]
+
 end

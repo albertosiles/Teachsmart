@@ -1,0 +1,12 @@
+<h1>Your profile</h1>
+
+<p><strong>First Name:</strong> <%= @profile.first_name %></p>
+<p><strong>Last Name:</strong> <%= @profile.last_name %></p>
+<p><strong>Description:</strong> <%= @profile.description %></p>
+<% if @profile.photo.attached? %>
+  <p><strong>Photo:</strong></p>
+  <%= image_tag @profile.photo.variant(resize: "100x100") %>
+<% end %>
+
+<%= link_to 'Edit', edit_profile_path %>
+<%= link_to 'Back', root_path %>
