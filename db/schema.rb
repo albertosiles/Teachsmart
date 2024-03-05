@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema[7.1].define(version: 2024_03_04_145507) do
-=======
-ActiveRecord::Schema[7.1].define(version: 2024_03_02_162829) do
->>>>>>> master
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -94,10 +90,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_02_162829) do
   add_foreign_key "bookmarks", "users"
   add_foreign_key "forum_posts", "forum_threads"
   add_foreign_key "forum_threads", "users"
-<<<<<<< HEAD
   add_foreign_key "profiles", "users"
-=======
   add_foreign_key "resources", "users"
->>>>>>> master
   add_foreign_key "reviews", "resources"
 end
