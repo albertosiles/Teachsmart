@@ -7,8 +7,8 @@ class ResourcesController < ApplicationController
   end
 
   def create
-    resource = Resource.new(resource_params)
-    if resource.save
+    @resource = Resource.new(resource_params)
+    if @resource.save
       redirect_to resource_path(@resource)
     else
       render :new, status: :unprocessable_entity
@@ -16,7 +16,7 @@ class ResourcesController < ApplicationController
   end
 
   def index
-    @resources = Resources.all
+    @resources = Resource.all
   end
 
   def show
