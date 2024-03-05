@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema[7.1].define(version: 2024_03_04_145507) do
+=======
+ActiveRecord::Schema[7.1].define(version: 2024_03_02_162829) do
+>>>>>>> master
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -61,6 +65,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_04_145507) do
     t.string "resource_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_resources_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -88,6 +94,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_04_145507) do
   add_foreign_key "bookmarks", "users"
   add_foreign_key "forum_posts", "forum_threads"
   add_foreign_key "forum_threads", "users"
+<<<<<<< HEAD
   add_foreign_key "profiles", "users"
+=======
+  add_foreign_key "resources", "users"
+>>>>>>> master
   add_foreign_key "reviews", "resources"
 end
