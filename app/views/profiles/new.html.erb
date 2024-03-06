@@ -1,9 +1,12 @@
 <h1>New Profile</h1>
 
-<%= simple_form_for(@profile) do |form| %>
+<%= simple_form_for(@profile, url: profile_path, method: :post) do |form| %>
   <%= form.input :first_name %>
   <%= form.input :last_name %>
   <%= form.input :description %>
-  <%= form.input :photo %>
+  <%= form.input :photo, label: "Profile Photo (Optional)", as: :file %>
   <%= form.button :submit %>
+  <br>
+  <br>
+  <br>
 <% end %>

@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   resources :resources
 
-  resource :profile, only: [:new, :create, :show, :edit, :update]
+  authenticated :user do
+    resource :profile, only: [:show, :edit, :update, :new, :create, :destroy]
+  end
 
 end

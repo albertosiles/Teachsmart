@@ -2,20 +2,14 @@ class ProfilesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
 
-  def new
-    @profile = current_user.build_profile
-  end
-
   def create
     @profile = current_user.build_profile(profile_params)
+
     if @profile.save
-      redirect_to @profile, notice: 'Your profile was successfully created.'
+      redirect_to @profile, notice: 'Profile was successfully created.'
     else
       render :new
     end
-  end
-
-  def show
   end
 
   def edit
@@ -23,21 +17,26 @@ class ProfilesController < ApplicationController
 
   def update
     if @profile.update(profile_params)
-      redirect_to @profile, notice: 'Your profile was successfully updated.'
+      redirect_to @profile, notice: 'Profile was successfully updated.'
     else
       render :edit
     end
   end
 
+  def new
+    @profile = current_user.build_profile
+  end
+
   def destroy
+    @profile = current_user.profile
     @profile.destroy
-    redirect_to profiles_url, notice: 'Your profile was successfully deleted.'
+    redirect_to root_path, notice: 'Profile was successfully deleted.'
   end
 
   private
 
   def set_profile
-    @profile = Profile.find(params[:id])
+    @profile = current_user.profile
   end
 
   def profile_params
