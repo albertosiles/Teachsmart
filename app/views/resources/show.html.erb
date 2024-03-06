@@ -4,3 +4,9 @@
 <p>Grade: <%= @resource.grade %></p>
 <p>Category: <%= @resource.category %></p>
 <p>Type: <%= @resource.resource_type %></p>
+
+<%= button_to 'Bookmark', bookmark_resource_path(@resource), method: :post %>
+
+<% if current_user.bookmarks.exists?(resource_id: @resource.id) %>
+  <%= button_to 'Remove from bookmarks', bookmark_path(@resource), method: :delete %>
+<% end %>
