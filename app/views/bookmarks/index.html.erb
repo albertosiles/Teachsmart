@@ -1,6 +1,13 @@
 <h1>My Bookmarks</h1>
 <ul>
   <% @bookmarks.each do |bookmark| %>
-    <li><%= link_to bookmark.resource.title, resource_path(bookmark.resource) %></li>
+    <li>
+      <%= link_to bookmark.resource.title, resource_path(bookmark.resource) %>
+      <%= button_to 'Remove from bookmarks', bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure you want to remove this bookmark?' } %>
+    </li>
   <% end %>
 </ul>
+
+<% if @bookmarks.empty? %>
+  <p>No bookmarks found.</p>
+<% end %>

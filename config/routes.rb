@@ -14,4 +14,8 @@ Rails.application.routes.draw do
 
   # Define bookmarks index route
   get '/bookmarks', to: 'bookmarks#index'
+
+  # Custom route for creating a bookmark
+  post '/resources/:id/bookmark', to: 'bookmarks#create', as: 'bookmark_resource'
+
 end
