@@ -42,7 +42,7 @@ class ResourcesController < ApplicationController
   private
 
     def resource_params
-      params.require(:resource).permit(:title, :description, :subject, :grade, :category, :resource_type)
+      params.require(:resource).permit(:title, :description, :subject, :student_age, :category, :resource_type)
     end
 
     def set_resource
