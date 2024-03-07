@@ -1,0 +1,10 @@
+<h1>My profile</h1>
+
+<p><strong>First Name:</strong> <%= @profile.first_name %></p>
+<p><strong>Last Name:</strong> <%= @profile.last_name %></p>
+<p><strong>Description:</strong> <%= @profile.description %></p>
+<p><strong>Photo:</strong></p>
+
+<%= link_to 'Edit', edit_profile_path %>
+<%= link_to 'Delete', profile_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<%= link_to 'Back', root_path %>

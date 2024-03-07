@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_02_162827) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_04_145507) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -18,7 +18,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_02_162827) do
     t.bigint "resource_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
     t.index ["resource_id"], name: "index_bookmarks_on_resource_id"
+    t.index ["user_id"], name: "index_bookmarks_on_user_id"
   end
 
   create_table "forum_posts", force: :cascade do |t|
@@ -57,6 +59,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_02_162827) do
     t.string "resource_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_resources_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -81,7 +85,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_02_162827) do
   end
 
   add_foreign_key "bookmarks", "resources"
+  add_foreign_key "bookmarks", "users"
   add_foreign_key "forum_posts", "forum_threads"
   add_foreign_key "forum_threads", "users"
+  add_foreign_key "resources", "users"
   add_foreign_key "reviews", "resources"
 end

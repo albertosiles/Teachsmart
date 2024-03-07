@@ -1,0 +1,10 @@
+  <h3>Update your teaching material:</h3>
+    <%= simple_form_for(@resource) do |f| %>
+        Title: <%= f.input :title, label: false %><br>
+        Description: <%= f.input :description, label: false %><br>
+        Subject: <%= f.input :subject, label: false %><br>
+        Student age: <%= f.input :student_age, label: false %><br>
+        Category: <%= f.input :category, label: false %><br>
+        Type: <%= f.input :resource_type, label: false %><br>
+        <%= f.submit "Update teaching material", class: "btn btn-primary" %>
+    <% end %>
