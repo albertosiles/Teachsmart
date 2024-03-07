@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 
   # Resources routes
   resources :resources
+  resources :reviews, only: [:new, :create]
+
+  resources :reviews, only: [:destroy]
 
   authenticated :user do
     resource :profile, only: [:show, :edit, :update, :new, :create, :destroy]
