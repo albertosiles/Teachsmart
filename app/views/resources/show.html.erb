@@ -1,10 +1,10 @@
 <h1>Resource Details</h1>
-<p>Teaching material: <%= @resource.title %></p>
+<p>Resource title: <%= @resource.title %></p>
 <p>Description: <%= @resource.description %></p>
 <p>Subject: <%= @resource.subject %></p>
 <p>Student age: <%= @resource.student_age %></p>
 <p>Category: <%= @resource.category %></p>
-<p>Type: <%= @resource.resource_type %></p>
+<p>Resource type: <%= @resource.resource_type %></p>
 
 <%= button_to 'Bookmark', bookmark_resource_path(@resource), method: :post %>
 

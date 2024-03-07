@@ -1,4 +1,4 @@
-<h1>New Profile</h1>
+<h1>Create a profile</h1>
 
 <%= simple_form_for(@profile, url: profile_path, method: :post) do |form| %>
   <%= form.input :first_name %>
@@ -6,7 +6,7 @@
   <%= form.input :description %>
   <%= form.input :photo, label: "Profile Photo (Optional)", as: :file %>
   <%= form.button :submit,  class: "btn btn-primary" %>
-  <%= link_to 'Not now', resources_path, class: "btn btn-secondary" %>
+  <%= link_to 'Maybe later', resources_path, class: "btn btn-secondary" %>
   <br>
   <br>
   <br>
