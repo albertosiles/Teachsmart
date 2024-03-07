@@ -7,11 +7,11 @@ class BookmarksController < ApplicationController
     @bookmark = current_user.bookmarks.find_by(resource: @resource)
 
     if @bookmark
-      redirect_to @resource, alert: 'This resource is already on your bookmark list.'
+      redirect_to bookmarks_path, alert: 'This resource is already on your bookmark list.'
     else
       @bookmark = Bookmark.new(resource: @resource, user: current_user)
       if @bookmark.save
-        redirect_to @resource, notice: 'This resource has been added to your bookmarks.'
+        redirect_to bookmarks_path, notice: 'This resource has been added to your bookmarks.'
       else
         redirect_to @resource, alert: 'Failed to add this resource to your bookmarks.'
       end
@@ -25,7 +25,7 @@ class BookmarksController < ApplicationController
   def destroy
     @resource = @bookmark.resource
     @bookmark.destroy
-    redirect_to @resource, notice: 'This resource has been removed from your bookmarks.'
+    redirect_to bookmarks_path, notice: 'This resource has been removed from your bookmarks.'
   end
 
   private
