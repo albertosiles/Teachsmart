@@ -5,6 +5,10 @@
 <p><strong>Description:</strong> <%= @profile.description %></p>
 <p><strong>Photo:</strong></p>
 
+<%= link_to "My Uploaded Resources", resources_path(user_id: current_user.id) %>
+<br>
+<br>
+
 <%= link_to 'Edit', edit_profile_path %>
 <%= link_to 'Delete', profile_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
 <%= link_to 'Back', root_path %>

@@ -1,14 +1,19 @@
-<p>Teaching material <%= @resource.title %></p>
+<h1>Resource Details</h1>
+<p>Resource title: <%= @resource.title %></p>
 <p>Description: <%= @resource.description %></p>
 <p>Subject: <%= @resource.subject %></p>
 <p>Student age: <%= @resource.student_age %></p>
 <p>Category: <%= @resource.category %></p>
-<p>Type: <%= @resource.resource_type %></p>
+<p>Resource type: <%= @resource.resource_type %></p>
 
 <%= button_to 'Bookmark', bookmark_resource_path(@resource), method: :post %>
 
 <% if current_user.bookmarks.exists?(resource_id: @resource.id) %>
-  <%= button_to 'Remove from bookmarks', bookmark_path(@resource), method: :delete %>
+  <%= button_to 'Remove from bookmarks', bookmark_path(current_user.bookmarks.find_by(resource_id: @resource.id)), method: :delete, data: { confirm: 'Are you sure you want to remove this bookmark?' } %>
+<% end %>
+
+<% if @resource.user == current_user %>
+  <%= link_to 'Edit', edit_resource_path(@resource) %>
 <% end %>
 
 <ul>
