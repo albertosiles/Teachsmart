@@ -10,3 +10,9 @@
 <% if current_user.bookmarks.exists?(resource_id: @resource.id) %>
   <%= button_to 'Remove from bookmarks', bookmark_path(@resource), method: :delete %>
 <% end %>
+
+<ul>
+	<% @resource.reviews.each do |review| %>
+	<li><%= "star-icon" * @resource.rating %> - <%= review.content %></li>
+	<% end %>
+	</ul>
