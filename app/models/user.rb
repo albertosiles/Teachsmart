@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one :profile
-  has_many :resources
+  has_many :resources, through: :bookmarks
   has_many :bookmarks
   has_many :forum_threads
   has_many :forum_posts
