@@ -88,5 +88,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_08_152326) do
   add_foreign_key "forum_posts", "forum_threads"
   add_foreign_key "forum_threads", "users"
   add_foreign_key "profiles", "users"
+  add_foreign_key "resources", "users"
   add_foreign_key "reviews", "resources"
 end

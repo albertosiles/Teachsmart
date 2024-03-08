@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Resources routes
-  resources :resources
+  resources :resources do
+  resources :reviews, only: [:new, :create]
+  end
+
+  resources :reviews, only: [:destroy]
 
   authenticated :user do
     resource :profile, only: [:show, :edit, :update, :new, :create, :destroy]
