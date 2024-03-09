@@ -20,6 +20,12 @@ class ResourcesController < ApplicationController
     @resources = Resource.all
   end
 
+  def my_uploaded_resources
+    @resources = current_user.resources
+    render 'index'
+  end
+
+
   def show
   end
 

@@ -16,6 +16,10 @@
   <%= link_to 'Edit', edit_resource_path(@resource) %>
 <% end %>
 
+<% if @resource.user == current_user %>
+  <%= link_to 'Delete', resource_path(@resource), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<% end %>
+
 <ul>
 	<% @resource.reviews.each do |review| %>
 	<li><%= "star-icon" * @resource.rating %> - <%= review.content %></li>
