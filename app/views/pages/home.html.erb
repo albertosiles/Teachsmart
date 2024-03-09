@@ -1,2 +1,24 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+ <body>
+  <div class="container">
+    <div class="left-container">
+      <div class="top-left-container">
+        <div class="content">
+          <h1 class="teachsmart">TeachSmart</h1>
+          <p>An app for teachers to share planning, resources, and networking.</p>
+        </div>
+      </div>
+      <div class="bottom-left-container">
+        <div class="background-image" style="background-image: url(<%= asset_path('image2.jpg') %>);"></div>
+      </div>
+    </div>
+    <div class="right-container">
+      <div class="content text-container">
+        <h2 class="welcome-heading">Welcome to our community of dedicated educators!</h2>
+        <p>At our platform, teaching transcends boundaries as we bring together passionate teachers from around the world. Whether you're looking to streamline your lesson planning, access high-quality resources, or connect with fellow educators, you've come to the right place.</p>
+        <p>But we're more than just a resource hub. We're a vibrant community built on collaboration and support. Connect with colleagues, exchange ideas, and forge meaningful connections that will enrich your teaching journey.</p>
+        <p>Welcome to a place where educators unite, innovate, and inspire. Welcome to our platform where teaching meets sharing, and learning knows no limits. Together, let's create a brighter future for education. </p>
+        <%= link_to "Discover More", resources_path, class: "discover-link" %>
+      </div>
+    </div>
+  </div>
+</body>
