@@ -22,7 +22,7 @@ class ResourcesController < ApplicationController
 
   def my_uploaded_resources
     @resources = current_user.resources
-    render 'index'
+    render 'my_uploaded_resources'
   end
 
 

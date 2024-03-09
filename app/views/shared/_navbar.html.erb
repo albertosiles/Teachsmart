@@ -11,20 +11,18 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto">
         <% if user_signed_in? %>
-          <% if current_user.profile %>
-            <li class="nav-item">
-              <%= link_to "My Profile", profile_path, class: "nav-link" %>
-            </li>
-          <% else %>
-            <li class="nav-item">
-              <%= link_to "My Profile", new_profile_path, class: "nav-link" %>
-            </li>
-          <% end %>
-           <li class="nav-item">
+          <li class="nav-item">
             <%= link_to "My Bookmarks", bookmarks_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Upload Resources", new_resource_path, class: "nav-link" %>
+            <%= link_to "My Uploads", my_uploaded_resources_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <% if current_user.profile %>
+              <%= link_to "My Profile", profile_path, class: "nav-link" %>
+            <% else %>
+              <%= link_to "My Profile", new_profile_path, class: "nav-link" %>
+            <% end %>
           </li>
           <li class="nav-item">
             <%= link_to "Logout", destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-link" %>
