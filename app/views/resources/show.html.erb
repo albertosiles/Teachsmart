@@ -1,23 +1,26 @@
-<h1>Resource Details</h1>
-<p>Resource title: <%= @resource.title %></p>
+<h1>Details</h1>
+<p>Title: <%= @resource.title %></p>
 <p>Description: <%= @resource.description %></p>
 <p>Subject: <%= @resource.subject %></p>
 <p>Student age: <%= @resource.student_age %></p>
 <p>Category: <%= @resource.category %></p>
 <p>Resource type: <%= @resource.resource_type %></p>
 
-<%= button_to 'Bookmark', bookmark_resource_path(@resource), method: :post %>
-
 <% if current_user.bookmarks.exists?(resource_id: @resource.id) %>
-  <%= button_to 'Remove from bookmarks', bookmark_path(current_user.bookmarks.find_by(resource_id: @resource.id)), method: :delete, data: { confirm: 'Are you sure you want to remove this bookmark?' } %>
+  <%= button_to 'Remove from Bookmarks', bookmark_path(current_user.bookmarks.find_by(resource_id: @resource.id)), method: :delete, data: { confirm: 'Are you sure you want to remove this bookmark?' } %>
+<% else %>
+  <%= button_to 'Bookmark', bookmark_resource_path(@resource), method: :post %>
 <% end %>
 
 <% if @resource.user == current_user %>
   <%= link_to 'Edit', edit_resource_path(@resource) %>
+  <%= link_to 'Delete', resource_path(@resource), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
 <% end %>
 
+<%= link_to 'Back to Teaching materials', resources_path %>
+
 <ul>
-	<% @resource.reviews.each do |review| %>
-	<li><%= "star-icon" * @resource.rating %> - <%= review.content %></li>
-	<% end %>
-	</ul>
+  <% @resource.reviews.each do |review| %>
+    <li><%= "star-icon" * @resource.rating %> - <%= review.content %></li>
+  <% end %>
+</ul>

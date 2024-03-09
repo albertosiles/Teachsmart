@@ -1,0 +1,16 @@
+<h1>My Uploads</h1>
+
+<% if @resources.any? %>
+  <ul>
+    <% @resources.each do |resource| %>
+      <li>
+        <%= link_to resource.title, resource_path(resource) %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No resources uploaded yet.</p>
+<% end %>
+
+<%= link_to "Upload Teaching Materials", new_resource_path, class: "btn btn-primary" %>
+<%= link_to "Back to Teaching Materials", resources_path, class: "btn btn-secondary" %>
