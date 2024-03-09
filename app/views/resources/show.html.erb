@@ -20,6 +20,8 @@
   <%= link_to 'Delete', resource_path(@resource), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
 <% end %>
 
+<%= link_to 'Back to Resources', resources_path %>
+
 <ul>
 	<% @resource.reviews.each do |review| %>
 	<li><%= "star-icon" * @resource.rating %> - <%= review.content %></li>
