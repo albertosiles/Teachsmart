@@ -1,0 +1,33 @@
+.container-center {
+  height: 70%;
+  width: 50%;
+  margin: 20px auto;
+  border: 1px solid grey;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.name-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  margin-left: 50px;
+  margin-right: 100px;
+}
+
+.description {
+  // display: flex;
+  padding: 15px;
+  margin-left: 50px;
+}
+
+
+.link-button {
+  text-align: center;
+  justify-content: center;
+  padding: 15px;
+  margin-left: 50px;
+  // text-decoration: none;
+  // color: inherit;
+}
