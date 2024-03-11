@@ -7,22 +7,25 @@
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding-left: 100px;
+  padding-right: 100px;
 
   h1 {
     text-align:center;
     }
 }
 
-.strong-label {
-  font-weight: 550;
-}
+// .strong-label {
+//   color:orange;
+// }
 
-.btn.btn-primary {
+.btn-profile-new {
   background-color: rgb(129, 69, 10);
   color: white;
-  outline: rgb(129, 69, 10);
+  outline: none;
 }
 
-.btn-primary:hover {
+.btn-profile-new:hover {
   background-color: black;
+  color: white;
 }

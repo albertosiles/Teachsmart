@@ -1,12 +1,12 @@
 <div class="container-profile-new">
   <h1>Create a profile</h1>
 
-  <%= simple_form_for(@profile, url: profile_path, method: :post) do |form| %>
-    <%= form.input :first_name, label_html: { class: 'strong-label' } %>
-    <%= form.input :last_name, label_html: { class: 'strong-label' } %>
-    <%= form.input :description, label_html: { class: 'strong-label' } %>
-    <%= form.input :photo, label: "Profile Photo (Optional)", as: :file, label_html: { class: 'strong-label' } %>
-    <%= form.button :submit,  class: "btn btn-primary" %>
+  <%= simple_form_for(@profile, url: profile_path, method: :post, html: { novalidate: true }) do |form| %>
+    <%= form.input :first_name, required: true, label_html: { data: { required: true } } %>
+    <%= form.input :last_name, required: true, label_html: { data: { required: true } } %>
+    <%= form.input :description, required: true, label_html: { data: { required: true } } %>
+    <%= form.input :photo, label: "Profile Photo (Optional)", as: :file %>
+    <%= form.button :submit,  class: "btn-profile-new" %>
     <%= link_to 'Maybe later', resources_path, class: "btn btn-secondary" %>
     <br>
   <% end %>
