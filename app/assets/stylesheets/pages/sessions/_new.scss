@@ -1,23 +1,28 @@
 .container-login {
+  background-color: #f2f0e5;
   height: auto;
-  width: 65%;
+  width: 45%;
   margin: 20px auto;
   border: 1px solid grey;
   padding: 15px;
   border-radius: 5%;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  max-width: 400px;
-  text-align: left;/* Adjust as needed */
+  text-align: left;
+  padding-left: 80px;
+  padding-right: 80px;
+
+  h2 {
+    text-align: center;
+    color:orange;
+  }
 }
 
+.btn-login {
+  color: (129, 69, 10);
+}
 
 .container-login .login-form  {
-  /* Center the h2 text */
   text-align: left;
-}
-
-.h2 {
-  text-align: center;
 }
 
 .container-login .form-links {
@@ -25,25 +30,11 @@
   text-align: left;
 }
 
-.form-inputs {
-
-  max-width: 100%;
-}
-
-.button {
-
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #474F7A;
-  color: white;
-  border: none;
-  border-radius: 5px;
-
-}
 
 .form-links {
   margin-top: 20px;
   text-align: left;
+  color: rgb(129, 69, 10);
 }
 
 .form-links a {
