@@ -1,14 +1,31 @@
-<h1>My profile</h1>
+<div class="container-profile-show">
+  <h1>My profile</h1><br>
 
-<p><strong>First Name:</strong> <%= @profile.first_name %></p>
-<p><strong>Last Name:</strong> <%= @profile.last_name %></p>
-<p><strong>Description:</strong> <%= @profile.description %></p>
-<p><strong>Photo:</strong></p>
+  <div class="profile-info">
+    <h3 class="profile-show-name">
+      <strong><%= @profile.first_name %> <%= @profile.last_name %></strong>
+    </h3>
+    <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm">
+  </div>
 
-<%= link_to "My Uploads", my_uploaded_resources_path %>
-<br>
-<br>
+  <p class="description">"<%= @profile.description %>"</p>
 
-<%= link_to 'Edit', edit_profile_path %>
-<%= link_to 'Delete', profile_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-<%= link_to 'Back', root_path %>
+  <% if current_user.resources.any? %>
+    <%= link_to my_uploaded_resources_path, class: "uploaded-materials link-button" do %>
+      <p><%= current_user.resources.count %> Uploaded Materials</p>
+    <% end %>
+  <% else %>
+    <p class="uploaded-materials">No materials uploaded yet</p>
+  <% end %>
+  <br><br>
+
+  <div class="profile-icons">
+    <%= link_to edit_profile_path do %>
+      <i class="fas fa-edit"></i>
+    <% end %>
+
+    <%= link_to profile_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+      <i class="fas fa-trash"></i>
+    <% end %>
+  </div>
+</div><br><br>
