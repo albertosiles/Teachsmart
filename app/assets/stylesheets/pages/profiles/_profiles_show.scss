@@ -1,33 +1,74 @@
-.container-center {
-  height: 70%;
-  width: 50%;
+.container-profile-show {
+  position: relative;
+  height: auto;
+  width: 60%;
   margin: 20px auto;
   border: 1px solid grey;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
 
-.name-container {
-  display: flex;
-  justify-content: space-between;
+}
+h1 {
+  text-align:center;
+  }
+
+.profile-show-name {
   padding: 15px;
   margin-left: 50px;
-  margin-right: 100px;
 }
+
 
 .description {
-  // display: flex;
+  padding: 15px;
+  margin-left: 50px;
+  max-width: 85%;
+}
+
+
+.uploaded-materials {
+  display: flex;
+  align-items: center;
   padding: 15px;
   margin-left: 50px;
 }
 
+.profile-info {
+  display: flex;
+  align-items: center;
+}
 
-.link-button {
-  text-align: center;
-  justify-content: center;
-  padding: 15px;
-  margin-left: 50px;
-  // text-decoration: none;
-  // color: inherit;
+.avatar-large {
+  margin-right: 12%;
+  width: 15%;
+  height: 15%;
+}
+
+.profile-show-name {
+  margin-right: auto;
+}
+
+
+.profile-icons {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 20px;
+  left: 40%;
+
+}
+
+.profile-icons a {
+  color: rgb(129, 69, 10);
+  margin: 0 20px;
+  font-size: 26px;
+  text-decoration: none;
+}
+
+.profile-icons i {
+  transition: filter 0.3s ease;
+}
+
+.profile-icons i:hover {
+  color: black;
 }

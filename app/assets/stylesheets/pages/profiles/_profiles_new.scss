@@ -1,16 +1,27 @@
-// app/assets/stylesheets/_profiles_new.scss
-
-.container-center {
+.container-profile-new {
   height: auto;
-  width: 75%;
+  width: 60%;
   margin: 20px auto;
   border: 1px solid grey;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
+  h1 {
+    text-align:center;
+    }
 }
 
-h1 {
-text-align:center;
+.strong-label {
+  font-weight: 550;
+}
+
+.btn.btn-primary {
+  background-color: rgb(129, 69, 10);
+  color: white;
+  outline: rgb(129, 69, 10);
+}
+
+.btn-primary:hover {
+  background-color: black;
 }
