@@ -1,16 +1,25 @@
-<h1>My Uploads</h1>
-
-<% if @resources.any? %>
-  <ul>
-    <% @resources.each do |resource| %>
-      <li>
-        <%= link_to resource.title, resource_path(resource) %>
-      </li>
-    <% end %>
-  </ul>
-<% else %>
-  <p>No resources uploaded yet.</p>
-<% end %>
-
-<%= link_to "Upload Teaching Materials", new_resource_path, class: "btn btn-primary" %>
-<%= link_to "Back to Teaching Materials", resources_path, class: "btn btn-secondary" %>
+<h1>My Uploads</h1><br>
+<div class="container-uploads">
+  <% if @resources.any? %>
+    <div class="card-upload-container">
+      <% @resources.each do |resource| %>
+        <%= link_to resource_path(resource) do %>
+          <div class="card-upload">
+            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Resource Image" class="resource-image"><br>
+            <div class="resource-details">
+              <%= resource.title %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  <% else %>
+    <p>No resources uploaded yet.</p>
+  <% end %>
+  <br>
+  <div class="card-links">
+    <%= link_to "Upload Teaching Materials", new_resource_path, class: "btn btn-upload" %>
+    <%= link_to "Back to Teaching Materials", resources_path, class: "btn btn-secondary" %>
+  </div>
+</div>
