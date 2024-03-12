@@ -45,8 +45,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_09_101627) do
     t.string "last_name"
     t.text "description"
     t.string "photo"
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
   create_table "resources", force: :cascade do |t|
@@ -87,6 +89,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_09_101627) do
   add_foreign_key "bookmarks", "users"
   add_foreign_key "forum_posts", "forum_threads"
   add_foreign_key "forum_threads", "users"
+  add_foreign_key "profiles", "users"
   add_foreign_key "resources", "users"
   add_foreign_key "reviews", "resources"
 end
