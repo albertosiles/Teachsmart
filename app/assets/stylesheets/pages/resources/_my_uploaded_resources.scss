@@ -1,13 +1,15 @@
 .container-uploads {
-  text-align: center; /* Center the card-links buttons */
-  margin-left: 80px; /* Add margin to the left */
-  margin-right: 80px; /* Add margin to the right */
+  text-align: center;
+  margin-left: 80px;
+  margin-right: 80px;
+  max-width: calc(100% - 160px);
+  margin: 0 auto;
 }
 
 .card-upload-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically adjust column widths */
-  gap: 10px; /* Reduce gap between cards */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
 }
 
 .card-upload {
@@ -18,14 +20,15 @@
   padding: 10px;
 }
 
-.card-links {
-  margin-top: 20px; /* Add space between cards and buttons */
-  display: inline-block; /* Ensure buttons are inline with the rest of the content */
+.link-resource-title {
+  text-decoration: none;
+  text-align: center;
+  color: rgb(129, 69, 10);
 }
 
-.resource-details a {
-  color: rgb(129, 69, 10); /* Set text color */
-  text-decoration: none; /* Remove underline from links */
+.card-links {
+  margin-top: 20px;
+  display: inline-block;
 }
 
 .resource-image {
@@ -36,22 +39,57 @@
   border-top-right-radius: 5px;
 }
 
-.btn-primary {
-  background-color: rgb(129, 69, 10); /* Set button background color */
-  color: black; /* Set button text color */
+.btn-upload {
+  background-color: rgb(129, 69, 10);
+  color:white;
+  border-radius: 5px;
 }
 
-.btn-primary:hover {
-  background-color: black; /* Change button background color on hover */
-  color: white; /* Change button text color on hover */
+.btn-upload:hover {
+  background-color: black;
+  color: white;
 }
 
-@media (min-width: 600px) {
-  .card-upload-container {
-    grid-template-columns: repeat(3, 1fr); /* Adjust to display 3 columns */
-  }
+.btn-secondary {
+  border-radius: 5px;
 }
 
 h1 {
   margin-top: 10px;
+}
+
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
