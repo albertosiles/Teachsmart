@@ -31,18 +31,24 @@
 
 
 
-<p class="plain-links"><%= link_to 'Back to Teaching materials', resources_path %></p>
+<p class="plain-links"><%= link_to 'Back to teaching materials', resources_path %></p>
 
 <% if @resource.user == current_user %>
   <p class="plain-links"><%= link_to 'Edit', edit_resource_path(@resource) %></p>
   <p class="plain-links"><%= link_to 'Delete', resource_path(@resource), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></p>
 <% end %>
+<br>
+<br>
+<h4 class="title-class">What other teachers thought</h4>
 
-
-
-<ul>
+<ul class="review-list">
   <% @resource.reviews.each do |review| %>
-    <li><%= "star-icon" * @resource.rating %> - <%= review.content %></li>
+    <li>
+      <% review.rating.times do %>
+        <i class="fa-solid fa-star"></i>
+      <% end %>
+
+       - <em><%= review.content %></em></li>
   <% end %>
 </ul>
 </main>

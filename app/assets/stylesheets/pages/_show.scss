@@ -1,0 +1,78 @@
+
+main {
+  background-color: #f2f0e5;
+  padding: 85px;
+}
+
+.show-container {
+  background-color: #f2f0e5;
+  padding: 85px;
+}
+
+.circle {
+width: 120px;
+height: 120px;
+border-radius: 50%;
+background-color: #634c3b;
+text-align: center;
+vertical-align: middle;
+padding-top: 40px;
+}
+
+.circle-text {
+  margin: auto;
+  color: white;
+  font-size: 12px;
+}
+
+.circle-text h3 {
+  font-weight: bold;
+}
+
+.circle-text h6 {
+  font-weight: bold;
+}
+
+.title-class {
+  color: #cd853f;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+.description {
+  height: 170px;
+  width: 500px;
+  border-radius: 15px;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  padding-top: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: inset 6px 6px 8px #d3d3d3;
+}
+
+.plain-links {
+  text-align: center;
+}
+
+.plain-links a {
+  text-decoration: none;
+  color: #634c3b;
+}
+
+.plain-links a:hover {
+  color: orange;
+}
+
+.fa-star {
+  color: #cd853f;
+}
+
+.review-list {
+  list-style-type: none;
+  padding: 0;
+  line-height: 30px;
+}
