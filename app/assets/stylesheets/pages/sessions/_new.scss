@@ -10,15 +10,25 @@
   text-align: left;
   padding-left: 80px;
   padding-right: 80px;
+
   h2 {
     text-align: center;
     color:orange;
   }
+
+  .btn-login {
+    background-color: rgb(129, 69, 10);
+    color: white;
+    border-radius: 5px;
+  }
+
+  .btn-login:hover {
+    background-color: black;
+    color: white;
+  }
+
 }
 
-.btn-login {
-  color: (129, 69, 10);
-}
 
 .container-login .login-form  {
   text-align: left;

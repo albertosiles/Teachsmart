@@ -15,11 +15,20 @@
     text-align: center;
     color:orange;
   }
+
+  .btn-signup {
+    background-color: rgb(129, 69, 10);
+    color: white;
+    border-radius: 5px;
+  }
+
+  .btn-signup:hover {
+    background-color: black;
+    color: white;
+  }
 }
 
-.btn-signup {
-  color: (129, 69, 10);
-}
+
 
 .container-signup .signup-form  {
   text-align: left;
