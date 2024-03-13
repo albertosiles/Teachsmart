@@ -1,0 +1,58 @@
+.container-forgot-password {
+  background-color: #f2f0e5;
+  height: auto;
+  width: 45%;
+  margin: 60px auto;
+  border: 1px solid grey;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align: left;
+  padding-left: 80px;
+  padding-right: 80px;
+
+  h2 {
+    text-align: center;
+    color:orange;
+  }
+
+  .btn-forgot-password {
+    background-color: rgb(129, 69, 10);
+    color: white;
+    border-radius: 5px;
+  }
+
+  .btn-forgot-password:hover {
+    background-color: black;
+    color: white;
+  }
+
+}
+
+
+
+.container-forgot-password .forgot-password-form  {
+  text-align: left;
+}
+
+.container-forgot-password .form-links {
+  margin-top: 20px;
+  text-align: left;
+}
+
+
+.form-links {
+  margin-top: 20px;
+  text-align: left;
+  color: rgb(129, 69, 10);
+}
+
+.form-links a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.form-actions {
+  margin-top: 20px;
+  text-align: left;
+}

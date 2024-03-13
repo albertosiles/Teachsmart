@@ -1,6 +1,23 @@
+<br>
 <h1>Teaching materials</h1>
-<ul>
+<br>
+<div class="container">
   <% @resources.each do |resource| %>
-    <li><%= link_to resource.title, resource_path(resource) %></li>
+    <div class="card-product">
+      <%= link_to image_tag(image_for_subject(resource.subject)), resource_path(resource) %>
+      <div class="card-product-infos">
+        <div class="row">
+            <h2><%= resource.title %></h2>
+                      <div class="col">
+            <p><%= resource.description %></p>
+          </div>
+          <div class="col">
+            <p><i class="fa-solid fa-book"></i> <%= resource.subject %></p>
+            <p><i class="fa-solid fa-user"></i> <%= resource.student_age %> years</p>
+          </div>
+        </div>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
+<br><br><br><br><br><br><br><br><br>
