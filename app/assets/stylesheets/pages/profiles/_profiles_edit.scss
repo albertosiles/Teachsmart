@@ -1,0 +1,32 @@
+.container-profile-edit {
+  background-color: #f2f0e5;
+  height: auto;
+  width: 60%;
+  margin: 20px auto;
+  border: 1px solid grey;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding-left: 100px;
+  padding-right: 100px;
+
+  h1 {
+    color: orange;
+    text-align:center;
+    }
+}
+
+
+.container-profile-edit .form-actions input[type="submit"] {
+  background-color: rgb(129, 69, 10);
+  color: white;
+}
+
+.container-profile-edit .form-actions input[type="submit"]:hover {
+  background-color: black; /* Change background color to black on hover */
+}
+
+
+.strong-label {
+  font-weight: 550;
+}

@@ -1,15 +1,19 @@
-<h1>Edit Profile</h1>
+<div class="container-profile-edit">
+  <h1>Edit Profile</h1>
 
-<%= simple_form_for @profile do |form| %>
-  <%= form.error_notification %>
+  <%= simple_form_for @profile do |form| %>
+    <%= form.error_notification %>
 
-  <div class="form-inputs">
-    <%= form.input :first_name %>
-    <%= form.input :last_name %>
-    <%= form.input :description %>
-    <%= form.input :photo, as: :file %>
-  </div>
-  <div class="form-actions">
-    <%= form.button :submit %>
-  </div>
-<% end %>
+    <div class="form-inputs">
+      <%= form.input :first_name, label_html: { class: 'strong-label' }  %>
+      <%= form.input :last_name, label_html: { class: 'strong-label' }   %>
+      <%= form.input :description, label_html: { class: 'strong-label' }  %>
+      <%= form.input :photo, as: :file, label_html: { class: 'strong-label' }  %>
+    </div>
+    <div class="form-actions">
+      <%= form.button :submit %>
+      <%= link_to "Cancel", profile_path, class: "btn btn-secondary" %>
+    </div>
+  <% end %>
+</div>
+<br><br>

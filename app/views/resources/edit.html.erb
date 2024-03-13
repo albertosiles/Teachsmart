@@ -1,13 +1,14 @@
-  <h3>Update your teaching materials:</h3>
+<div class="container-edit-materials">
+  <h2>Update your teaching materials:</h2><br>
     <%= simple_form_for(@resource) do |f| %>
         Title: <%= f.input :title, label: false %><br>
-        Description: <%= f.input :description, label: false %><br>
+        Description: <%= f.input :description, as: :text, input_html: { rows: 4 }, label: false %><br>
         Subject: <%= f.input :subject, label: false %><br>
         Student age: <%= f.input :student_age, label: false %><br>
         Category: <%= f.input :category, label: false %><br>
         Resource type: <%= f.input :resource_type, label: false %><br>
-        <%= f.submit "Update teaching material", class: "btn btn-primary" %>
+        <%= f.submit "Update Teaching Materials", class: "btn btn-update-materials" %>
     <% end %>
+</div>
   <br>   <br>
-   <br>
-   <br>
+  <br>
