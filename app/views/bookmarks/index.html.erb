@@ -1,15 +1,20 @@
-<h1>My Bookmarks</h1>
-<ul>
-  <% @bookmarks.each do |bookmark| %>
-    <li>
-      <%= link_to bookmark.resource.title, resource_path(bookmark.resource) %>
-      <%= button_to 'Remove from bookmarks', bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure you want to remove this bookmark?' } %>
-    </li>
+<div class="container-bookmarks">
+  <h1 class="bookmarks-heading">My Bookmarks</h1>
+
+  <div class="bookmark-container" id="bookmark-container">
+    <% @bookmarks.each do |bookmark| %>
+      <div class="bookmark-item">
+        <%= link_to bookmark.resource.title, resource_path(bookmark.resource), class: "full-width-link" %>
+        <%= button_to 'Remove from bookmarks', bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure you want to remove this bookmark?' }, class: "btn btn-primary remove-btn grey-btn" %>
+      </div>
+    <% end %>
+  </div>
+
+  <% if @bookmarks.empty? %>
+    <p class="no-bookmarks-msg">No bookmarks found.</p>
   <% end %>
-</ul>
 
-<% if @bookmarks.empty? %>
-  <p>No bookmarks found.</p>
-<% end %>
-
-<%= link_to 'Back to Teaching materials', resources_path %>
+  <div class="back-link">
+    <%= link_to 'Back to teaching materials', resources_path, class: "btn btn-primary" %>
+  </div>
+</div>
