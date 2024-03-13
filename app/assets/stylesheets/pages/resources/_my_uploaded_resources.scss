@@ -1,15 +1,18 @@
-.container-uploads {
-  text-align: center;
-  margin-left: 80px;
-  margin-right: 80px;
-  max-width: calc(100% - 160px);
-  margin: 0 auto;
-}
+// .container-uploads {
+//   text-align: center;
+//   margin-left: 80px;
+//   margin-right: 80px;
+//   max-width: calc(100% - 160px);
+//   margin: 0 auto;
+// }
 
 .card-upload-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 15px;
+  margin-left: 80px;
+  margin-right: 80px;
+  max-width: fit-content;
 }
 
 .card-upload {
@@ -24,19 +27,22 @@
   text-decoration: none;
   text-align: center;
   color: rgb(129, 69, 10);
+  cursor: default;
 }
 
 .card-links {
-  margin-top: 20px;
-  display: inline-block;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .resource-image {
   height: auto;
-  width: 80%;
+  width: 100%;
   object-fit: cover;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-radius: 5px;
 }
 
 .btn-upload {
