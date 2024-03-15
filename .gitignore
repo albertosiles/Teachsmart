@@ -35,7 +35,6 @@
 /config/master.key
 
 # Ignore .env file containing credentials.
-echo '.env*'
 .env*
 
 # Ignore Mac and Linux file system files
