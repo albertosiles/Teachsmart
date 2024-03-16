@@ -11,4 +11,8 @@ class Resource < ApplicationRecord
   validates :student_age, presence: true
   validates :category, presence: true
   validates :resource_type, presence: true
+
+  scope :with_subject, -> (subject) { where(subject: subject) if subject.present? }
+  scope :with_student_age, -> (age) { where(student_age: age) if age.present? }
+
 end

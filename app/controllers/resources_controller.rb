@@ -18,6 +18,10 @@ class ResourcesController < ApplicationController
 
   def index
     @resources = Resource.all
+    @resources = @resources.with_subject(params[:subject])
+    @resources = @resources.with_student_age(params[:student_age])
+    @subjects = Resource.pluck(:subject).uniq
+    @student_ages = Resource.pluck(:student_age).uniq.sort
   end
 
   def my_uploaded_resources
