@@ -2,6 +2,15 @@
 <h1>Teaching materials</h1>
 <br>
 <div class="container">
+<%= form_with url: resources_path, method: :get do %>
+  <%= label_tag :subject %>
+  <%= select_tag :subject, options_for_select(@subjects, params[:subject]), include_blank: "All Subjects" %>
+  <%= label_tag :student_age %>
+  <%= select_tag :student_age, options_for_select(@student_ages, params[:student_age]), include_blank: "All Ages" %>
+
+  <%= submit_tag "Filter" %>
+<% end %>
+ <br>
   <% @resources.each do |resource| %>
     <div class="card-product">
       <%= link_to image_tag(image_for_subject(resource.subject)), resource_path(resource) %>
