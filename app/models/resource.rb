@@ -3,6 +3,7 @@ class Resource < ApplicationRecord
   has_many :reviews
   has_many :bookmarks
   has_many_attached :photos
+  has_many_attached :files
 
   validates :title, presence: true
   validates :description, presence: true

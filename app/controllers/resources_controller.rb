@@ -48,7 +48,7 @@ class ResourcesController < ApplicationController
   private
 
     def resource_params
-      params.require(:resource).permit(:title, :description, :subject, :student_age, :category, :resource_type, photos: [])
+      params.require(:resource).permit(:title, :description, :subject, :student_age, :category, :resource_type, photos: [], files: [])
     end
 
     def set_resource
