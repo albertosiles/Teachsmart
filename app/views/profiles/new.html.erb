@@ -1,7 +1,7 @@
 <div class="container-profile-new">
   <h1>Create a profile</h1>
 
-  <%= simple_form_for(@profile, url: profile_path, method: :post, html: { novalidate: true }) do |form| %>
+  <%= simple_form_for(@profile, url: profile_path, method: :post, html: { novalidate: true, multipart: true }) do |form| %>
     <%= form.input :first_name, required: false, label_html: { data: { required: true } } %>
     <%= form.input :last_name, required: false, label_html: { data: { required: true } } %>
     <%= form.input :description, required: false, label_html: { data: { required: true } } %>
