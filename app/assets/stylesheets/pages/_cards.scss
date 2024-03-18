@@ -1,46 +1,107 @@
-.card-product {
-  overflow: hidden;
-  height: 120px;
-  background: #f2f0e5;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+.teaching-materials-container {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.card-resource {
+  border: 1px solid grey;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background-color: #f2f0e5;
+  height: 400px; /* Set a fixed height for the cards */
+  overflow: auto; /* Allow content to scroll if it exceeds the card height */
   display: flex;
-  align-items: center;
-  margin: 10px;
+  flex-direction: column;
+  padding: 20px;
 }
 
-.card-product img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  object-position: center;
+.card-resource:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-.card-product h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
+.resource-image {
+  height: 50%; /* Set height to 50% of the card */
+  border-radius: 15px; /* Round top left corner */
+  overflow: hidden; /* Hide overflow content */
+  box-sizing: border-box; /* Include padding in the total width and height */
 }
 
-.card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+.img-resource-index {
+  width: 100%; /* Ensure the image takes the full width of its container */
+  height: 100%; /* Ensure the image takes the full height of its container */
+  display: block; /* Ensure image does not create extra space */
+  border-radius: 15px; /* Round corners */
+  object-fit: cover; /* Enlarge the image within the container while maintaining aspect ratio */
 }
 
-.card-product .card-product-infos {
-  display: flex;
-  justify-content: space-between;
-  padding: 16px;
+.card-resource-content {
+  padding: 25px;
 }
 
-.card-product .card-product-infos .row {
-  display: flex;
-  width: 100%;
+.card-resource-content h2 {
+  margin-top: 0;
+  text-align: center;
 }
 
-.card-product .card-product-infos .col {
-  flex: 1;
-  padding: 0 10px;
+.card-resource-infos p {
+  font-size: 22px;
 }
+
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  margin-top: 10px;
+}
+
+
+
+// .card-product {
+//   overflow: hidden;
+//   height: 120px;
+//   background: #f2f0e5;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//   display: flex;
+//   align-items: center;
+//   margin: 10px;
+// }
+
+// .card-product img {
+//   width: 120px;
+//   height: 120px;
+//   object-fit: cover;
+//   object-position: center;
+// }
+
+// .card-product h2 {
+//   font-size: 16px;
+//   font-weight: bold;
+//   margin: 0;
+// }
+
+// .card-product p {
+//   font-size: 12px;
+//   line-height: 1.4;
+//   opacity: .7;
+//   margin-bottom: 0;
+//   margin-top: 8px;
+// }
+
+// .card-product .card-product-infos {
+//   display: flex;
+//   justify-content: space-between;
+//   padding: 16px;
+// }
+
+// .card-product .card-product-infos .row {
+//   display: flex;
+//   width: 100%;
+// }
+
+// .card-product .card-product-infos .col {
+//   flex: 1;
+//   padding: 0 10px;
+// }
