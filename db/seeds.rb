@@ -20,7 +20,7 @@ user_Thomas = User.create!(email: "thomas@lewagon.com", password: "xxx444")
 user_Vivien = User.create!(email: "vivien@lewagon.com", password: "xxx555")
 puts "Creating resources..."
 puts "seeding"
-resource_basic_algebra = Resource.create!(title: "Basic Algebra", description: "Introduction to simple equations", subject: "Mathematics", student_age: 11, category: "Algebra", resource_type: "Worksheets", user: user_Julia)
+resource_basic_algebra = Resource.create!(title: "Basic Algebra", description: "Introduction to simple equations", subject: "Mathematics", student_age: 11, category: "Algebra", resource_type: "Worksheets", user: user_Julia, resource_url: "public/resources/files/simple_algebra_practice.pdf")
 resource_past_tense = Resource.create!(title: "Past Tense", description: "Past tenses in German", subject: "German", student_age: 12, category: "Grammar", resource_type: "Worksheet", user: user_Julia)
 resource_states = Resource.create!(title: "States", description: "Map of USA showing states", subject: "Geography", student_age: 14, category: "Political geography", resource_type: "Slides", user: user_Julia)
 resource_presentation = Resource.create!(title: "The Visible Spectrum", description: "Great resource for physics teachers", subject: "Physics", student_age: 14, category: "Light", resource_type: "Slides", user: user_Julia)
