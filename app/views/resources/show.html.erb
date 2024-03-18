@@ -1,3 +1,23 @@
+
+<!-- Display one image in the view --->
+<%#= cl_image_tag @resource.photo.key, height: 300, width: 400, crop: :fill %>
+
+ <!-- Display multiple images in the view. Needs to be placed in the desired position  --->
+    <%# <div class="uploaded-photo">
+      <% @resource.photos.each do |photo| %>
+        <%#= cl_image_tag photo.key, height: 50, width: 80, crop: :fill %>
+      <%# end %>
+    <%# </div>  %>
+
+<!--As a background image:  -->
+<%# <div class="card-category" %>
+  <%# style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @article.photo.key, height: 300, crop: :fill')">  %>
+<%# </div> %>
+
+
+<!-- Display one file in the view --->
+<%#= cl_image_tag @resource.file.key, height: 300, width: 400, crop: :fill %>
+
 <main>
   <h1 class="title-class"><%= @resource.title %></h1>
   <br>
@@ -5,14 +25,30 @@
     <div class="circle">
       <div class="circle-text">Student age: <h3><%= @resource.student_age %></h3></div>
     </div>
-      <div class="resource-description"><%= @resource.description %></div>
-
+  <h1 class="title-resource-class"><%= @resource.title %></h1>
+  <br>
     <div class="circle">
       <div class="circle-text">Subject: <h6><%= @resource.subject %></h6></div>
     </div>
 </div>
 <br>
 <div class="d-flex justify-content-between align-items-top">
+  <div class="circle">
+    <div class="circle-text">Category: <h6><%= @resource.category %></h6></div>
+  </div>
+  <div class="description-pdf-container">
+    <div class="resource-description">
+      <%= @resource.description %>
+    </div><br>
+    <div class="uploaded-pdf">
+      <!-- Display multiple files in the view. Needs to be placed in the desired position --->
+        <% @resource.files.each do |file| %>
+          <%#= cl_image_tag file.key, height: 300, width: 400, crop: :fill %>
+              <iframe src= <%= file.key %> width="600px" frameborder="0" loading= "lazy"></iframe>
+          <img src="https://res.cloudinary.com/di9zm7azt/image/upload/v1710586555/development/<%= file.key %>.jpg" style="width: 150px; height: 150px;" alt="">
+        <% end %>
+    </div>
+    </div>
   <div class="circle">
     <div class="circle-text">Resource type: <h6><%= @resource.resource_type %></h6></div>
   </div>
@@ -42,7 +78,7 @@
 <% end %>
 <br>
 <br>
-<h4 class="title-class">What other teachers thought</h4>
+<h4 class="title-review-class">What other teachers thought</h4>
 
 <ul class="review-list">
   <% @resource.reviews.each do |review| %>

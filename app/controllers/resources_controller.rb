@@ -18,6 +18,10 @@ class ResourcesController < ApplicationController
 
   def index
     @resources = Resource.all
+    @resources = @resources.with_subject(params[:subject])
+    @resources = @resources.with_student_age(params[:student_age])
+    @subjects = Resource.pluck(:subject).uniq
+    @student_ages = Resource.pluck(:student_age).uniq.sort
   end
 
   def my_uploaded_resources
@@ -48,7 +52,7 @@ class ResourcesController < ApplicationController
   private
 
     def resource_params
-      params.require(:resource).permit(:title, :description, :subject, :student_age, :category, :resource_type)
+      params.require(:resource).permit(:title, :description, :subject, :student_age, :category, :resource_type, photos: [], files: [])
     end
 
     def set_resource
