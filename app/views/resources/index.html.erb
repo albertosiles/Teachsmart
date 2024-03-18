@@ -1,15 +1,19 @@
-<h1>Teaching materials</h1>
+<br><h1 class="h1-teaching-materials">Teaching materials</h1>
 <br>
 <div class="teaching-materials-container">
   <%= form_with url: resources_path, method: :get do %>
     <div class="row">
       <div class="col-md-3 mb-3">
-        <%= label_tag :subject, "Subject:" %>
-        <%= select_tag :subject, options_for_select(@subjects, params[:subject]), include_blank: "All Subjects", class: "form-control" %>
+        <div class="form-group">
+          <%= label_tag :subject, "Subject:" %>
+          <%= select_tag :subject, options_for_select(@subjects, params[:subject]), include_blank: "All Subjects", class: "form-control" %>
+        </div>
       </div>
       <div class="col-md-3 mb-3">
-        <%= label_tag :student_age, "Student Age:" %>
-        <%= select_tag :student_age, options_for_select(@student_ages, params[:student_age]), include_blank: "All Ages", class: "form-control" %>
+        <div class="form-group">
+          <%= label_tag :student_age, "Student Age:" %>
+          <%= select_tag :student_age, options_for_select(@student_ages, params[:student_age]), include_blank: "All Ages", class: "form-control" %>
+        </div>
       </div>
       <div class="col-md-3 mb-3 align-self-end">
         <%= submit_tag "Filter", class: "btn btn-primary btn-block" %>
@@ -21,14 +25,13 @@
   <div class="row justify-content-center">
     <% @resources.each do |resource| %>
       <div class="col-lg-4 col-md-4 col-sm-6 mb-4">
-        <a href="<%= resource_path(resource) %>" class="card-link">
+        <a href="<%= resource_path(resource) %>" class="card-link-index">
           <div class="card-resource">
             <div class="resource-image">
               <%= image_tag(image_for_subject(resource.subject), class: "img-resource-index") %>
-            </div>
-            <div class="card-resource-content">
-              <h2><%= resource.title %></h2>
-              <p><%= resource.description %></p>
+            </div><br>
+            <div class="card-resource-infos">
+              <h2><%= resource.title %></h2><br>
               <div class="row">
                 <div class="col">
                   <p><i class="fa-solid fa-book"></i> <%= resource.subject %></p>
@@ -36,6 +39,7 @@
                 <div class="col">
                   <p><i class="fa-solid fa-user"></i> <%= resource.student_age %> years</p>
                 </div>
+                <%# <p><%= resource.description</p>  %>
               </div>
             </div>
           </div>
@@ -43,4 +47,4 @@
       </div>
     <% end %>
   </div>
-</div>
+</div><br><br>

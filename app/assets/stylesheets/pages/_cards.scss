@@ -1,37 +1,65 @@
+body {
+  background-color:#7a6ad8;
+}
+
+.h1-teaching-materials {
+  margin-top: 10px;
+  color: white;
+}
+
 .teaching-materials-container {
   margin-left: 80px;
   margin-right: 80px;
 }
+.teaching-materials-container label {
+  color:white;
+}
+
+.teaching-materials-container .form-control {
+  border-radius: 10px;
+}
 
 .card-resource {
-  border: 1px solid grey;
+  border: 1px solid black;
   border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  background-color: #f2f0e5;
-  height: 400px; /* Set a fixed height for the cards */
-  overflow: auto; /* Allow content to scroll if it exceeds the card height */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  background-color: rgb(234, 244, 248);
+  height: 400px;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   padding: 20px;
 }
 
+.card-resource h2 {
+  color: black;
+}
 .card-resource:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .resource-image {
-  height: 50%; /* Set height to 50% of the card */
-  border-radius: 15px; /* Round top left corner */
-  overflow: hidden; /* Hide overflow content */
-  box-sizing: border-box; /* Include padding in the total width and height */
+  height: 50%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.card-resource-infos p,
+.card-resource-infos i {
+  font-size: 1.3em;
+  padding-left: 15px;
+  padding-right: 5px;
+  text-align: center;
 }
 
 .img-resource-index {
-  width: 100%; /* Ensure the image takes the full width of its container */
-  height: 100%; /* Ensure the image takes the full height of its container */
-  display: block; /* Ensure image does not create extra space */
-  border-radius: 15px; /* Round corners */
-  object-fit: cover; /* Enlarge the image within the container while maintaining aspect ratio */
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 15px;
+  object-fit: cover;
+  border: 1px solid black;
 }
 
 .card-resource-content {
@@ -39,23 +67,21 @@
 }
 
 .card-resource-content h2 {
+  color: black;
   margin-top: 0;
   text-align: center;
 }
 
-.card-resource-infos p {
-  font-size: 22px;
+.card-resource-content p {
+  font-size: 20px;
 }
 
-.card-link {
+.card-link-index {
   display: block;
   text-decoration: none;
-  color: inherit;
+  color: black;
 }
 
-h1 {
-  margin-top: 10px;
-}
 
 
 
