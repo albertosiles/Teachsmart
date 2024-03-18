@@ -5,7 +5,11 @@
     <h3 class="profile-show-name">
       <strong><%= @profile.first_name %> <%= @profile.last_name %></strong>
     </h3>
-    <%= cl_image_tag @profile.photo.key, crop: :fill, class: "avatar-profile", alt: "avatar-large" %>
+    <% if @profile.photo.attached? %>
+      <%= cl_image_tag @profile.photo.key, crop: :fill, class: "avatar-profile", alt: "avatar-large" %>
+    <% else %>
+      <%= image_tag "profile_neutral.jpg", alt: "Teacher", class: "avatar-default rounded-avatar" %>
+    <% end %>
   </div>
 
   <p class="profile-description">"<%= @profile.description %>"</p>
