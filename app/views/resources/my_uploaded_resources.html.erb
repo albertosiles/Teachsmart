@@ -7,7 +7,7 @@
     <% @resources.each do |resource| %>
         <div class="card-resource" onclick="window.location='<%= resource_path(resource) %>'" style="cursor: pointer;">
           <div class="resource-image">
-            <%= image_tag(image_for_subject(resource.subject), class: "img-resource-index") %>
+            <%= cl_image_tag((resource.photos.first.key), class: "img-resource-index") %>
           </div><br>
           <div class="card-resource-infos">
             <h2><%= resource.title %></h2><br>
