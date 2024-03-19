@@ -7,6 +7,12 @@
   color: white;
 }
 
+.btn-filter {
+  background-color: rgb(34, 15, 78);
+  color: white;
+  border-radius: 10px;
+}
+
 .teaching-materials-container {
   margin-left: 80px;
   margin-right: 80px;
@@ -23,7 +29,7 @@
   border: 1px solid black;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  background-color: rgb(234, 244, 248);
+  background-color: white;
   height: 400px;
   overflow: auto;
   display: flex;
@@ -32,7 +38,7 @@
 }
 
 .card-resource h2 {
-  color: black;
+  color: rgb(34, 15, 78);
 }
 .card-resource:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
@@ -67,7 +73,6 @@
 }
 
 .card-resource-content h2 {
-  color: black;
   margin-top: 0;
   text-align: center;
 }
@@ -79,7 +84,7 @@
 .card-link-index {
   display: block;
   text-decoration: none;
-  color: black;
+  color: rgb(34, 15, 78);
 }
 
 

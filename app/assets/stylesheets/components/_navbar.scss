@@ -1,7 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #ffffff;
-  padding: 1px 60px;
+  background: white;
+  padding: 5px 60px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -14,14 +14,15 @@
 }
 
 .navbar-brand {
-  font-size: 16px;
+  font-size: 20px;
+  color: rgb(34, 15, 78);
 }
 
-.navbar-lewagon .navbar-toggler-icon {
-  font-size: 18px;
-}
+// .navbar-lewagon .navbar-toggler-icon {
+//   font-size: 22px;
+// }
 
 .navbar-lewagon .nav-link {
-  font-size: 16px;
-  color: rgb(129, 69, 10);
+  font-size: 24px;
+  color: rgb(34, 15, 78);
 }
