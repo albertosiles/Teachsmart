@@ -35,10 +35,13 @@
               <h2><%= resource.title %></h2><br>
               <div class="row">
                 <div class="col">
-                  <p><i class="fa-solid fa-book"></i> <%= resource.subject %></p>
+                  <p><i class="fa-solid fa-book"></i><br> <%= resource.subject %></p>
                 </div>
                 <div class="col">
-                  <p><i class="fa-solid fa-user"></i> <%= resource.student_age %> years</p>
+                  <p><i class="fa-solid fa-user"></i><br> <%= resource.student_age %> years</p>
+                </div>
+                                <div class="col">
+                  <p><i class="fa-solid fa-chalkboard"></i><br> <%= resource.resource_type %></p>
                 </div>
                 <%# <p><%= resource.description</p>  %>
               </div>
