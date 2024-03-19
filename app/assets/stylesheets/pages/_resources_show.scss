@@ -41,23 +41,27 @@ padding-top: 40px;
 
 .title-resource-class {
   font-weight: bold;
+  color: #cd853f;
   // display: flex;
   text-align: center;
 }
 
 .resource-description {
   height: 170px;
-  width: 500px;
+  width: 600px;
   border-radius: 15px;
-  background-color: white;
-  color: black;
-  font-size: 16px;
-  padding-top: 15px;
-  padding-left: 25px;
-  padding-right: 25px;
+  color: #634c3b;
+  font-size: 14px;
+  // padding-top: 15px;
+  // padding-left: 25px;
+  // padding-right: 25px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: inset 6px 6px 8px #d3d3d3;
+}
+
+iframe {
+  height: 338px;
+  width: 600px;
 }
 
 .description-pdf-container {
