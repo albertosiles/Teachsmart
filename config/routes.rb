@@ -26,4 +26,9 @@ Rails.application.routes.draw do
   # Custom route for creating a bookmark
   post '/resources/:id/bookmark', to: 'bookmarks#create', as: 'bookmark_resource'
 
+  # Chat routes
+  resources :chatrooms, only: [:show, :new, :create] do
+    resources :messages, only: :create
+  end
+
 end
