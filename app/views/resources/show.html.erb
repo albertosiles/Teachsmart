@@ -19,25 +19,20 @@
 <%#= cl_image_tag @resource.file.key, height: 300, width: 400, crop: :fill %>
 
 <main>
-  <div class="d-flex justify-content-between align-items-top">
-    <h1 class="title-resource-class"><%= @resource.title %></h1>
+  <h1 class="text-center title-resource-class"><%= @resource.title %></h1>
     <br>
-  </div>
-  <br>
-  <div class="d-flex justify-content-between">
-    <div class="d-flex flex-column">
-      <div class="circle">
-        <div class="circle-text">Category: <h6><%= @resource.category %></h6></div>
-      </div>
-      <div class="circle">
-        <div class="circle-text">Category: <h6><%= @resource.category %></h6></div>
-      </div>
+      <div class="d-flex justify-content-between align-items-top">
+        <div class="circle">
+          <div class="circle-text">Student age: <h3><%= @resource.student_age %></h3></div>
+            </div>
+              <div class="resource-description">
+                <%= @resource.description %>
+              </div>
+            <div class="circle">
+          <div class="circle-text">Subject: <h6><%= @resource.subject %></h6></div>
+        </div>
     </div>
-    <div>
-      <div class="description-pdf-container">
-        <div class="resource-description">
-          <%= @resource.description %>
-        </div><br>
+        <br>
         <div class="uploaded-pdf">
           <!-- Display multiple files in the view. Needs to be placed in the desired position --->
             <% @resource.files.each do |file| %>
@@ -46,15 +41,15 @@
         </div>
       </div>
     </div>
-    <div class="d-flex flex-column">
       <div class="circle">
-        <div class="circle-text">Category: <h6><%= @resource.category %></h6></div>
-      </div>
-      <div class="circle">
-        <div class="circle-text">Category: <h6><%= @resource.category %></h6></div>
-      </div>
-    </div>
-  </div>
+          <div class="circle-text">Resource type: <h6><%= @resource.resource_type %></h6></div>
+            </div>
+                  <iframe src="../resources/files/simple_algebra_practice.pdf" width="600px" frameborder="0" loading= "lazy"></iframe>
+                <div class="circle">
+                <div class="circle-text">Category: <h6><%= @resource.category %></h6></div>
+              </div>
+            </div>
+        </div>
 
   <br>
   <br>
