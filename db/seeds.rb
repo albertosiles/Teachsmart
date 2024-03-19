@@ -50,8 +50,16 @@ puts "Profiles created"
 # puts "Profile pictures created"
 
 puts "Creating resources..."
-resource_basic_algebra = Resource.create!(title: "Basic Algebra", description: "Introduction to simple equations", subject: "Mathematics", student_age: 11, category: "Algebra", resource_type: "Worksheets", user: user_Julia)
-resource_past_tense = Resource.create!(title: "Past Tense", description: "Past tenses in German", subject: "German", student_age: 12, category: "Grammar", resource_type: "Worksheet", user: user_Julia)
+resource_basic_algebra = Resource.create!(
+  title: "Basic Algebra",
+  description: "Introduction to simple equations",
+  subject: "Mathematics",
+  student_age: 11,
+  category: "Algebra",
+  resource_type: "Worksheets",
+  user: user_Julia,
+  cloudinary_photo_key: "math_an6io6")
+resource_past_tense = Resource.create!(title: "Past Tense", description: "Past tenses in German", subject: "German", student_age: 12, category: "Grammar", resource_type: "Worksheets", user: user_Julia)
 resource_states = Resource.create!(title: "States", description: "Map of USA showing states", subject: "Geography", student_age: 14, category: "Political geography", resource_type: "Slides", user: user_Thomas)
 resource_presentation = Resource.create!(title: "The Visible Spectrum", description: "Great resource for physics teachers", subject: "Physics", student_age: 14, category: "Light", resource_type: "Slides", user: user_Julia)
 resource_formal_letters = Resource.create!(title: "Writing Formal Letters", description: "Introduction to using formal style in letter writing", subject: "English", student_age: 15, category: "Practice", resource_type: "Worksheets", user: user_Julia)
@@ -61,13 +69,13 @@ resource_hydrological_cycle = Resource.create!(title: "Rain in the UK", descript
 resource_relational_databases = Resource.create!(title: "SQL Commands", description: "Learners explore increasingly challenging SQL commands", subject: "Computing", student_age: 15, category: "Databases", resource_type: "Worksheets", user: user_Julia)
 resource_early_history = Resource.create!(title: "The Romans", description: "Everyday life in ancient Rome", subject: "History", student_age: 13, category: "Early history", resource_type: "Video", user: user_Albert)
 resource_add_decimals = Resource.create!(title: "Add decimals", description: "Common fractions and decimals, adding decimals (tenths and hundredths)", subject: "Mathematics", student_age: 11, category: "Decimals", resource_type: "Slides", user: user_Albert)
-resource_fractions = Resource.create!(title: "Add and substract fractions", description: "Adding and subtracting fractions with unlike denominators", subject: "Mathematics", student_age: 11, category: "Fractions", resource_type: "Worksheet", user: user_Julia)
-resource_multi_digit_multiplication = Resource.create!(title: "Multi-digit multiplication", description: "Multi-digit multiplication estimation, multiplication as scaling and multiplying mixed numbers", subject: "Mathematics", student_age: 11, category: "Multiplication", resource_type: "Worksheet", user: user_Albert)
-resource_volumes = Resource.create!(title: "Calculating volumes", description: "Volume with unit cubes, rectangular prisms and volume word problems", subject: "Mathematics", student_age: 12, category: "Volumes", resource_type: "Worksheet", user: user_Vivien)
+resource_fractions = Resource.create!(title: "Add and substract fractions", description: "Adding and subtracting fractions with unlike denominators", subject: "Mathematics", student_age: 11, category: "Fractions", resource_type: "Worksheets", user: user_Julia)
+resource_multi_digit_multiplication = Resource.create!(title: "Multi-digit multiplication", description: "Multi-digit multiplication estimation, multiplication as scaling and multiplying mixed numbers", subject: "Mathematics", student_age: 11, category: "Multiplication", resource_type: "Worksheets", user: user_Albert)
+resource_volumes = Resource.create!(title: "Calculating volumes", description: "Volume with unit cubes, rectangular prisms and volume word problems", subject: "Mathematics", student_age: 12, category: "Volumes", resource_type: "Worksheets", user: user_Vivien)
 resource_converting_units = Resource.create!(title: "Converting units of measure", description: "Converting units of time, metric units and metric units word problems", subject: "Mathematics", student_age: 12, category: "Units", resource_type: "Slides", user: user_Julia)
 resource_unknown_variable = Resource.create!(title: "Solving equations with unknown variable", description: "Equations with variables on both sides and with parantheses", subject: "Mathematics", student_age: 14, category: "Algebra", resource_type: "Practice", user: user_Thomas)
 resource_complex_numbers = Resource.create!(title: "Complex numbers and quadratic equations", description: "Complex numbers of quadratic equations, algebraic properties of complex numbers and the square root of a complex number", subject: "Mathematics", student_age: 16, category: "Algebra", resource_type: "Practice", user: user_Thomas)
-resource_linear_inequalities = Resource.create!(title: "Linear inequalities", description: "Algebraic solutions of linear inequalities in one variable, graphical solution of linear inequalities in two variables", subject: "Mathematics", student_age: 16, category: "Inequalities", resource_type: "Worksheet", user: user_Vivien)
+resource_linear_inequalities = Resource.create!(title: "Linear inequalities", description: "Algebraic solutions of linear inequalities in one variable, graphical solution of linear inequalities in two variables", subject: "Mathematics", student_age: 16, category: "Inequalities", resource_type: "Worksheets", user: user_Vivien)
 resource_binomial_theorem = Resource.create!(title: "Binomial Theorem", description: "Statement and proof for positive integral indices, Pascal’s triangle and Binomial Expansion", subject: "Mathematics", student_age: 16, category: "AlgebraAlgebra", resource_type: "Practice", user: user_Thomas)
 resource_derivatives = Resource.create!(title: "Limits and derivatives", description: "Definition of derivative and relation to the scope of the tangent of the curve", subject: "Mathematics", student_age: 16, category: "Calculus", resource_type: "Practice", user: user_Bridget)
 resource_essentials_scratch = Resource.create!(title: "Programming essentials in Scratch", description: "Sequence and variables, operators and count-controlled iteration", subject: "Computing", student_age: 15, category: "Scratch", resource_type: "Worksheets", user: user_Bridget)
