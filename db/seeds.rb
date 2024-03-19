@@ -112,7 +112,7 @@ resource_derivatives.photos.attach(io: File.open(file_path_maths), filename: 'ma
 file_path_computing = Rails.root.join('db', 'seeds', 'images', 'computing.jpg')
 resource_linear_inequalities.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
 resource_essentials_scratch.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
-resource_modeling_data .photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
+resource_modeling_data.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
 resource_relational_advances_scratch.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
 resource_computer_networks.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
 resource_vector_graphics.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
@@ -120,6 +120,7 @@ resource_python.photos.attach(io: File.open(file_path_computing), filename: 'com
 resource_data_science.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
 resource_relational_cybersecurity.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
 resource_creating_media.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
+resource_relational_databases.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
 
 file_path_german = Rails.root.join('db', 'seeds', 'images', 'language.jpg')
 resource_past_tense.photos.attach(io: File.open(file_path_german), filename: 'language.jpg')
