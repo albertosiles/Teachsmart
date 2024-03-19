@@ -25,29 +25,35 @@ puts "Users created"
 
 
 puts "Creating profiles..."
-profile_Julia = Profile.create!(user: user_Julia, first_name: "Julia", last_name: "Hernandez", description: "My name is Julia, I'm a passionate teacher for grades 5-12 and have been working in several schools for the last 10 years. I believe that we teachers have to support each other much more, e.g. for creating teaching material and in pedagogical questions. Let's network!")
+profile_Julia = Profile.create!(user: user_Julia,
+  first_name: "Julia",
+  last_name: "Hernandez",
+  description: "My name is Julia, I'm a passionate teacher for grades 5-12 and have been working
+  in several schools for the last 10 years. I believe that we teachers have to support each other much more,
+  e.g. for creating teaching material and in pedagogical questions. Let's network!",
+   )
 profile_Albert = Profile.create!(user: user_Albert, first_name: "Albert", last_name: "Einstein", description: "Hi everyone, Albert here. I'm a total Math nerd and have been teaching Math for many years now. So if there are any Math questions coming up, I'm your guy :) Other subjects like Computing are interesting as well, but Math rules!")
 profile_Bridget = Profile.create!(user: user_Bridget, first_name: "Bridget", last_name: "Jones", description: "As a junior teacher and young mother, I have to admit that I am sometimes overwhelmed with all the material I have to prepare for classes. Thank God I found TeachSmart and thank you everyone for sharing your teaching resources!")
 profile_Thomas = Profile.create!(user: user_Thomas, first_name: "Thomas", last_name: "Jones", description: "My name is Thomas, but everyone calls me Teacher Tom. I have been teaching kids for a correspondence school for some time now and had to master many pedagogical challenges by only working remote and seeing my students on screens only. Happy to connect with you (online again, haha) and share insights into how you all manage everyday teacher life :)")
 profile_Vivien = Profile.create!(user: user_Vivien, first_name: "Vivien", last_name: "Smith", description: "Hi fellow teachers, I'm Viv (short for Vivien). I'm kind of new here and am happy for any helpful hints and ideas on how to create some creative lessons for my students.")
 puts "Profiles created"
 
-# puts "Creating profile pictures..."
-# file_path_julia = Rails.root.join('app', 'assets', 'images', 'Julia.jpg')
-# profile_Julia.photo.attach(io: File.open(file_path_julia), filename: 'Julia.jpg')
+puts "Creating profile pictures..."
+file_path_julia = Rails.root.join('db', 'seeds', 'images', 'Julia.jpg')
+profile_Julia.photo.attach(io: File.open(file_path_julia), filename: 'Julia.jpg')
 
-# file_path_albert = Rails.root.join('db', 'seeds', 'images', 'Albert.jpg')
-# profile_Albert.photo.attach(io: File.open(file_path_albert), filename: 'Albert.jpg')
+file_path_albert = Rails.root.join('db', 'seeds', 'images', 'Albert.jpg')
+profile_Albert.photo.attach(io: File.open(file_path_albert), filename: 'Albert.jpg')
 
-# file_path_bridget = Rails.root.join('db', 'seeds', 'images', 'Bridget.jpg')
-# profile_Bridget.photo.attach(io: File.open(file_path_bridget), filename: 'Bridget.jpg')
+file_path_bridget = Rails.root.join('db', 'seeds', 'images', 'Bridget.jpg')
+profile_Bridget.photo.attach(io: File.open(file_path_bridget), filename: 'Bridget.jpg')
 
-# file_path_thomas = Rails.root.join('db', 'seeds', 'images', 'Thomas.jpg')
-# profile_Thomas.photo.attach(io: File.open(file_path_thomas), filename: 'Thomas.jpg')
+file_path_thomas = Rails.root.join('db', 'seeds', 'images', 'Thomas.jpg')
+profile_Thomas.photo.attach(io: File.open(file_path_thomas), filename: 'Thomas.jpg')
 
-# file_path_vivien = Rails.root.join('db', 'seeds', 'images', 'Vivien.jpg')
-# profile_Vivien.photo.attach(io: File.open(file_path_vivien), filename: 'Vivien.jpg')
-# puts "Profile pictures created"
+file_path_vivien = Rails.root.join('db', 'seeds', 'images', 'Vivien.jpg')
+profile_Vivien.photo.attach(io: File.open(file_path_vivien), filename: 'Vivien.jpg')
+puts "Profile pictures created"
 
 puts "Creating resources..."
 resource_basic_algebra = Resource.create!(
@@ -87,6 +93,51 @@ resource_data_science = Resource.create!(title: "Introduction to data science", 
 resource_relational_cybersecurity = Resource.create!(title: "Introduction to Cybersecurity", description: "Basic introduction, privacy policies and Social Engineering", subject: "Computing", student_age: 15, category: "Cybersecurity", resource_type: "Worksheets", user: user_Vivien)
 resource_creating_media = Resource.create!(title: "Creating media", description: "Creating templates, layouts and edited media", subject: "Computing", student_age: 14, category: "Media", resource_type: "Slides", user: user_Thomas)
 puts "Resources created"
+
+puts "Attaching resource images"
+file_path_maths = Rails.root.join('db', 'seeds', 'images', 'math.jpg')
+resource_basic_algebra.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+resource_fractions_and_decimals.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+resource_charts_and_graphs.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+resource_add_decimals.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+resource_fractions.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+resource_multi_digit_multiplication.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+resource_volumes.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+resource_converting_units.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+resource_unknown_variable.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+resource_complex_numbers.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+resource_binomial_theorem.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+resource_derivatives.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+
+file_path_computing = Rails.root.join('db', 'seeds', 'images', 'computing.jpg')
+resource_linear_inequalities.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
+resource_essentials_scratch.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
+resource_modeling_data .photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
+resource_relational_advances_scratch.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
+resource_computer_networks.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
+resource_vector_graphics.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
+resource_python.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
+resource_data_science.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
+resource_relational_cybersecurity.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
+resource_creating_media.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
+
+file_path_german = Rails.root.join('db', 'seeds', 'images', 'language.jpg')
+resource_past_tense.photos.attach(io: File.open(file_path_german), filename: 'language.jpg')
+
+file_path_geography = Rails.root.join('db', 'seeds', 'images', 'geography.jpg')
+resource_states.photos.attach(io: File.open(file_path_geography), filename: 'geography.jpg')
+resource_hydrological_cycle.photos.attach(io: File.open(file_path_geography), filename: 'geography.jpg')
+
+file_path_physics = Rails.root.join('db', 'seeds', 'images', 'physics.jpg')
+resource_presentation.photos.attach(io: File.open(file_path_physics), filename: 'physics.jpg')
+
+file_path_english = Rails.root.join('db', 'seeds', 'images', 'english.jpg')
+resource_formal_letters.photos.attach(io: File.open(file_path_english), filename: 'english.jpg')
+
+file_path_history = Rails.root.join('db', 'seeds', 'images', 'history.jpg')
+resource_early_history.photos.attach(io: File.open(file_path_history), filename: 'history.jpg')
+puts "Images attached"
+
 
 puts "Creating reviews..."
 review_algebra_first = Review.create!(rating: 4, content: "Well-designed with right amount of challenge", resource: resource_basic_algebra, user: user_Albert)
