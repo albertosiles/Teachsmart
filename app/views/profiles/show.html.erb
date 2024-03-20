@@ -7,10 +7,10 @@
       </h3>
       <% if current_user.resources.any? %>
         <%= link_to my_uploaded_resources_path, class: "uploaded-materials link-button" do %>
-            <p><%= current_user.resources.count %> Uploaded Materials</p><br>
+            <h5><%= current_user.resources.count %> Uploaded Materials</h5><br>
         <% end %>
       <% else %>
-        <p class="uploaded-materials">No materials uploaded yet</p>
+        <br><h5 class="uploaded-materials">No materials uploaded yet</h5><br>
       <% end %>
       <p class="profile-description">"<%= @profile.description %>"</p><br><br>
     </div>
