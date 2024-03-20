@@ -6,7 +6,7 @@
       <h2 class="profile-show-name">
         <strong><%= @profile.first_name %> <%= @profile.last_name %></strong>
       </h2><br>
-      <p class="profile-description">"<%= @profile.description %>"</p>
+      <p class="profile-description"><%= @profile.description %></p>
       <% if current_user.resources.any? %>
         <%= link_to my_uploaded_resources_path, class: "uploaded-materials link-button" do %>
             <h5><%= current_user.resources.count %> Uploaded materials</h5>
