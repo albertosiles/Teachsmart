@@ -7,6 +7,7 @@
 .h1-teaching-materials {
   margin-top: 10px;
   color: white;
+  font-size: 44px;
 }
 
 .btn-filter {
@@ -66,9 +67,11 @@
   padding: 20px;
 }
 
-.card-resource h2 {
+.h2-cards {
   color: black;
+  font-size: 38px;
 }
+
 .card-resource:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }

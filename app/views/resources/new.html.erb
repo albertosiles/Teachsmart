@@ -1,6 +1,6 @@
 <br><br><body class="new-upload-body">
-<div class="container-upload-materials"><br>
-  <h2>Upload your teaching materials:</h2><br>
+<h2 class="h2-upload">Upload your teaching materials:</h2><br>
+<div class="container-upload-materials">
     <%= simple_form_for(@resource, html: { class: 'form-new-upload' }) do |f| %>
         Title: <%= f.input :title, label: false %><br>
         Description: <%= f.input :description, as: :text, input_html: { rows: 4 }, label: false %><br>
