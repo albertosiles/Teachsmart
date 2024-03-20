@@ -1,5 +1,5 @@
 .container-upload-materials {
-  background-color: #e8e8e6;
+  background: radial-gradient(circle at top, rgb(84, 204, 228) , #cef2f2);
   height: auto;
   width: 50%;
   margin: 20px auto;
@@ -21,13 +21,18 @@ h2 {
 // }
 
 .btn-upload-materials {
-  background-color: rgb(34, 15, 78);
+  background-color: #fab323;
   color: white;
   border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.btn-upload-materials:hover {
+  background-color: #0e5d6d;
 }
 
 .new-upload-body {
-  background-color: #7a6ad8;
+  background-color:#116c7e;
 }
 
 .form-new-upload {
