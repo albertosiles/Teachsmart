@@ -1,10 +1,11 @@
+<body class="profile-body">
+<br><h1>My profile</h1>
 <div class="container-profile-show">
   <div class="profile-info">
-    <h1>My profile</h1>
     <div class="profile-details">
-      <h3 class="profile-show-name">
+      <h2 class="profile-show-name">
         <strong><%= @profile.first_name %> <%= @profile.last_name %></strong>
-      </h3>
+      </h2>
       <% if current_user.resources.any? %>
         <%= link_to my_uploaded_resources_path, class: "uploaded-materials link-button" do %>
             <h5><%= current_user.resources.count %> Uploaded Materials</h5><br>
@@ -32,4 +33,5 @@
     <% end %>
   </div>
 </div>
+</body>
 <br><br>

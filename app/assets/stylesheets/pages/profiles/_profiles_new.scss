@@ -1,7 +1,7 @@
 .container-profile-new {
-  background-color: #f2f0e5;
+  background: radial-gradient(circle at top, rgb(84, 204, 228) , #cef2f2);
   height: auto;
-  width: 60%;
+  width: 50%;
   margin: 20px auto;
   border: 1px solid grey;
   padding: 15px;
@@ -15,14 +15,22 @@
     }
 }
 
-// .strong-label {
-//   color:orange;
-// }
+.profile-new {
+  background-color:#116c7e;
+}
 
 .btn-profile-new {
-  background-color: rgb(129, 69, 10);
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-right: 25px;
+  background-color: #0e5d6d;
   color: white;
-  outline: none;
+}
+
+.btn-secondary {
+  border-radius: 5px;
+  padding: 10px 20px;
+
 }
 
 .btn-profile-new:hover {

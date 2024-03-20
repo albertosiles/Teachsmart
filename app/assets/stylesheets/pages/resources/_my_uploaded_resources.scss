@@ -16,7 +16,8 @@
 }
 
 .my-uploads-body {
-  background-color:#7a6ad8;
+  background-color:#116c7e;
+
 }
 
 .my-uploads-title {
@@ -44,7 +45,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
 }
 
 .resource-image {
@@ -55,23 +56,25 @@
 }
 
 .btn-upload {
-  background-color: rgb(34, 15, 78);
+  background-color: #fab323;
   color:white;
   border-radius: 5px;
+  padding: 10px 20px;
 }
 
 .btn-upload:hover {
-  background-color: black;
+  background-color: #0e5d6d;
   color: white;
 }
 
 .btn-secondary {
   border-radius: 5px;
+  padding: 10px 20px;
 }
 
-.col p {
-  color: rgb(34, 15, 78);
-}
+// .col p {
+//   color: rgb(34, 15, 78);
+// }
 
 h1 {
   margin-top: 10px;
