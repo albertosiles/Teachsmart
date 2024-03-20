@@ -41,9 +41,15 @@
   padding: 30px;
 }
 
-h1 {
+.h1-profile-show {
   color: white;
   text-align: center;
+  font-size: 40px;
+}
+
+.h2-profile-show-name {
+  font-size: 36px;
+  color: black;
 }
 
 .profile-details h5 {
@@ -51,10 +57,10 @@ h1 {
 }
 
 
-.profile-show-name,
-.uploaded-materials {
+.profile-show-name, .uploaded-materials {
   margin: 10px auto;
   max-width: 100%;
+  color: black;
 }
 
 .profile-description {
