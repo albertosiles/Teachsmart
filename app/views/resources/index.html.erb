@@ -1,23 +1,21 @@
 <body class="index-body">
 <br><h1 class="h1-teaching-materials">Teaching materials</h1>
-<br>
+<br><br>
 <div class="teaching-materials-container">
   <%= form_with url: resources_path, method: :get do %>
     <div class="row">
       <div class="col-md-3 mb-3">
         <div class="form-group">
-          <%= label_tag :subject, "Subject:" %>
-          <%= select_tag :subject, options_for_select(@subjects, params[:subject]), include_blank: "All Subjects", class: "form-control" %>
+          <%= select_tag :subject, options_for_select(@subjects, params[:subject]), include_blank: "All Subjects", class: "form-control bold-text" %>
         </div>
       </div>
       <div class="col-md-3 mb-3">
         <div class="form-group">
-          <%= label_tag :student_age, "Student Age:" %>
-          <%= select_tag :student_age, options_for_select(@student_ages, params[:student_age]), include_blank: "All Ages", class: "form-control" %>
+          <%= select_tag :student_age, options_for_select(@student_ages, params[:student_age]), include_blank: "All Ages", class: "form-control bold-text" %>
         </div>
       </div>
       <div class="col-md-3 mb-3 align-self-end">
-        <%= submit_tag "Filter", class: "btn btn-filter btn-block" %>
+        <%= submit_tag "Find", class: "btn btn-filter btn-block" %>
       </div>
     </div>
   <% end %>

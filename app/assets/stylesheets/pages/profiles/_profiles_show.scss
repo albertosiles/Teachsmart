@@ -46,6 +46,11 @@ h1 {
   text-align: center;
 }
 
+.profile-details h5 {
+  text-align: left;
+}
+
+
 .profile-show-name,
 .uploaded-materials {
   margin: 10px auto;
@@ -57,7 +62,7 @@ h1 {
   font-size: 22px;
 }
 
-.uploaded-materials.link-button {
+.uploaded-materials.link-button, .bookmarks-link-button {
   color: #0e5d6d;
   text-decoration: none;
   cursor: pointer;

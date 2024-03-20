@@ -13,11 +13,17 @@
   background-color: #fab323;
   color: black;
   border-radius: 10px;
+  width: 100px;
+  font-size: 24px;
 }
 
 .btn-filter:hover {
   background-color: black;
   color: white;
+}
+
+.bold-text {
+  font-weight: bold;
 }
 
 .index-icon {
@@ -42,6 +48,9 @@
 
 .form-group label {
   color: white;
+}
+.form-control {
+  height: 50px;
 }
 
 .card-resource {
