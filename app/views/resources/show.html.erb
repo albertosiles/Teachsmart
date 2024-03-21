@@ -53,8 +53,8 @@
         </div>
         <br>
       <div class="d-flex justify-content-evenly author">
-          <p> Author: <%= @resource.user.profile.first_name %></p>
-          <p class= "plain-links"><i class="fa-regular fa-comments"></i> <%= link_to "Chat with author", "#" %> </p>
+          <p class="fixed-width"> Author: <%= @resource.user.profile.first_name %></p>
+          <p class= "fixed-width plain-links"><i class="fa-regular fa-comments"></i> <%= link_to "Chat with author", "#" %> </p>
       </div>
 
   <br>
@@ -66,13 +66,17 @@
       <%= button_to 'Bookmark', bookmark_resource_path(@resource), method: :post, class: "showpage-btn" %>
     <% end %>
 
-    <button class="showpage-btn">Add Review</button>
+    <button class="showpage-btn"><%= link_to "Add a Review", new_resource_review_path(@resource) %></button>
   </div>
     <br>
     <br>
   <div class="d-flex justify-content-evenly">
   <% if @resource.user == current_user %>
-    <p class="plain-links"><%= link_to "Edit", edit_resource_path(@resource) %></p>
+    <p class="plain-links">
+      <%= link_to edit_resource_path(@resource) do %>
+      <i class="fa-solid fa-pen-to-square"></i>
+    <% end %>
+    </p>
     <p class="plain-links"><%= link_to 'Delete', resource_path(@resource), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></p>
   <% end %>
   </div>
