@@ -19,21 +19,26 @@
   background-color:#116c7e;
 }
 
+.btn-profile-new,
+.btn-maybe {
+  border-radius: 5px;
+  padding: 10px 20px; /* Adjusted padding */
+  margin-right: 10px; /* Add margin between buttons */
+}
+
 .btn-profile-new {
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin-right: 25px;
-  background-color: #0e5d6d;
+  background-color: #fab323;
+  color: black;
+}
+
+.btn-maybe {
+background-color: grey;
   color: white;
+  padding: 10px 20px; /* Same padding as btn-profile-new */
 }
 
-.btn-secondary {
-  border-radius: 5px;
-  padding: 10px 20px;
-
-}
-
-.btn-profile-new:hover {
+.btn-profile-new:hover,
+.btn-maybe:hover {
   background-color: black;
   color: white;
 }

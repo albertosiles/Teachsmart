@@ -60,6 +60,7 @@
   gap: 30px;
 }
 
+
 .resource-image {
   height: auto;
   width: 100%;
@@ -69,19 +70,26 @@
 
 .btn-upload {
   background-color: #fab323;
-  color:white;
+  color:black;
   border-radius: 5px;
   padding: 10px 20px;
+  font-size: 24px;
 }
 
 .btn-upload:hover {
-  background-color: #0e5d6d;
+  background-color: black;
   color: white;
 }
 
 .btn-secondary {
   border-radius: 5px;
   padding: 10px 20px;
+  font-size: 24px;
+}
+
+.btn-upload:hover {
+  background-color: black;
+  color: white;
 }
 
 // .col p {

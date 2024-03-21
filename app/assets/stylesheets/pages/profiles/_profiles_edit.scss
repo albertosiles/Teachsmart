@@ -37,13 +37,15 @@ h1 {
 
 .container-profile-edit .form-actions input[type="submit"] {
   background-color: #fab323;
-  color: white;
-  padding: 10px 20px; /* Add padding to increase space */
-  margin-right: 20px; /* Add margin between buttons */
-  border-radius: 5px; /* Round the borders */
-  border: none; /* Remove default border */
+  color: black;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  font-size: 24px;
 }
 
 .container-profile-edit .form-actions input[type="submit"]:hover {
-  background-color: black; /* Change background color to black on hover */
+  background-color: black;
+  color: white;/* Change background color to black on hover */
 }

@@ -23,13 +23,15 @@ h2 {
 
 .btn-upload-materials {
   background-color: #fab323;
-  color: white;
+  color: black;
   border-radius: 5px;
+  font-size: 22px;
   border: 1px solid grey;
 }
 
 .btn-upload-materials:hover {
-  background-color: #0e5d6d;
+  background-color: black;
+  color: white;
 }
 
 .new-upload-body {
@@ -38,9 +40,4 @@ h2 {
 
 .form-new-upload {
   color: rgb(34, 15, 78);
-}
-
-.btn-upload-materials:hover {
-  background-color: black;
-  color: white;
 }

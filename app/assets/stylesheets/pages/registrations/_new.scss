@@ -13,10 +13,13 @@
 
 
   .btn-signup {
-    background-color: #fab323;
-    color: white;
-    border-radius: 5px;
-  }
+      background-color: #fab323;
+      color:black;
+      border-radius: 5px;
+      padding: 10px 20px;
+      border: 1px solid grey;
+    }
+
 
   .btn-signup:hover {
     background-color: black;
