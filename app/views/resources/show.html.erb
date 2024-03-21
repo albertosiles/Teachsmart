@@ -77,7 +77,10 @@
       <i class="fa-solid fa-pen-to-square"></i>
     <% end %>
     </p>
-    <p class="plain-links"><%= link_to 'Delete', resource_path(@resource), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></p>
+    <p class="plain-links"><%= link_to resource_path(@resource), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+      <i class="fa-solid fa-trash"></i>
+      <% end %>
+    </p>
   <% end %>
   </div>
   <br>
