@@ -1,9 +1,37 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Mako&family=Viga&family=Wellfleet&display=swap');
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+// $body-font: "Work Sans", "Helvetica", "sans-serif";
+// $headers-font: "Nunito", "Helvetica", "sans-serif";
+
+$body-font: "Mako", "Helvetica", "sans-serif";
+$headers-font: "Hammersmith One", "Helvetica", "sans-serif";
+
+.mako-regular {
+  font-family: "Mako", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+.wellfleet-regular {
+  font-family: "Wellfleet", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hammersmith-one-regular {
+  font-family: "Hammersmith One", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.viga-regular {
+  font-family: "Viga", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

@@ -30,5 +30,7 @@ Rails.application.routes.draw do
   resources :chatrooms, only: [:show, :new, :create] do
     resources :messages, only: :create
   end
+  # Route to serve static PDF files
+  get '/resources/files/:filename', to: 'static_files#show_pdf'
 
 end

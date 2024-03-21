@@ -26,29 +26,35 @@ puts "Users created"
 
 
 puts "Creating profiles..."
-profile_Julia = Profile.create!(user: user_Julia, first_name: "Julia", last_name: "Hernandez", description: "My name is Julia, I'm a passionate teacher for grades 5-12 and have been working in several schools for the last 10 years. I believe that we teachers have to support each other much more, e.g. for creating teaching material and in pedagogical questions. Let's network!")
+profile_Julia = Profile.create!(user: user_Julia,
+  first_name: "Julia",
+  last_name: "Hernandez",
+  description: "My name is Julia, I'm a passionate teacher for grades 5-12 and have been working
+  in several schools for the last 10 years. I believe that we teachers have to support each other much more,
+  e.g. for creating teaching material and in pedagogical questions. Let's network!",
+   )
 profile_Albert = Profile.create!(user: user_Albert, first_name: "Albert", last_name: "Einstein", description: "Hi everyone, Albert here. I'm a total Math nerd and have been teaching Math for many years now. So if there are any Math questions coming up, I'm your guy :) Other subjects like Computing are interesting as well, but Math rules!")
 profile_Bridget = Profile.create!(user: user_Bridget, first_name: "Bridget", last_name: "Jones", description: "As a junior teacher and young mother, I have to admit that I am sometimes overwhelmed with all the material I have to prepare for classes. Thank God I found TeachSmart and thank you everyone for sharing your teaching resources!")
 profile_Thomas = Profile.create!(user: user_Thomas, first_name: "Thomas", last_name: "Jones", description: "My name is Thomas, but everyone calls me Teacher Tom. I have been teaching kids for a correspondence school for some time now and had to master many pedagogical challenges by only working remote and seeing my students on screens only. Happy to connect with you (online again, haha) and share insights into how you all manage everyday teacher life :)")
 profile_Vivien = Profile.create!(user: user_Vivien, first_name: "Vivien", last_name: "Smith", description: "Hi fellow teachers, I'm Viv (short for Vivien). I'm kind of new here and am happy for any helpful hints and ideas on how to create some creative lessons for my students.")
 puts "Profiles created"
 
-# puts "Creating profile pictures..."
-# file_path_julia = Rails.root.join('app', 'assets', 'images', 'Julia.jpg')
-# profile_Julia.photo.attach(io: File.open(file_path_julia), filename: 'Julia.jpg')
+puts "Creating profile pictures..."
+file_path_julia = Rails.root.join('db', 'seeds', 'images', 'Julia.jpg')
+profile_Julia.photo.attach(io: File.open(file_path_julia), filename: 'Julia.jpg')
 
-# file_path_albert = Rails.root.join('db', 'seeds', 'images', 'Albert.jpg')
-# profile_Albert.photo.attach(io: File.open(file_path_albert), filename: 'Albert.jpg')
+file_path_albert = Rails.root.join('db', 'seeds', 'images', 'Albert.jpg')
+profile_Albert.photo.attach(io: File.open(file_path_albert), filename: 'Albert.jpg')
 
-# file_path_bridget = Rails.root.join('db', 'seeds', 'images', 'Bridget.jpg')
-# profile_Bridget.photo.attach(io: File.open(file_path_bridget), filename: 'Bridget.jpg')
+file_path_bridget = Rails.root.join('db', 'seeds', 'images', 'Bridget.jpg')
+profile_Bridget.photo.attach(io: File.open(file_path_bridget), filename: 'Bridget.jpg')
 
-# file_path_thomas = Rails.root.join('db', 'seeds', 'images', 'Thomas.jpg')
-# profile_Thomas.photo.attach(io: File.open(file_path_thomas), filename: 'Thomas.jpg')
+file_path_thomas = Rails.root.join('db', 'seeds', 'images', 'Thomas.jpg')
+profile_Thomas.photo.attach(io: File.open(file_path_thomas), filename: 'Thomas.jpg')
 
-# file_path_vivien = Rails.root.join('db', 'seeds', 'images', 'Vivien.jpg')
-# profile_Vivien.photo.attach(io: File.open(file_path_vivien), filename: 'Vivien.jpg')
-# puts "Profile pictures created"
+file_path_vivien = Rails.root.join('db', 'seeds', 'images', 'Vivien.jpg')
+profile_Vivien.photo.attach(io: File.open(file_path_vivien), filename: 'Vivien.jpg')
+puts "Profile pictures created"
 
 puts "Creating chatrooms..."
 chat_Julia = Chatroom.create!(name: "Julia")
@@ -59,8 +65,15 @@ chat_Vivien = Chatroom.create!(name: "Vivien")
 puts "Chatrooms created"
 
 puts "Creating resources..."
-resource_basic_algebra = Resource.create!(title: "Basic Algebra", description: "Introduction to simple equations", subject: "Mathematics", student_age: 11, category: "Algebra", resource_type: "Worksheets", user: user_Julia)
-resource_past_tense = Resource.create!(title: "Past Tense", description: "Past tenses in German", subject: "German", student_age: 12, category: "Grammar", resource_type: "Worksheet", user: user_Julia)
+resource_basic_algebra = Resource.create!(
+  title: "Basic Algebra",
+  description: "Introduction to simple equations",
+  subject: "Mathematics",
+  student_age: 11,
+  category: "Algebra",
+  resource_type: "Worksheets",
+  user: user_Julia)
+resource_past_tense = Resource.create!(title: "Past Tense", description: "Past tenses in German", subject: "German", student_age: 12, category: "Grammar", resource_type: "Worksheets", user: user_Julia)
 resource_states = Resource.create!(title: "States", description: "Map of USA showing states", subject: "Geography", student_age: 14, category: "Political geography", resource_type: "Slides", user: user_Thomas)
 resource_presentation = Resource.create!(title: "The Visible Spectrum", description: "Great resource for physics teachers", subject: "Physics", student_age: 14, category: "Light", resource_type: "Slides", user: user_Julia)
 resource_formal_letters = Resource.create!(title: "Writing Formal Letters", description: "Introduction to using formal style in letter writing", subject: "English", student_age: 15, category: "Practice", resource_type: "Worksheets", user: user_Julia)
@@ -70,13 +83,13 @@ resource_hydrological_cycle = Resource.create!(title: "Rain in the UK", descript
 resource_relational_databases = Resource.create!(title: "SQL Commands", description: "Learners explore increasingly challenging SQL commands", subject: "Computing", student_age: 15, category: "Databases", resource_type: "Worksheets", user: user_Julia)
 resource_early_history = Resource.create!(title: "The Romans", description: "Everyday life in ancient Rome", subject: "History", student_age: 13, category: "Early history", resource_type: "Video", user: user_Albert)
 resource_add_decimals = Resource.create!(title: "Add decimals", description: "Common fractions and decimals, adding decimals (tenths and hundredths)", subject: "Mathematics", student_age: 11, category: "Decimals", resource_type: "Slides", user: user_Albert)
-resource_fractions = Resource.create!(title: "Add and substract fractions", description: "Adding and subtracting fractions with unlike denominators", subject: "Mathematics", student_age: 11, category: "Fractions", resource_type: "Worksheet", user: user_Julia)
-resource_multi_digit_multiplication = Resource.create!(title: "Multi-digit multiplication", description: "Multi-digit multiplication estimation, multiplication as scaling and multiplying mixed numbers", subject: "Mathematics", student_age: 11, category: "Multiplication", resource_type: "Worksheet", user: user_Albert)
-resource_volumes = Resource.create!(title: "Calculating volumes", description: "Volume with unit cubes, rectangular prisms and volume word problems", subject: "Mathematics", student_age: 12, category: "Volumes", resource_type: "Worksheet", user: user_Vivien)
+resource_fractions = Resource.create!(title: "Add and substract fractions", description: "Adding and subtracting fractions with unlike denominators", subject: "Mathematics", student_age: 11, category: "Fractions", resource_type: "Worksheets", user: user_Julia)
+resource_multi_digit_multiplication = Resource.create!(title: "Multi-digit multiplication", description: "Multi-digit multiplication estimation, multiplication as scaling and multiplying mixed numbers", subject: "Mathematics", student_age: 11, category: "Multiplication", resource_type: "Worksheets", user: user_Albert)
+resource_volumes = Resource.create!(title: "Calculating volumes", description: "Volume with unit cubes, rectangular prisms and volume word problems", subject: "Mathematics", student_age: 12, category: "Volumes", resource_type: "Worksheets", user: user_Vivien)
 resource_converting_units = Resource.create!(title: "Converting units of measure", description: "Converting units of time, metric units and metric units word problems", subject: "Mathematics", student_age: 12, category: "Units", resource_type: "Slides", user: user_Julia)
 resource_unknown_variable = Resource.create!(title: "Solving equations with unknown variable", description: "Equations with variables on both sides and with parantheses", subject: "Mathematics", student_age: 14, category: "Algebra", resource_type: "Practice", user: user_Thomas)
 resource_complex_numbers = Resource.create!(title: "Complex numbers and quadratic equations", description: "Complex numbers of quadratic equations, algebraic properties of complex numbers and the square root of a complex number", subject: "Mathematics", student_age: 16, category: "Algebra", resource_type: "Practice", user: user_Thomas)
-resource_linear_inequalities = Resource.create!(title: "Linear inequalities", description: "Algebraic solutions of linear inequalities in one variable, graphical solution of linear inequalities in two variables", subject: "Mathematics", student_age: 16, category: "Inequalities", resource_type: "Worksheet", user: user_Vivien)
+resource_linear_inequalities = Resource.create!(title: "Linear inequalities", description: "Algebraic solutions of linear inequalities in one variable, graphical solution of linear inequalities in two variables", subject: "Mathematics", student_age: 16, category: "Inequalities", resource_type: "Worksheets", user: user_Vivien)
 resource_binomial_theorem = Resource.create!(title: "Binomial Theorem", description: "Statement and proof for positive integral indices, Pascal’s triangle and Binomial Expansion", subject: "Mathematics", student_age: 16, category: "AlgebraAlgebra", resource_type: "Practice", user: user_Thomas)
 resource_derivatives = Resource.create!(title: "Limits and derivatives", description: "Definition of derivative and relation to the scope of the tangent of the curve", subject: "Mathematics", student_age: 16, category: "Calculus", resource_type: "Practice", user: user_Bridget)
 resource_essentials_scratch = Resource.create!(title: "Programming essentials in Scratch", description: "Sequence and variables, operators and count-controlled iteration", subject: "Computing", student_age: 15, category: "Scratch", resource_type: "Worksheets", user: user_Bridget)
@@ -89,6 +102,52 @@ resource_data_science = Resource.create!(title: "Introduction to data science", 
 resource_relational_cybersecurity = Resource.create!(title: "Introduction to Cybersecurity", description: "Basic introduction, privacy policies and Social Engineering", subject: "Computing", student_age: 15, category: "Cybersecurity", resource_type: "Worksheets", user: user_Vivien)
 resource_creating_media = Resource.create!(title: "Creating media", description: "Creating templates, layouts and edited media", subject: "Computing", student_age: 14, category: "Media", resource_type: "Slides", user: user_Thomas)
 puts "Resources created"
+
+puts "Attaching resource images"
+file_path_maths = Rails.root.join('db', 'seeds', 'images', 'math.jpg')
+resource_basic_algebra.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+resource_fractions_and_decimals.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+resource_charts_and_graphs.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+resource_add_decimals.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+resource_fractions.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+resource_multi_digit_multiplication.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+resource_volumes.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+resource_converting_units.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+resource_unknown_variable.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+resource_complex_numbers.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+resource_binomial_theorem.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+resource_derivatives.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+
+file_path_computing = Rails.root.join('db', 'seeds', 'images', 'computing.jpg')
+resource_linear_inequalities.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
+resource_essentials_scratch.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
+resource_modeling_data.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
+resource_relational_advances_scratch.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
+resource_computer_networks.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
+resource_vector_graphics.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
+resource_python.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
+resource_data_science.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
+resource_relational_cybersecurity.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
+resource_creating_media.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
+resource_relational_databases.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
+
+file_path_german = Rails.root.join('db', 'seeds', 'images', 'language.jpg')
+resource_past_tense.photos.attach(io: File.open(file_path_german), filename: 'language.jpg')
+
+file_path_geography = Rails.root.join('db', 'seeds', 'images', 'geography.jpg')
+resource_states.photos.attach(io: File.open(file_path_geography), filename: 'geography.jpg')
+resource_hydrological_cycle.photos.attach(io: File.open(file_path_geography), filename: 'geography.jpg')
+
+file_path_physics = Rails.root.join('db', 'seeds', 'images', 'physics.jpg')
+resource_presentation.photos.attach(io: File.open(file_path_physics), filename: 'physics.jpg')
+
+file_path_english = Rails.root.join('db', 'seeds', 'images', 'english.jpg')
+resource_formal_letters.photos.attach(io: File.open(file_path_english), filename: 'english.jpg')
+
+file_path_history = Rails.root.join('db', 'seeds', 'images', 'history.jpg')
+resource_early_history.photos.attach(io: File.open(file_path_history), filename: 'history.jpg')
+puts "Images attached"
+
 
 puts "Creating reviews..."
 review_algebra_first = Review.create!(rating: 4, content: "Well-designed with right amount of challenge", resource: resource_basic_algebra, user: user_Albert)

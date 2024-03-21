@@ -28,6 +28,7 @@ gem "jbuilder"
 
 gem "cloudinary"
 
+gem "wicked_pdf"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"

@@ -19,68 +19,69 @@
 <%#= cl_image_tag @resource.file.key, height: 300, width: 400, crop: :fill %>
 
 <main>
-  <div class="d-flex justify-content-between align-items-center">
-    <div class="circle">
-      <div class="circle-text">Student age: <h3><%= @resource.student_age %></h3></div>
+  <h1 class="text-center title-resource-class"><%= @resource.title %></h1>
+  <p> Author: <%= @resource.user.profile.first_name %></p>
+  <p><i class="fa-regular fa-comments"></i> <%= link_to "Chat with author", "#" %> </p>
+    <br>
+      <div class="d-flex justify-content-between align-items-top">
+        <div class="circle">
+          <div class="circle-text">Student age: <h3><%= @resource.student_age %></h3></div>
+            </div>
+              <div class="resource-description">
+                <%= @resource.description %>
+              </div>
+            <div class="circle">
+          <div class="circle-text">Subject: <h6><%= @resource.subject %></h6></div>
+        </div>
     </div>
-  <h1 class="title-resource-class"><%= @resource.title %></h1>
+        <br>
+
+      <div div class="d-flex justify-content-between align-items-top">
+      <div class="circle">
+          <div class="circle-text">Resource type: <h6><%= @resource.resource_type %></h6></div>
+            </div>
+            <div>
+              </div>
+            <div>
+          <!-- Display multiple files in the view. Needs to be placed in the desired position --->
+            <% @resource.files.each do |file| %>
+                <iframe src="https://res.cloudinary.com/di9zm7azt/image/upload/v1710586555/development/<%= file.key %>.pdf" width="600px" frameborder="0" loading= "lazy"></iframe>
+            <% end %>
+        </div>
+                <div class="circle">
+                <div class="circle-text">Category: <h6><%= @resource.category %></h6></div>
+              </div>
+            </div>
+        </div>
+
   <br>
-    <div class="circle">
-      <div class="circle-text">Subject: <h6><%= @resource.subject %></h6></div>
-    </div>
-</div>
-<br>
-<div class="d-flex justify-content-between align-items-top">
-  <div class="circle">
-    <div class="circle-text">Category: <h6><%= @resource.category %></h6></div>
+  <br>
+  <div class="d-flex justify-content-between">
+    <% if current_user.bookmarks.exists?(resource_id: @resource.id) %>
+      <%= button_to 'Remove from Bookmarks', bookmark_path(current_user.bookmarks.find_by(resource_id: @resource.id)), method: :delete, data: { confirm: 'Are you sure you want to remove this bookmark?' }, class: "btn btn-secondary" %>
+    <% else %>
+      <%= button_to 'Bookmark', bookmark_resource_path(@resource), method: :post, class: "btn btn-secondary" %>
+    <% end %>
+    <button class="btn btn-secondary">Download</button>
   </div>
-  <div class="description-pdf-container">
-    <div class="resource-description">
-      <%= @resource.description %>
-    </div><br>
-    <div class="uploaded-pdf">
-      <!-- Display multiple files in the view. Needs to be placed in the desired position --->
-        <% @resource.files.each do |file| %>
-          <%#= cl_image_tag file.key, height: 300, width: 400, crop: :fill %>
-          <img src="https://res.cloudinary.com/di9zm7azt/image/upload/v1710586555/development/<%= file.key %>.jpg" style="width: 150px; height: 150px;" alt="">
-        <% end %>
-    </div>
-    </div>
-  <div class="circle">
-    <div class="circle-text">Resource type: <h6><%= @resource.resource_type %></h6></div>
-  </div>
-</div>
-<br>
-<br>
-<div class="d-flex justify-content-between">
-<% if current_user.bookmarks.exists?(resource_id: @resource.id) %>
-  <%= button_to 'Remove from Bookmarks', bookmark_path(current_user.bookmarks.find_by(resource_id: @resource.id)), method: :delete, data: { confirm: 'Are you sure you want to remove this bookmark?' }, class: "btn btn-secondary" %>
-<% else %>
-  <%= button_to 'Bookmark', bookmark_resource_path(@resource), method: :post, class: "btn btn-secondary" %>
-<% end %>
-<button class="btn btn-secondary">Download</button>
-</div>
+  <p class="plain-links"><%= link_to 'Back to teaching materials', resources_path %></p>
 
-
-
-<p class="plain-links"><%= link_to 'Back to teaching materials', resources_path %></p>
-
-<% if @resource.user == current_user %>
-  <p class="plain-links"><%= link_to 'Edit', edit_resource_path(@resource) %></p>
-  <p class="plain-links"><%= link_to 'Delete', resource_path(@resource), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></p>
-<% end %>
-<br>
-<br>
-<h4 class="title-review-class">What other teachers thought</h4>
-
-<ul class="review-list">
-  <% @resource.reviews.each do |review| %>
-    <li>
-      <% review.rating.times do %>
-        <i class="fa-solid fa-star"></i>
-      <% end %>
-
-            <em class="review-content"><%= review.content %></em></li>
+  <% if @resource.user == current_user %>
+    <p class="plain-links"><%= link_to 'Edit', edit_resource_path(@resource) %></p>
+    <p class="plain-links"><%= link_to 'Delete', resource_path(@resource), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></p>
   <% end %>
-</ul>
+  <br>
+  <br>
+  <h4 class="title-review-class">What other teachers thought</h4>
+
+  <ul class="review-list">
+    <% @resource.reviews.each do |review| %>
+      <li>
+        <% review.rating.times do %>
+          <i class="fa-solid fa-star"></i>
+        <% end %>
+
+              <em class="review-content"><%= review.content %></em></li>
+    <% end %>
+  </ul>
 </main>

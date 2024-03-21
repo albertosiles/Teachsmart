@@ -1,14 +1,15 @@
-<div class="container-profile-new">
+<body class="profile-new">
+  <br>
   <h1>Create a profile</h1>
-
+<div class="container-profile-new"><br>
   <%= simple_form_for(@profile, url: profile_path, method: :post, html: { novalidate: true, multipart: true }) do |form| %>
     <%= form.input :first_name, required: false, label_html: { data: { required: true } } %>
     <%= form.input :last_name, required: false, label_html: { data: { required: true } } %>
     <%= form.input :description, required: false, label_html: { data: { required: true } } %>
-    <%= form.input :photo, label: "Profile Photo (Optional)", as: :file %>
+    <%= form.input :photo, label: "Profile Photo (Optional)", as: :file %><br>
     <%= form.button :submit,  class: "btn-profile-new" %>
     <%= link_to 'Maybe later', resources_path, class: "btn btn-secondary" %>
     <br>
-  <% end %>
+  <% end %><br>
 </div>
-<br><br>
+</body>

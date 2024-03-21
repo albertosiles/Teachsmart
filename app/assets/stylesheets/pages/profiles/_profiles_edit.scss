@@ -1,7 +1,7 @@
 .container-profile-edit {
-  background-color: #f2f0e5;
+  background: radial-gradient(circle at top, rgb(84, 204, 228) , #cef2f2);
   height: auto;
-  width: 60%;
+  width: 50%;
   margin: 20px auto;
   border: 1px solid grey;
   padding: 15px;
@@ -11,14 +11,18 @@
   padding-right: 100px;
 
   h1 {
-    color: orange;
+    color: white;
     text-align:center;
     }
 }
 
+.profile-edit {
+  background-color:#116c7e;
+}
+
 
 .container-profile-edit .form-actions input[type="submit"] {
-  background-color: rgb(129, 69, 10);
+  background-color: #0e5d6d;
   color: white;
 }
 
@@ -26,7 +30,19 @@
   background-color: black; /* Change background color to black on hover */
 }
 
-
 .strong-label {
   font-weight: 550;
+}
+
+.container-profile-edit .form-actions input[type="submit"] {
+  background-color: #0e5d6d;
+  color: white;
+  padding: 10px 20px; /* Add padding to increase space */
+  margin-right: 30px; /* Add margin between buttons */
+  border-radius: 5px; /* Round the borders */
+  border: none; /* Remove default border */
+}
+
+.container-profile-edit .form-actions input[type="submit"]:hover {
+  background-color: black; /* Change background color to black on hover */
 }

@@ -1,32 +1,55 @@
-<br>
-<h1>Teaching materials</h1>
-<br>
-<div class="container">
-<%= form_with url: resources_path, method: :get do %>
-  <%= label_tag :subject %>
-  <%= select_tag :subject, options_for_select(@subjects, params[:subject]), include_blank: "All Subjects" %>
-  <%= label_tag :student_age %>
-  <%= select_tag :student_age, options_for_select(@student_ages, params[:student_age]), include_blank: "All Ages" %>
-
-  <%= submit_tag "Filter" %>
-<% end %>
- <br>
-  <% @resources.each do |resource| %>
-    <div class="card-product">
-      <%= link_to image_tag(image_for_subject(resource.subject)), resource_path(resource) %>
-      <div class="card-product-infos">
-        <div class="row">
-            <h2><%= resource.title %></h2>
-                      <div class="col">
-            <p><%= resource.description %></p>
-          </div>
-          <div class="col">
-            <p><i class="fa-solid fa-book"></i> <%= resource.subject %></p>
-            <p><i class="fa-solid fa-user"></i> <%= resource.student_age %> years</p>
-          </div>
+<body class="index-body">
+<br><h1 class="h1-teaching-materials">Teaching materials</h1>
+<br><br>
+<div class="teaching-materials-container">
+  <%= form_with url: resources_path, method: :get do %>
+    <div class="row">
+      <div class="col-md-3 mb-3">
+        <div class="form-group">
+          <%= select_tag :subject, options_for_select(@subjects, params[:subject]), include_blank: "All Subjects", class: "form-control bold-text" %>
         </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="form-group">
+          <%= select_tag :student_age, options_for_select(@student_ages, params[:student_age]), include_blank: "All Ages", class: "form-control bold-text" %>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3 align-self-end">
+        <%= submit_tag "Find", class: "btn btn-filter btn-block" %>
       </div>
     </div>
   <% end %>
-</div>
-<br><br><br><br><br><br><br><br><br>
+
+  <br>
+  <div class="row justify-content-center">
+    <% @resources.each do |resource| %>
+      <div class="col-lg-4 col-md-4 col-sm-6 mb-4">
+        <a href="<%= resource_path(resource) %>" class="card-link-index">
+          <div class="card-resource">
+            <div class="resource-image">
+            <% if resource.photos.length > 0 %>
+              <%= cl_image_tag((resource.photos.first.key), class: "img-resource-index") %>
+            <% end %>
+            </div><br>
+            <div class="card-resource-infos">
+              <h2><%= resource.title %></h2><br>
+              <div class="row">
+                <div class="col">
+                  <p><i class="fa-solid fa-book index-icon"></i><br> <%= resource.subject %></p>
+                </div>
+                <div class="col">
+                  <p><i class="fa-solid fa-user index-icon"></i><br>Age <%= resource.student_age %></p>
+                </div>
+                <div class="col">
+                  <p><i class="fa-solid fa-chalkboard index-icon"></i><br> <%= resource.resource_type %></p>
+                </div>
+                <%# <p><%= resource.description</p>  %>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    <% end %>
+  </div>
+</div><br><br>
+</body>
