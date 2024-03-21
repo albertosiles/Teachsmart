@@ -14,6 +14,7 @@ Bookmark.destroy_all
 Profile.destroy_all
 Resource.destroy_all
 User.destroy_all
+Chatroom.destroy_all
 
 puts "Creating users..."
 user_Julia = User.create!(email: "julia@lewagon.com", password: "xxx111")
@@ -48,6 +49,14 @@ puts "Profiles created"
 # file_path_vivien = Rails.root.join('db', 'seeds', 'images', 'Vivien.jpg')
 # profile_Vivien.photo.attach(io: File.open(file_path_vivien), filename: 'Vivien.jpg')
 # puts "Profile pictures created"
+
+puts "Creating chatrooms..."
+chat_Julia = Chatroom.create!(name: "Julia")
+chat_Albert = Chatroom.create!(name: "Albert")
+chat_Bridget = Chatroom.create!(name: "Bridget")
+chat_Thomas = Chatroom.create!(name: "Thomas")
+chat_Vivien = Chatroom.create!(name: "Vivien")
+puts "Chatrooms created"
 
 puts "Creating resources..."
 resource_basic_algebra = Resource.create!(title: "Basic Algebra", description: "Introduction to simple equations", subject: "Mathematics", student_age: 11, category: "Algebra", resource_type: "Worksheets", user: user_Julia)
