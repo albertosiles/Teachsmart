@@ -39,6 +39,8 @@
           <div class="circle-text">Resource type: <h6><%= @resource.resource_type %></h6></div>
             </div>
             <div>
+              </div>
+            <div>
           <!-- Display multiple files in the view. Needs to be placed in the desired position --->
             <% @resource.files.each do |file| %>
                 <iframe src="https://res.cloudinary.com/di9zm7azt/image/upload/v1710586555/development/<%= file.key %>.pdf" width="600px" frameborder="0" loading= "lazy"></iframe>
@@ -49,24 +51,38 @@
               </div>
             </div>
         </div>
+        <br>
+      <div class="d-flex justify-content-center author">
+          <p class="fixed-width"> Author: <%= @resource.user.profile.first_name %></p>
+          <p class= "fixed-width plain-links"><i class="fa-regular fa-comments"></i> <%= link_to "Chat with author", "#" %> </p>
+      </div>
 
-  <br>
   <br>
   <div class="d-flex justify-content-between">
+        <button class="showpage-btn"><%= link_to "Back to Resouces", resources_path(@resources) %></button>
     <% if current_user.bookmarks.exists?(resource_id: @resource.id) %>
-      <%= button_to 'Remove from Bookmarks', bookmark_path(current_user.bookmarks.find_by(resource_id: @resource.id)), method: :delete, data: { confirm: 'Are you sure you want to remove this bookmark?' }, class: "btn btn-secondary" %>
+      <%= button_to 'Remove from Bookmarks', bookmark_path(current_user.bookmarks.find_by(resource_id: @resource.id)), method: :delete, data: { confirm: 'Are you sure you want to remove this bookmark?' }, class: "showpage-btn" %>
     <% else %>
-      <%= button_to 'Bookmark', bookmark_resource_path(@resource), method: :post, class: "btn btn-secondary" %>
+      <%= button_to 'Bookmark', bookmark_resource_path(@resource), method: :post, class: "showpage-btn" %>
     <% end %>
-    <button class="btn btn-secondary">Download</button>
-  </div>
-  <p class="plain-links"><%= link_to 'Back to teaching materials', resources_path %></p>
 
+    <button class="showpage-btn"><%= link_to "Add a Review", new_resource_review_path(@resource) %></button>
+  </div>
+    <br>
+    <br>
+  <div class="d-flex justify-content-evenly">
   <% if @resource.user == current_user %>
-    <p class="plain-links"><%= link_to 'Edit', edit_resource_path(@resource) %></p>
-    <p class="plain-links"><%= link_to 'Delete', resource_path(@resource), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></p>
+    <p class="plain-links">
+      <%= link_to edit_resource_path(@resource) do %>
+      <i class="fa-solid fa-pen-to-square"></i>
+    <% end %>
+    </p>
+    <p class="plain-links"><%= link_to resource_path(@resource), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+      <i class="fa-solid fa-trash"></i>
+      <% end %>
+    </p>
   <% end %>
-  <br>
+  </div>
   <br>
   <h4 class="title-review-class">What other teachers thought</h4>
 
