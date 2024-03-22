@@ -17,10 +17,10 @@
 }
 
 .profile-body {
-  background-color:#1797b1;
-  // background: rgb(23,151,177);
-  // background: linear-gradient(216deg, rgba(23,151,177,1) 7%, rgba(27,153,151,0.7847514005602241) 95%);
-}
+  background: linear-gradient(216deg, rgba(23,151,177,1) 7%, rgba(27,153,151,0.7847514005602241) 95%);
+  background-size: cover;
+  background-attachment: fixed;
+  }
 
 
 .profile-photo {

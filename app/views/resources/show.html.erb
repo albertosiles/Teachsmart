@@ -54,17 +54,31 @@
         <br>
         <%# Link to chat with author is here %>
       <div class="d-flex justify-content-center author">
+<<<<<<< HEAD
         <p class="fixed-width"> Author: <%= @resource.user.profile.first_name %></p>
+=======
+          <p class="fixed-width plain-links"> <%= link_to "Author: #{@resource.user.profile.first_name}", profile_path(@resource.user) %></p>
+>>>>>>> d4df2dd1678d5dc6f2401edb353ae741436c1fc5
           <p class= "fixed-width plain-links"><i class="fa-regular fa-comments"></i> <%= link_to "Chat with author", "#" %> </p>
       </div>
   <br>
   <div class="d-flex justify-content-between">
+<<<<<<< HEAD
         <button class="showpage-btn"><%= link_to "Back to Resouces", resources_path(@resources) %></button>
           <% if current_user.bookmarks.exists?(resource_id: @resource.id) %>
             <%= button_to 'Remove from Bookmarks', bookmark_path(current_user.bookmarks.find_by(resource_id: @resource.id)), method: :delete, data: { confirm: 'Are you sure you want to remove this bookmark?' }, class: "showpage-btn" %>
           <% else %>
             <%= button_to 'Bookmark', bookmark_resource_path(@resource), method: :post, class: "showpage-btn" %>
           <% end %>
+=======
+        <button class="showpage-btn"><%= link_to "Back to Resources", resources_path(@resources) %></button>
+    <% if current_user.bookmarks.exists?(resource_id: @resource.id) %>
+      <%= button_to 'Remove from Bookmarks', bookmark_path(current_user.bookmarks.find_by(resource_id: @resource.id)), method: :delete, data: { confirm: 'Are you sure you want to remove this bookmark?' }, class: "showpage-btn" %>
+    <% else %>
+      <%= button_to 'Bookmark', bookmark_resource_path(@resource), method: :post, class: "showpage-btn" %>
+    <% end %>
+
+>>>>>>> d4df2dd1678d5dc6f2401edb353ae741436c1fc5
     <button class="showpage-btn"><%= link_to "Add a Review", new_resource_review_path(@resource) %></button>
       </div>
         <br>
@@ -83,6 +97,7 @@
             <% end %>
   </div>
     <br>
+<<<<<<< HEAD
       <h4 class="title-review-class">What other teachers thought</h4>
         <ul class="review-list">
           <% @resource.reviews.each do |review| %>
@@ -90,6 +105,32 @@
               <% review.rating.times do %>
                 <i class="fa-solid fa-star"></i>
               <% end %>
+=======
+    <br>
+  <div class="d-flex justify-content-evenly">
+  <% if @resource.user == current_user %>
+  <p class="plain-links">
+    <%= link_to edit_resource_path(@resource) do %>
+    <i class="fa-solid fa-pen-to-square"></i>
+    <% end %>
+    </p>
+    <p class="plain-links"><%= link_to resource_path(@resource), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+    <i class="fa-solid fa-trash"></i>
+    <% end %>
+    </p>
+    <% end %>
+    </div>
+    <br>
+    <h4 class="title-review-class">What other teachers thought</h4>
+
+  <ul class="review-list">
+    <% @resource.reviews.each do |review| %>
+      <li>
+        <% review.rating.times do %>
+          <i class="fa-solid fa-star"></i>
+        <% end %>
+
+>>>>>>> d4df2dd1678d5dc6f2401edb353ae741436c1fc5
               <em class="review-content"><%= review.content %></em></li>
           <% end %>
         </ul>
