@@ -1,6 +1,7 @@
+<body class="login-new-body"><br>
+<h2 class="h2-login">Log in</h2>
 <div class="container-login">
   <div class="login-form">
-    <h2>Log in</h2>
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-inputs">
         <%= f.input :email,
@@ -19,3 +20,4 @@
     <% end %>
   </div>
 </div><br><br>
+</body>
