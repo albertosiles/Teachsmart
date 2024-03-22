@@ -62,7 +62,7 @@ resource_basic_algebra = Resource.create!(
   subject: "Mathematics",
   student_age: 11,
   category: "Algebra",
-  resource_type: "Worksheets",
+  resource_type: "Worksheet",
   user: user_Julia)
 resource_past_tense = Resource.create!(title: "Past Tense", description: "Past tenses in German", subject: "German", student_age: 12, category: "Grammar", resource_type: "Worksheet", user: user_Julia)
 resource_states = Resource.create!(title: "States", description: "Map of USA showing states", subject: "Geography", student_age: 14, category: "Political geography", resource_type: "Slides", user: user_Thomas)
