@@ -13,10 +13,14 @@ Rails.application.routes.draw do
 
   resources :reviews, only: [:destroy]
 
+  resources :profiles, only: [:show]
+
   authenticated :user do
     get '/my_uploaded_resources', to: 'resources#my_uploaded_resources'
-    resource :profile, only: [:show, :edit, :update, :new, :create, :destroy]
+    resource :profile, only: [:edit, :update, :new, :create, :destroy]
   end
+
+
   # Bookmarks routes
   resources :bookmarks, only: [:create, :destroy]
 
