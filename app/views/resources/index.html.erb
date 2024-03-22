@@ -1,5 +1,5 @@
-<body class="index-body">
-<br><h1 class="h1-teaching-materials">Teaching materials</h1>
+<body class="index-body"><br>
+<h1 class="h1-teaching-materials">Teaching materials</h1>
 <br><br>
 <div class="teaching-materials-container">
   <%= form_with url: resources_path, method: :get do %>
@@ -32,7 +32,7 @@
             <% end %>
             </div><br>
             <div class="card-resource-infos">
-              <h2><%= resource.title %></h2><br>
+              <h2 class="h2-cards"><%= resource.title %></h2><br>
               <div class="row">
                 <div class="col">
                   <p><i class="fa-solid fa-book index-icon"></i><br> <%= resource.subject %></p>

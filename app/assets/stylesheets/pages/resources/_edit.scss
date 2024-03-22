@@ -1,5 +1,5 @@
 .container-edit-materials {
-  background-color: #f2f0e5;
+  background: radial-gradient(circle at top, rgb(84, 204, 228) , #cef2f2);
   height: auto;
   width: 60%;
   margin: 20px auto;
@@ -17,12 +17,25 @@ h2 {
   }
 
   .btn-update-materials {
-    background-color: rgb(129, 69, 10);
-    color: white;
+    background-color:#fab323;
+    color: black;
+
     border-radius: 5px;
+    margin-right: 20px;
   }
 
   .btn-update-materials:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .btn-cancel {
+    background-color: grey;
+    color:white;
+    border-radius: 5px;
+  }
+
+  .btn-cancel:hover {
     background-color: black;
     color: white;
   }

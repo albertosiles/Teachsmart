@@ -1,5 +1,5 @@
 .container-signup {
-  background-color: #f2f0e5;
+  background: radial-gradient(circle at top, rgb(84, 204, 228) , #cef2f2);
   height: auto;
   width: 45%;
   margin: 60px auto;
@@ -11,16 +11,15 @@
   padding-left: 80px;
   padding-right: 80px;
 
-  h2 {
-    text-align: center;
-    color:orange;
-  }
 
   .btn-signup {
-    background-color: rgb(129, 69, 10);
-    color: white;
-    border-radius: 5px;
-  }
+      background-color: #fab323;
+      color:black;
+      border-radius: 5px;
+      padding: 10px 20px;
+      border: 1px solid grey;
+    }
+
 
   .btn-signup:hover {
     background-color: black;
@@ -28,7 +27,16 @@
   }
 }
 
+.h2-signup {
+  text-align: center;
+  color:white;
+  font-size: 40px;
 
+}
+
+.sign-up-body {
+  background-color:#1797b1;
+}
 
 .container-signup .signup-form  {
   text-align: left;
@@ -43,7 +51,6 @@
 .form-links {
   margin-top: 20px;
   text-align: left;
-  color: rgb(129, 69, 10);
 }
 
 .form-links a {

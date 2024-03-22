@@ -20,9 +20,21 @@
 
 }
 
+.body-update-materials {
+  background-color:#1797b1;
+}
+
+.h2-update-materials {
+  text-align: center;
+  color:white;
+  font-size: 40px;
+}
+
 .my-uploads-title {
   margin-top: 10px;
-  color: white;
+  text-align: center;
+  color:white;
+  font-size: 40px;
 }
 
 // .card-upload {
@@ -48,6 +60,7 @@
   gap: 30px;
 }
 
+
 .resource-image {
   height: auto;
   width: 100%;
@@ -57,19 +70,26 @@
 
 .btn-upload {
   background-color: #fab323;
-  color:white;
+  color:black;
   border-radius: 5px;
   padding: 10px 20px;
+  font-size: 24px;
 }
 
 .btn-upload:hover {
-  background-color: #0e5d6d;
+  background-color: black;
   color: white;
 }
 
 .btn-secondary {
   border-radius: 5px;
   padding: 10px 20px;
+  font-size: 24px;
+}
+
+.btn-upload:hover {
+  background-color: black;
+  color: white;
 }
 
 // .col p {
@@ -78,6 +98,11 @@
 
 h1 {
   margin-top: 10px;
+}
+
+.h2-resource-title {
+  color: black;
+  font-size: 38px;
 }
 
 h5 {

@@ -10,15 +10,16 @@
   padding-left: 100px;
   padding-right: 100px;
 
-  h1 {
-    color: white;
-    text-align:center;
-    }
 }
 
 .profile-edit {
   background-color:#116c7e;
 }
+
+h1 {
+  color: white;
+  text-align:center;
+  }
 
 
 .container-profile-edit .form-actions input[type="submit"] {
@@ -35,14 +36,16 @@
 }
 
 .container-profile-edit .form-actions input[type="submit"] {
-  background-color: #0e5d6d;
-  color: white;
-  padding: 10px 20px; /* Add padding to increase space */
-  margin-right: 30px; /* Add margin between buttons */
-  border-radius: 5px; /* Round the borders */
-  border: none; /* Remove default border */
+  background-color: #fab323;
+  color: black;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  font-size: 24px;
 }
 
 .container-profile-edit .form-actions input[type="submit"]:hover {
-  background-color: black; /* Change background color to black on hover */
+  background-color: black;
+  color: white;/* Change background color to black on hover */
 }
