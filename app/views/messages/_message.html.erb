@@ -1,0 +1,11 @@
+    <div id="message-<%= message.id %>">
+      <small>
+        <% if message.user.profile&.first_name.present? %>
+          <strong><%= message.user.profile.first_name %></strong>
+        <% else %>
+          <strong><%= message.user.email.split('@').first %></strong>
+        <% end %>
+        <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
+      </small>
+      <p><%= message.content %></p>
+</div>
