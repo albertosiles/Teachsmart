@@ -22,22 +22,39 @@ h2 {
 // }
 
 .btn-upload-materials {
+  width: 120px; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
   background-color: #fab323;
   color: black;
   border-radius: 5px;
   font-size: 22px;
   border: 1px solid grey;
+  margin-right: 20px;
 }
 
-.btn-upload-materials:hover {
+
+.btn-not-now {
+  font-size: 26px;
+  width: 140px; /* Adjust the width as needed */
+  height: 40px;
+  border-radius: 5px;
+  background-color: grey;
+  color: white; /* Adjust the font size for the Not Now button */
+}
+
+.btn-upload-materials:hover,
+.btn-not-now:hover {
   background-color: black;
   color: white;
 }
+
+
 
 .new-upload-body {
   background-color:#1797b1;
 }
 
-.form-new-upload {
-  color: rgb(34, 15, 78);
-}
+// .form-new-upload {
+//   color: rgb(34, 15, 78);
+// }
+

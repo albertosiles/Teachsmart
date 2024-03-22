@@ -8,9 +8,10 @@
         Student age: <%= f.input :student_age, label: false %><br>
         Category: <%= f.input :category, label: false %><br>
         Resource type: <%= f.input :resource_type, label: false %><br>
-        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <%# <%= f.input :photos, as: :file, input_html: { multiple: true } %>
         <%= f.input :files, as: :file, input_html: { multiple: true } %>
         <%= f.submit "Update Teaching Materials", class: "btn btn-update-materials" %>
+        <%= link_to 'Cancel', resource_path, class: "btn btn-not-now" %>
     <% end %>
 </div>
   <br>   <br>
