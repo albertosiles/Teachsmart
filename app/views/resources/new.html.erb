@@ -11,6 +11,7 @@
         <%#= f.input :photos, as: :file, input_html: { multiple: true } %>
         <%= f.input :files, as: :file, input_html: { multiple: true } %><br>
         <%= f.submit "Upload", class: "btn btn-upload-materials" %>
+        <%= link_to 'Not now', resources_path, class: "btn btn-cancel" %>
     <% end %>
 </div>
 <br><br><br>
