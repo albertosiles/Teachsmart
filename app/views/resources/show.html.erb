@@ -20,6 +20,8 @@
 
 <main>
   <h1 class="text-center title-resource-class"><%= @resource.title %></h1>
+  <p> Author: <%= @resource.user.profile.first_name %></p>
+  <p><i class="fa-regular fa-comments"></i> <%= link_to "Chat with author", "#" %> </p>
     <br>
       <div class="d-flex justify-content-between align-items-top">
         <div class="circle">
@@ -38,6 +40,8 @@
       <div class="circle">
           <div class="circle-text">Resource type: <h6><%= @resource.resource_type %></h6></div>
             </div>
+            <div>
+              </div>
             <div>
           <!-- Display multiple files in the view. Needs to be placed in the desired position --->
             <% @resource.files.each do |file| %>
