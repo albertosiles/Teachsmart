@@ -33,6 +33,11 @@ class ProfilesController < ApplicationController
     redirect_to root_path, notice: 'Profile was successfully deleted.'
   end
 
+  def show
+    @profile = Profile.find(params[:id])
+    @user = @profile.user
+  end
+
   private
 
   def set_profile
