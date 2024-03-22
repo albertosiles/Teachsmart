@@ -16,24 +16,31 @@
 }
 
 .profile-new {
-  background-color:#116c7e;
+  background: linear-gradient(216deg, rgba(23,151,177,1) 7%, rgba(27,153,151,0.7847514005602241) 95%);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.btn-profile-new,
+.btn-maybe {
+  border-radius: 5px;
+  padding: 10px 20px; /* Adjusted padding */
+  margin-right: 10px; /* Add margin between buttons */
 }
 
 .btn-profile-new {
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin-right: 25px;
-  background-color: #0e5d6d;
+  background-color: #fab323;
+  color: black;
+}
+
+.btn-maybe {
+background-color: grey;
   color: white;
+  padding: 10px 20px; /* Same padding as btn-profile-new */
 }
 
-.btn-secondary {
-  border-radius: 5px;
-  padding: 10px 20px;
-
-}
-
-.btn-profile-new:hover {
+.btn-profile-new:hover,
+.btn-maybe:hover {
   background-color: black;
   color: white;
 }

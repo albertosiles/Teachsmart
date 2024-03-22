@@ -1,5 +1,5 @@
 .container-login {
-  background-color: #f2f0e5;
+  background: radial-gradient(circle at top, rgb(84, 204, 228) , #cef2f2);
   height: auto;
   width: 45%;
   margin: 60px auto;
@@ -10,25 +10,32 @@
   text-align: left;
   padding-left: 80px;
   padding-right: 80px;
-
-  h2 {
-    text-align: center;
-    color:orange;
-  }
-
-  .btn-login {
-    background-color: rgb(129, 69, 10);
-    color: white;
-    border-radius: 5px;
-  }
-
-  .btn-login:hover {
-    background-color: black;
-    color: white;
-  }
-
 }
 
+.btn-login {
+  background-color: #fab323;
+  color:black;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: 1px solid grey;
+}
+
+.login-body {
+  background: linear-gradient(216deg, rgba(23,151,177,1) 7%, rgba(27,153,151,0.7847514005602241) 95%);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.btn-login:hover {
+  background-color: black;
+  color: white;
+}
+
+.h2-login {
+  text-align: center;
+  color:white;
+  font-size: 40px;
+}
 
 .container-login .login-form  {
   text-align: left;
@@ -43,7 +50,7 @@
 .form-links {
   margin-top: 20px;
   text-align: left;
-  color: rgb(129, 69, 10);
+  color: #0e5d6d;
 }
 
 .form-links a {
