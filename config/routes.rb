@@ -26,6 +26,10 @@ Rails.application.routes.draw do
   # Custom route for creating a bookmark
   post '/resources/:id/bookmark', to: 'bookmarks#create', as: 'bookmark_resource'
 
+  # Chat routes
+  resources :chatrooms, only: [:show, :new, :create] do
+    resources :messages, only: :create
+  end
   # Route to serve static PDF files
   get '/resources/files/:filename', to: 'static_files#show_pdf'
 
