@@ -7,7 +7,7 @@
         Subject: <%= f.input :subject, collection: ["Computing", "English", "Geography", "German", "History", "Mathematics", "Physics"], label: false %><br>
         Student age: <%= f.input :student_age, label: false %><br>
         Category: <%= f.input :category, label: false %><br>
-        Resource type: <%= f.input :resource_type, collection: ["Databases", "Practice", "Slides", "Video", "Worksheets", "Other"], label: false %><br>
+        Resource type: <%= f.input :resource_type, collection: ["Databases", "Practice", "Slides", "Video", "Worksheet", "Other"], label: false %><br>
         <%= f.input :photos, as: :file, input_html: { multiple: true } %><br>
         <%= f.input :files, as: :file, input_html: { multiple: true } %><br>
         <%= f.submit "Upload", class: "btn btn-upload-materials" %>
