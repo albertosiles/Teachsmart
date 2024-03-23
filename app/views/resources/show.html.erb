@@ -18,22 +18,26 @@
 <!-- Display one file in the view --->
 <%#= cl_image_tag @resource.file.key, height: 300, width: 400, crop: :fill %>
 
+<body class="resource-show">
 <main>
   <h1 class="text-center title-resource-class"><%= @resource.title %></h1>
     <br>
+      <div class="d-flex justify-content-center author">
+        <p class="fixed-width plain-links"> <%= link_to "Author: #{@resource.user.profile.first_name} #{@resource.user.profile.last_name}", profile_path(@resource.user) %></p>
+        <p class= "fixed-width plain-links"><i class="fa-regular fa-comments"></i> <%= link_to "Chat with author", "#" %> </p>
+      </div><br>
       <div class="d-flex justify-content-between align-items-top">
         <div class="circle">
-          <div class="circle-text">Student age: <h3><%= @resource.student_age %></h3></div>
+          <div class="circle-text">Student age:<h6><br><%= @resource.student_age %></h6></div>
             </div>
-              <div class="resource-description">
-                <%= @resource.description %>
-              </div>
+            <div class="resource-description">
+              <%= @resource.description %>
+            </div>
             <div class="circle">
-          <div class="circle-text">Subject: <h6><%= @resource.subject %></h6></div>
+          <div class="circle-text">Subject:<h6><br><%= @resource.subject %></h6></div>
         </div>
-    </div>
+      </div>
         <br>
-
       <div div class="d-flex justify-content-between align-items-top">
         <div class="circle">
           <div class="circle-text">Resource type: <h6><%= @resource.resource_type %></h6></div>
@@ -54,23 +58,11 @@
         <br>
         <%# Link to chat with author is here %>
       <div class="d-flex justify-content-center author">
-<<<<<<< HEAD
-        <p class="fixed-width"> Author: <%= @resource.user.profile.first_name %></p>
-=======
           <p class="fixed-width plain-links"> <%= link_to "Author: #{@resource.user.profile.first_name}", profile_path(@resource.user) %></p>
->>>>>>> d4df2dd1678d5dc6f2401edb353ae741436c1fc5
           <p class= "fixed-width plain-links"><i class="fa-regular fa-comments"></i> <%= link_to "Chat with author", "#" %> </p>
       </div>
   <br>
   <div class="d-flex justify-content-between">
-<<<<<<< HEAD
-        <button class="showpage-btn"><%= link_to "Back to Resouces", resources_path(@resources) %></button>
-          <% if current_user.bookmarks.exists?(resource_id: @resource.id) %>
-            <%= button_to 'Remove from Bookmarks', bookmark_path(current_user.bookmarks.find_by(resource_id: @resource.id)), method: :delete, data: { confirm: 'Are you sure you want to remove this bookmark?' }, class: "showpage-btn" %>
-          <% else %>
-            <%= button_to 'Bookmark', bookmark_resource_path(@resource), method: :post, class: "showpage-btn" %>
-          <% end %>
-=======
         <button class="showpage-btn"><%= link_to "Back to Resources", resources_path(@resources) %></button>
     <% if current_user.bookmarks.exists?(resource_id: @resource.id) %>
       <%= button_to 'Remove from Bookmarks', bookmark_path(current_user.bookmarks.find_by(resource_id: @resource.id)), method: :delete, data: { confirm: 'Are you sure you want to remove this bookmark?' }, class: "showpage-btn" %>
@@ -78,7 +70,6 @@
       <%= button_to 'Bookmark', bookmark_resource_path(@resource), method: :post, class: "showpage-btn" %>
     <% end %>
 
->>>>>>> d4df2dd1678d5dc6f2401edb353ae741436c1fc5
     <button class="showpage-btn"><%= link_to "Add a Review", new_resource_review_path(@resource) %></button>
       </div>
         <br>
@@ -97,19 +88,25 @@
             <% end %>
   </div>
     <br>
-<<<<<<< HEAD
-      <h4 class="title-review-class">What other teachers thought</h4>
-        <ul class="review-list">
-          <% @resource.reviews.each do |review| %>
-            <li>
-              <% review.rating.times do %>
-                <i class="fa-solid fa-star"></i>
-              <% end %>
-=======
     <br>
+      <div class="circle">
+          <div class="circle-text">Resource type:<h6><br><%= @resource.resource_type %></h6></div>
+      </div>
+      <div>
+          <!-- Display multiple files in the view. Needs to be placed in the desired position --->
+        <%# @resource.file.each do |file| %>
+          <br><br><br><iframe src="<%= cl_image_path @resource.file.key %>.pdf" width="600px" frameborder="0" loading= "lazy"></iframe>
+        <%# end %>
+      </div>
+            <div class="circle">
+              <div class="circle-text">Category:<h6><br><%= @resource.category %></h6></div>
+            </div>
+      </div>
+      <br><br>
+
   <div class="d-flex justify-content-evenly">
-  <% if @resource.user == current_user %>
-  <p class="plain-links">
+    <% if @resource.user == current_user %>
+    <p class="plain-links">
     <%= link_to edit_resource_path(@resource) do %>
     <i class="fa-solid fa-pen-to-square"></i>
     <% end %>
@@ -119,10 +116,22 @@
     <% end %>
     </p>
     <% end %>
-    </div>
-    <br>
-    <h4 class="title-review-class">What other teachers thought</h4>
+  </div>
 
+  <br><br>
+  <div class="d-flex justify-content-between">
+    <% if current_user.bookmarks.exists?(resource_id: @resource.id) %>
+      <%= button_to 'Remove from Bookmarks', bookmark_path(current_user.bookmarks.find_by(resource_id: @resource.id)), method: :delete, data: { confirm: 'Are you sure you want to remove this bookmark?' }, class: "showpage-btn" %>
+    <% else %>
+      <%= button_to 'Bookmark', bookmark_resource_path(@resource), method: :post, class: "showpage-btn" %>
+    <% end %>
+    <button class="showpage-btn"><%= link_to "Back to Teaching Materials", resources_path(@resources) %></button>
+    <button class="showpage-btn"><%= link_to "Add a Review", new_resource_review_path(@resource) %></button>
+  </div>
+    <br>
+    <br>
+  <br>
+  <h4 class="title-review-class">What other teachers thought:</h4><br>
   <ul class="review-list">
     <% @resource.reviews.each do |review| %>
       <li>
@@ -130,8 +139,12 @@
           <i class="fa-solid fa-star"></i>
         <% end %>
 
->>>>>>> d4df2dd1678d5dc6f2401edb353ae741436c1fc5
               <em class="review-content"><%= review.content %></em></li>
           <% end %>
         </ul>
+    <% end %>
+    <em class="review-content"><%= review.content %></em></li>
+    <% end %>
+  </ul><br><br>
 </main>
+</body>

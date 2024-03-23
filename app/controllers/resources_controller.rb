@@ -37,6 +37,7 @@ class ResourcesController < ApplicationController
   end
 
   def update
+    # raise
     if @resource.update(resource_params)
       redirect_to resource_path(@resource)
     else
@@ -52,7 +53,7 @@ class ResourcesController < ApplicationController
   private
 
     def resource_params
-      params.require(:resource).permit(:title, :description, :subject, :student_age, :category, :resource_type, photos: [], files: [])
+      params.require(:resource).permit(:title, :description, :subject, :student_age, :category, :resource_type, :file)
     end
 
     def set_resource
