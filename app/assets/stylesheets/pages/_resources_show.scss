@@ -2,8 +2,8 @@
 
 main {
   padding: 35px;
-  margin-left: 250px;
-  margin-right: 250px;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
 .resource-show {
@@ -18,16 +18,14 @@ main {
 }
 
 .circle {
-width: 200px;
-height: 200px;
+width: 210px;
+height: 210px;
 border-radius: 50%;
 background: radial-gradient(circle at top, rgb(84, 204, 228) , #cef2f2);
 text-align: center;
 vertical-align: middle;
 padding-top: 40px;
-border-style: solid;
-border-width: 0.5px;
-border-color: black;
+border: 1px solid black;
 margin-top: 40px;
 }
 
@@ -62,21 +60,20 @@ margin-top: 40px;
 
 .resource-description {
   height: auto;
-  width: 600px;
+  width: 800px;
   border-radius: 15px;
   color: black;
-  font-size: 26px;
-  // padding-top: 15px;
-  padding-left: 5px;
-  // padding-right: 25px;
+  font-size: 20px;
+  text-align: justify;
   margin-left: auto;
   margin-right: auto;
 }
 
 iframe {
-  height: 338px;
-  width: 600px;
-  margin-top: -50px;
+  height: 600px;
+  width: 800px;
+  margin-top: -140px;
+  border-radius: 10px;
 }
 
 .description-pdf-container {
@@ -93,7 +90,7 @@ iframe {
   height: 60px;
   color: black;
   font-size: 24px;
-  border-radius: 5px;
+  border-radius: 10px;
   padding-left: 15px;
   padding-right: 15px;
   vertical-align: middle;
@@ -132,11 +129,15 @@ iframe {
 }
 
 .plain-links a:hover {
-  color: #fab323;
+  color: black;
 }
 
 .fa-comments {
   color: #fab323;
+}
+
+.fa-comments:hover {
+  color: black;
 }
 
 .fa-pen-to-square {

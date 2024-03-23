@@ -2,6 +2,10 @@
 <br>
 <h1 class="my-uploads-title">My Uploads</h1>
 <br>
+<div class="card-links">
+  <%= link_to "Upload Teaching Materials", new_resource_path, class: "btn btn-upload" %>
+  <%= link_to "Back to Teaching Materials", resources_path, class: "btn btn-secondary" %>
+</div><br>
 <% if @resources.any? %>
   <div class="card-upload-container">
     <% @resources.each do |resource| %>
@@ -30,11 +34,5 @@
   <br>
   <h5 class="no-resources-message">No resources uploaded yet.</h5>
   <br>
-<% end %>
-<br>
-<div class="card-links">
-  <%= link_to "Upload Teaching Materials", new_resource_path, class: "btn btn-upload" %>
-  <%= link_to "Back to Teaching Materials", resources_path, class: "btn btn-secondary" %>
-</div>
-<br><br><br>
+<% end %><br><br><br>
 </body>
