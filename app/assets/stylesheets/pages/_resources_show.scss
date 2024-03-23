@@ -1,8 +1,9 @@
 
+
 main {
   padding: 35px;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 250px;
+  margin-right: 250px;
 }
 
 .resource-show {
@@ -17,8 +18,8 @@ main {
 }
 
 .circle {
-width: 120px;
-height: 120px;
+width: 200px;
+height: 200px;
 border-radius: 50%;
 background: radial-gradient(circle at top, rgb(84, 204, 228) , #cef2f2);
 text-align: center;
@@ -27,43 +28,46 @@ padding-top: 40px;
 border-style: solid;
 border-width: 0.5px;
 border-color: black;
+margin-top: 40px;
 }
 
 .circle-text {
   margin: auto;
   color: black;
-  font-size: 12px;
+  font-size: 20px;
 }
 
 .circle-text h3 {
-  font-weight: bold;
+  font-weight:300;
 }
 
 .circle-text h6 {
   font-weight: bold;
+  font-size: 30px;
 }
 
 .title-review-class {
   color: white;
-  font-weight: bold;
+  // font-weight: bold;
   vertical-align: middle;
 }
 
 .title-resource-class {
-  font-weight: bold;
+  // font-weight: bold;
   color: white;
   // display: flex;
   text-align: center;
+  font-size: 48px;
 }
 
 .resource-description {
   height: auto;
   width: 600px;
   border-radius: 15px;
-  color: white;
-  font-size: 14px;
+  color: black;
+  font-size: 26px;
   // padding-top: 15px;
-  padding-left: 25px;
+  padding-left: 5px;
   // padding-right: 25px;
   margin-left: auto;
   margin-right: auto;
@@ -75,29 +79,26 @@ iframe {
   margin-top: -50px;
 }
 
-.author {
-  color: white;
-}
-
 .description-pdf-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: auto; /* Adjust this value according to your design */
+  height: auto;
 }
 
 .showpage-btn {
   background-color: #fab323;
   width: auto;
-  height: 26px;
+  height: 60px;
   color: black;
-  font-size: 16px;
+  font-size: 24px;
   border-radius: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   vertical-align: middle;
-  border: none;
+  border: 1px solid grey;
+  margin-left: 20px;
 }
 
 .showpage-btn a {
@@ -115,7 +116,7 @@ iframe {
 }
 
 .fixed-width {
-  width: 200px;
+  width: 500px;
   text-align: center;
 }
 
@@ -125,19 +126,25 @@ iframe {
 
 .plain-links a {
   text-decoration: none;
-  color: white;
+  color: #fab323;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .plain-links a:hover {
   color: #fab323;
 }
 
+.fa-comments {
+  color: #fab323;
+}
+
 .fa-pen-to-square {
-  font-size: 20px;
+  font-size: 40px;
 }
 
 .fa-trash {
-  font-size: 20px;
+  font-size: 40px;
 }
 
 .fa-star {
@@ -148,10 +155,23 @@ iframe {
   list-style-type: none;
   padding: 0;
   line-height: 30px;
+  text-align: left;
+  // margin-left: 350px;
+}
+
+// .review-list li {
+//   text-align: left;
+//   margin-left: 450px;
+// }
+
+h4 {
+  font-size: 34px;
+  text-align: left;
+  // margin-left: 350px;
 }
 
 .review-content {
   color: white;
-  font-size: 18px;
+  font-size: 26px;
   padding-left: 25px;
 }
