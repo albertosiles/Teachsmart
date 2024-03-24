@@ -1,5 +1,18 @@
-<%= simple_form_for [@resource, @review] do |f| %>
-  <%= f.input :rating %>
-  <%= f.input :content %>
-  <%= f.submit %>
+<body class="new-reviews-body">
+<br>
+<h1>Create a Review</h1>
+<div class="container-reviews-new"><br>
+  <%= simple_form_for [@resource, @review], html: { class: "form-review" } do |form| %>
+  <div class="form-group">
+  <p class="rating">Rating</p>
+  <%= form.input :rating, label: false, collection: 0..10, input_html: { class: "form-control" } %>
+  </div>
+  <div class="form-group">
+  <p class="content">Content</p>
+  <%= form.input :content, as: :text, label: false, input_html: { class: "form-control", rows: 5 } %>
+  </div>
+<br>
+    <%= form.button :submit,  class: "btn btn-reviews-new" %>
 <% end %>
+</div>
+</body>
