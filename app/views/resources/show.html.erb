@@ -54,7 +54,12 @@
         <br>
       <div class="d-flex justify-content-center author">
           <p class="fixed-width plain-links"> <%= link_to "Author: #{@resource.user.profile.first_name}", profile_path(@resource.user) %></p>
-          <p class= "fixed-width plain-links"><i class="fa-regular fa-comments"></i> <%= link_to "Chat with author", "#" %> </p>
+          <p class= "fixed-width plain-links"><i class="fa-regular fa-comments"></i>
+          <% if @resource.user&.chatroom %>
+          <%= link_to "Chat with author", chatroom_path(@resource.user.chatroom) %>
+          <% else %>
+          <p>The author is not available for chat at the moment.</p>
+          <% end %></p>
       </div>
 
   <br>

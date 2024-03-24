@@ -57,11 +57,16 @@ profile_Vivien.photo.attach(io: File.open(file_path_vivien), filename: 'Vivien.j
 puts "Profile pictures created"
 
 puts "Creating chatrooms..."
-chat_Julia = Chatroom.create!(name: "Julia")
-chat_Albert = Chatroom.create!(name: "Albert")
-chat_Bridget = Chatroom.create!(name: "Bridget")
-chat_Thomas = Chatroom.create!(name: "Thomas")
-chat_Vivien = Chatroom.create!(name: "Vivien")
+
+User.find_each do |user|
+  Chatroom.create!(name: user.email.split('@').first.capitalize, user: user) unless user.chatroom
+end
+
+#chat_Julia = Chatroom.create!(name: "Julia", user: user_Julia)
+#chat_Albert = Chatroom.create!(name: "Albert", user: user_Albert)
+#chat_Bridget = Chatroom.create!(name: "Bridget", user: user_Bridget)
+#chat_Thomas = Chatroom.create!(name: "Thomas", user: user_Thomas)
+#chat_Vivien = Chatroom.create!(name: "Vivien", user: user_Vivien)
 puts "Chatrooms created"
 
 puts "Creating resources..."
