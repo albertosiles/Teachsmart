@@ -16,31 +16,32 @@ h2 {
   text-align:center;
   }
 
-  .btn-update-materials {
-    background-color:#fab323;
-    color: black;
+.btn-update-materials {
+  background-color:#fab323;
+  color: black;
+  border-radius: 5px;
+  margin-right: 20px;
+  font-size: 20px;
+}
 
-    border-radius: 5px;
-    margin-right: 20px;
-  }
-
-  .btn-update-materials:hover {
-    background-color: black;
-    color: white;
-  }
+.btn-update-materials:hover {
+  background-color: black;
+  color: white;
+}
 
 .body-update-materials {
   background: linear-gradient(216deg, rgba(23,151,177,1) 7%, rgba(27,153,151,0.7847514005602241) 95%);
   background-size: cover;
   background-attachment: fixed;
 }
-  .btn-cancel {
-    background-color: grey;
-    color:white;
-    border-radius: 5px;
-  }
+.btn-cancel-edit {
+  background-color: grey;
+  color:white;
+  border-radius: 5px;
+  font-size: 20px;
+}
 
-  .btn-cancel:hover {
-    background-color: black;
-    color: white;
-  }
+.btn-cancel-edit:hover {
+  background-color: black;
+  color: white;
+}
