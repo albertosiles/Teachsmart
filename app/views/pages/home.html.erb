@@ -41,53 +41,14 @@
             </div>
         </div>
     </div>
-
-    <div class="container white-container">
-        <section class="team-section">
-            <h2 class="team-section">Get to Know Our Team</h2>
-            <div class="team-members">
-                <!-- Team members content goes here -->
-                <div class="team-member pale-purple-card">
-                    <div class="background-image" style="background-image: url(<%= asset_path('alberto.jpg') %>);"></div>
-                    <h3>Alberto Siles</h3>
-                    <a href="https://github.com/albertosiles" target="_blank" class="github-link"><i class="fab fa-github"></i></a>
-                </div>
-                <div class="team-member pale-purple-card">
-                    <div class="background-image" style="background-image: url(<%= asset_path('jeremy.jpg') %>);"></div>
-                    <h3>Jeremy Thorpe</h3>
-                    <a href="https://github.com/jeremyTh635" target="_blank" class="github-link"><i class="fab fa-github"></i></a>
-                </div>
-                <div class="team-member pale-purple-card">
-                    <div class="background-image" style="background-image: url(<%= asset_path('theresa.jpg') %>);"></div>
-                    <h3>Theresa Niedernhuber</h3>
-                    <a href="https://github.com/theresa-niedernhuber" target="_blank" class="github-link"><i class="fab fa-github"></i></a>
-                </div>
-                <div class="team-member pale-purple-card">
-                    <div class="background-image" style="background-image: url(<%= asset_path('pablo.jpg') %>);"></div>
-                    <h3>Pablo F. Mori</h3>
-                    <a href="https://github.com/pfmori" target="_blank" class="github-link"><i class="fab fa-github"></i></a>
-                </div>
-            </div>
-        </section>
-    </div>
-
     <div class="container white-container2 custom-height">
-        <h2>What We Offer</h2>
+        <%# <h2>What We Offer</h2> %>
         <div class="row">
             <div class="col-md-4">
                 <div class="card pale-purple-card">
                     <div class="card-body">
-                        <h5 class="card-title">Online Chat</h5>
-                        <p class="card-text">A chat platform for teachers to share and discuss educational resources in real-time.</p>
-                        <i class="fa-solid fa-comments"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card pale-purple-card">
-                    <div class="card-body">
                         <h5 class="card-title">Teaching Materials</h5>
-                        <p class="card-text">Discover downloadable teaching resources including lesson plans, worksheets and more.</p>
+                        <p class="card-text">Discover and share teaching materials, including lesson plans, worksheets and more.</p>
                         <i class="fa-solid fa-person-chalkboard"></i>
                     </div>
                 </div>
@@ -95,15 +56,52 @@
             <div class="col-md-4">
                 <div class="card pale-purple-card">
                     <div class="card-body">
-                        <h5 class="card-title">Forum</h5>
-                        <p class="card-text">Engage in vibrant discussions and share insights with fellow educators on our interactive forum.</p>
-                        <i class="fa-solid fa-people-line"></i>
+                        <h5 class="card-title">Online Chat</h5>
+                        <p class="card-text">A chat platform for teachers to share and discuss educational resources in real-time.</p>
+                        <i class="fa-solid fa-comments icon-black"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card pale-purple-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Rating and reviews</h5>
+                        <p class="card-text">As a member of our community, rate and review other teachers' materials.</p>
+                        <i class="fa-solid fa-star"></i>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container white-container3 custom-height" style="height: 600px;">
+    </div><br>
+    <%# <div class="container white-container">
+        <section class="team-section">
+            <h2 class="team-section">Get to Know Our Team</h2>
+            <div class="team-members"> %>
+                <!-- Team members content goes here -->
+                <%# <div class="team-member pale-purple-card"> %>
+                    <%# <div class="background-image" style="background-image: url(<%= asset_path('alberto.jpg') %>
+                    <%# <h3>Alberto Siles</h3> %>
+                    <%# <a href="https://github.com/albertosiles" target="_blank" class="github-link"><i class="fab fa-github"></i></a> %>
+                <%# </div> %>
+                <%# <div class="team-member pale-purple-card"> %>
+                    <%# <div class="background-image" style="background-image: url(<%= asset_path('jeremy.jpg'));"></div> %>
+                    <%# <h3>Jeremy Thorpe</h3> %>
+                    <%# <a href="https://github.com/jeremyTh635" target="_blank" class="github-link"><i class="fab fa-github"></i></a> %>
+                <%# </div> %>
+                <%# <div class="team-member pale-purple-card"> %>
+                    <%# <div class="background-image" style="background-image: url(<%= asset_path('theresa.jpg'));"></div>  %>
+                    <%# <h3>Theresa Niedernhuber</h3> %>
+                    <%# <a href="https://github.com/theresa-niedernhuber" target="_blank" class="github-link"><i class="fab fa-github"></i></a> %>
+                <%# </div> %>
+                <%# <div class="team-member pale-purple-card"> %>
+                    <%# <div class="background-image" style="background-image: url(<%= asset_path('pablo.jpg'));"></div>  %>
+                    <%# <h3>Pablo F. Mori</h3> %>
+                    <%# <a href="https://github.com/pfmori" target="_blank" class="github-link"><i class="fab fa-github"></i></a> %>
+                <%# </div> %>
+            <%# </div> %>
+        <%# </section> %>
+    <%# </div> %>
+    <%# <div class="container white-container3 custom-height" style="height: 600px;">
         <h2>Where are we based?</h2>
         <iframe
             width="100%"
@@ -113,7 +111,7 @@
             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD1-po-cZkiG_Ao7ILGgoJB-481YztTKfc&q=London,UK"
             allowfullscreen
         ></iframe>
-    </div>
+    </div> %>
     <!-- Bootstrap JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
