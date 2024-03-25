@@ -27,22 +27,28 @@
       <a href="<%= resource_path(resource) %>" class="card-link-index">
         <div class="card-resource">
           <div class="resource-image">
-              <%= link_to image_tag(image_for_subject(resource.subject)), resource_path(resource) %>
+            <% #unless resource.nil? %>
+              <%= #image_tag(image_for_subject(resource.subject)), class: "img-resource-index" %>
+              <%# end %>
+            <% if resource.photos.length > 0 %>
+              <%= cl_image_tag((resource.photos.first.key), class: "img-resource-index") %>
+            <% end %>
           </div>
-          <div class="card-resource-infos">
-            <h2 class="h2-cards"><%= resource.title %></h2><br>
-            <div class="row">
-              <div class="col">
-                <p><i class="fa-solid fa-book index-icon"></i><br> <%= resource.subject %></p>
-              </div>
-              <div class="col">
-                <p><i class="fa-solid fa-user index-icon"></i><br>Age <%= resource.student_age %></p>
-              </div>
-              <div class="col">
-                <p><i class="fa-solid fa-chalkboard index-icon"></i><br> <%= resource.resource_type %></p>
-              </div>
-            </div><br><br>
+        </div>
+        <div class="card-resource-infos">
+          <h2 class="h2-cards"><%= resource.title %></h2><br>
+          <div class="row">
+            <div class="col">
+              <p><i class="fa-solid fa-book index-icon"></i><br> <%= resource.subject %></p>
+            </div>
+            <div class="col">
+              <p><i class="fa-solid fa-user index-icon"></i><br>Age <%= resource.student_age %></p>
+            </div>
+            <div class="col">
+              <p><i class="fa-solid fa-chalkboard index-icon"></i><br> <%= resource.resource_type %></p>
+            </div>
           </div>
+            <br><br>
         </div>
       </a>
     </div>
