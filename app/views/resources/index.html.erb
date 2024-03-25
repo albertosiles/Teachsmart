@@ -27,9 +27,7 @@
       <a href="<%= resource_path(resource) %>" class="card-link-index">
         <div class="card-resource">
           <div class="resource-image">
-            <% if resource.photos.length > 0 %>
-              <%= cl_image_tag((resource.photos.first.key), class: "img-resource-index") %>
-            <% end %>
+              <%= link_to image_tag(image_for_subject(resource.subject)), resource_path(resource) %>
           </div>
           <div class="card-resource-infos">
             <h2 class="h2-cards"><%= resource.title %></h2><br>
