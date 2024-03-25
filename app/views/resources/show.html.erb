@@ -81,15 +81,28 @@
     <br>
     <br>
   <br>
-  <h4 class="title-review-class">What other teachers thought:</h4><br>
-  <ul class="review-list">
-    <% @resource.reviews.each do |review| %>
-      <li>
-        <% review.rating.times do %>
-          <i class="fa-solid fa-star"></i>
+<div class="review-box">
+  <br>
+  <div class="content-review">
+    <h4 class="title-review-class">What other teachers thought:</h4><br>
+    <% if @resource.reviews.empty? %>
+      <p>These materials have not been reviewed yet.</p>
+    <% else %>
+      <ul class="review-list">
+        <% @resource.reviews.each do |review| %>
+          <li>
+            <% review.rating.times do %>
+              <i class="fa-solid fa-star"></i>
+            <% end %>
+            <div class="review-content">
+            <em ><%= review.content %></em>
+            </div><br>
+          </li>
+        <% end %>
+      </ul><br>
     <% end %>
-    <em class="review-content"><%= review.content %></em></li>
-    <% end %>
-  </ul><br><br>
+  </div>
+</div>
+<br><br>
 </main>
 </body>

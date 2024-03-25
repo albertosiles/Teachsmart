@@ -21,7 +21,9 @@ main {
 width: 210px;
 height: 210px;
 border-radius: 50%;
-background: radial-gradient(circle at top, rgb(84, 204, 228) , #cef2f2);
+// background: radial-gradient(circle at top, rgb(84, 204, 228) , #cef2f2);
+background-color: #fab323;
+opacity: 0.8;
 text-align: center;
 vertical-align: middle;
 padding-top: 40px;
@@ -33,6 +35,7 @@ margin-top: 40px;
   margin: auto;
   color: black;
   font-size: 20px;
+  font-family: "Hammersmith One";
 }
 
 .circle-text h3 {
@@ -47,7 +50,9 @@ margin-top: 40px;
 .title-review-class {
   color: white;
   // font-weight: bold;
-  vertical-align: middle;
+  // text-align: center;
+  font-size: 32px;
+  text-align: left;
 }
 
 .title-resource-class {
@@ -63,8 +68,9 @@ margin-top: 40px;
   width: 800px;
   border-radius: 15px;
   color: black;
-  font-size: 20px;
-  text-align: justify;
+  font-family: "Mako";
+  font-size: 22px;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
@@ -125,7 +131,8 @@ iframe {
   text-decoration: none;
   color: #fab323;
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 400;
+  font-family: "Hammersmith One";
 }
 
 .plain-links a:hover {
@@ -149,7 +156,15 @@ iframe {
 }
 
 .fa-star {
-  color: rgb(159, 227, 241);
+  color: #fab323;
+}
+
+.review-box {
+  padding: 0 20px;
+  // background: radial-gradient(circle at top, rgb(84, 204, 228) , #cef2f2);
+  color: black;
+  margin-left: 400px;
+  margin-right: 300px;
 }
 
 .review-list {
@@ -164,15 +179,25 @@ iframe {
 //   text-align: left;
 //   margin-left: 450px;
 // }
-
-h4 {
-  font-size: 34px;
+.content-review {
+  padding-left: 25px;
+  color: black;
   text-align: left;
-  // margin-left: 350px;
 }
+
+.reviews-p {
+  color: white;
+  font-size: 22px;
+  font-family: "Mako";
+  text-align: center;
+  padding-left: 10px;
+}
+
 
 .review-content {
   color: white;
-  font-size: 26px;
-  padding-left: 25px;
+  font-size: 24px;
+  font-family: "Mako";
+  text-align: left;
+  padding-left: 30px;
 }
