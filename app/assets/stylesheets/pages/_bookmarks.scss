@@ -1,3 +1,9 @@
+.bookmarks-container {
+  max-width:1700px;
+  // margin: 0;
+  padding: 20px;
+}
+
 .bookmarks-page {
   overflow-x: hidden; /* Hide horizontal scrollbar */
 }
@@ -5,10 +11,18 @@
 .bookmarks-page .row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-right: 0px; /* Compensate for negative margins from padding */
-  margin-left: 0; /* Compensate for negative margins from padding */
+  justify-content: left;
+  margin-right: 10px; /* Compensate for negative margins from padding */
+  margin-left: 10px;
+  width:auto;
+  max-width: auto;
 }
+
+.mb-4 {
+  margin-left:60px;
+  margin-right:60px;
+}
+
 
 .bookmarks-page .bookmarks-heading {
   color: rgb(255, 255, 255);
@@ -18,10 +32,14 @@
 }
 
 .bookmarks-page .card-resource {
+  display:flex;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   background-color: #f2f0e5;
   padding: 10px;
+  width: 500px;
+  justify-content: center;
+
 }
 
 .bookmarks-page .resource-image {
@@ -74,7 +92,8 @@
   padding: 5px 10px;
   text-decoration: none;
   display: inline-block;
-  margin: 0; /* Horizontally center the button */
+  margin: 0;
+  /* Horizontally center the button */
 }
 
 .back-link a:hover {
