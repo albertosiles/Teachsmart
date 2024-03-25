@@ -13,9 +13,11 @@
   height: 100%;
 }
 
-.navbar-brand .fa-school{
-  font-size: 40px;
+.navbar-brand h4 {
+  font-size: 34px;
   color: #0e5d6d;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
 }
 
 // .navbar-lewagon .navbar-toggler-icon {
@@ -25,4 +27,6 @@
 .navbar-lewagon .nav-link {
   font-size: 24px;
   color: #0e5d6d;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
 }

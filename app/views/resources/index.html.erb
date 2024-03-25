@@ -21,35 +21,34 @@
   <% end %>
 
   <br>
-  <div class="row justify-content-center">
-    <% @resources.each do |resource| %>
-      <div class="col-lg-4 col-md-4 col-sm-6 mb-4">
-        <a href="<%= resource_path(resource) %>" class="card-link-index">
-          <div class="card-resource">
-            <div class="resource-image">
+<div class="row justify-content-center">
+  <% @resources.each do |resource| %>
+    <div class="col-lg-4 col-md-4 col-sm-6 mb-4">
+      <a href="<%= resource_path(resource) %>" class="card-link-index">
+        <div class="card-resource">
+          <div class="resource-image">
             <% if resource.photos.length > 0 %>
               <%= cl_image_tag((resource.photos.first.key), class: "img-resource-index") %>
             <% end %>
-            </div><br>
-            <div class="card-resource-infos">
-              <h2 class="h2-cards"><%= resource.title %></h2><br>
-              <div class="row">
-                <div class="col">
-                  <p><i class="fa-solid fa-book index-icon"></i><br> <%= resource.subject %></p>
-                </div>
-                <div class="col">
-                  <p><i class="fa-solid fa-user index-icon"></i><br>Age <%= resource.student_age %></p>
-                </div>
-                <div class="col">
-                  <p><i class="fa-solid fa-chalkboard index-icon"></i><br> <%= resource.resource_type %></p>
-                </div>
-                <%# <p><%= resource.description</p>  %>
-              </div>
-            </div>
           </div>
-        </a>
-      </div>
-    <% end %>
-  </div>
+          <div class="card-resource-infos">
+            <h2 class="h2-cards"><%= resource.title %></h2><br>
+            <div class="row">
+              <div class="col">
+                <p><i class="fa-solid fa-book index-icon"></i><br> <%= resource.subject %></p>
+              </div>
+              <div class="col">
+                <p><i class="fa-solid fa-user index-icon"></i><br>Age <%= resource.student_age %></p>
+              </div>
+              <div class="col">
+                <p><i class="fa-solid fa-chalkboard index-icon"></i><br> <%= resource.resource_type %></p>
+              </div>
+            </div><br><br>
+          </div>
+        </div>
+      </a>
+    </div>
+  <% end %>
+</div>
 </div><br><br>
 </body>
