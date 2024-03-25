@@ -1,0 +1,5 @@
+# config/meta.yml
+ meta_product_name: "TeachSmart"
+ meta_title: "TeachSmart - Smarter Teaching, Brighter Futures"
+ meta_description: "An app for teachers to share planning, resources and networking"
+ meta_image: "image4.jpg" # should exist in `app/assets/images/`
