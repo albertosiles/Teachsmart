@@ -1,4 +1,3 @@
-
 <!-- Display one image in the view --->
 <%#= cl_image_tag @resource.photo.key, height: 300, width: 400, crop: :fill %>
 
@@ -8,16 +7,12 @@
         <%#= cl_image_tag photo.key, height: 50, width: 80, crop: :fill %>
       <%# end %>
     <%# </div>  %>
-
 <!--As a background image:  -->
 <%# <div class="card-category" %>
   <%# style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @article.photo.key, height: 300, crop: :fill')">  %>
 <%# </div> %>
-
-
 <!-- Display one file in the view --->
 <%#= cl_image_tag @resource.file.key, height: 300, width: 400, crop: :fill %>
-
 <body class="resource-show">
 <main>
   <h1 class="text-center title-resource-class"><%= @resource.title %></h1>
@@ -40,30 +35,7 @@
         <br>
       <div div class="d-flex justify-content-between align-items-top">
       <div class="circle">
-          <div class="circle-text">Resource type: <h6><%= @resource.resource_type %></h6></div>
-            </div>
-            <div>
-              </div>
-            <div>
-          <!-- Display multiple files in the view. Needs to be placed in the desired position --->
-            <% @resource.files.each do |file| %>
-                <iframe src="https://res.cloudinary.com/di9zm7azt/image/upload/v1710586555/development/<%= file.key %>.pdf" width="600px" frameborder="0" loading= "lazy"></iframe>
-            <% end %>
-        </div>
-                <div class="circle">
-                <div class="circle-text">Category: <h6><%= @resource.category %></h6></div>
-              </div>
-            </div>
-        </div>
-        <br>
-      <div class="d-flex justify-content-center author">
-          <p class="fixed-width plain-links"> <%= link_to "Author: #{@resource.user.profile.first_name}", profile_path(@resource.user) %></p>
-          <p class= "fixed-width plain-links"><i class="fa-regular fa-comments"></i>
-          <% if @resource.user&.chatroom %>
-          <%= link_to "Chat with author", chatroom_path(@resource.user.chatroom) %>
-          <% else %>
-          <p>The author is not available for chat at the moment.</p>
-          <% end %></p>
+          <div class="circle-text">Resource type:<h6><br><%= @resource.resource_type %></h6></div>
       </div>
       <div>
           <!-- Display multiple files in the view. Needs to be placed in the desired position --->
@@ -76,7 +48,6 @@
             </div>
       </div>
       <br><br>
-
   <div class="d-flex justify-content-evenly">
     <% if @resource.user == current_user %>
     <p class="plain-links">
@@ -90,7 +61,6 @@
     </p>
     <% end %>
   </div>
-
   <br><br>
   <div class="d-flex justify-content-between">
     <% if current_user.bookmarks.exists?(resource_id: @resource.id) %>
@@ -104,15 +74,28 @@
     <br>
     <br>
   <br>
-  <h4 class="title-review-class">What other teachers thought:</h4><br>
-  <ul class="review-list">
-    <% @resource.reviews.each do |review| %>
-      <li>
-        <% review.rating.times do %>
-          <i class="fa-solid fa-star"></i>
+<div class="review-box">
+  <br>
+  <div class="content-review">
+    <h4 class="title-review-class">What other teachers thought:</h4><br>
+    <% if @resource.reviews.empty? %>
+      <p>These materials have not been reviewed yet.</p>
+    <% else %>
+      <ul class="review-list">
+        <% @resource.reviews.each do |review| %>
+          <li>
+            <% review.rating.times do %>
+              <i class="fa-solid fa-star"></i>
+            <% end %>
+            <div class="review-content">
+            <em ><%= review.content %></em>
+            </div><br>
+          </li>
+        <% end %>
+      </ul><br>
     <% end %>
-    <em class="review-content"><%= review.content %></em></li>
-    <% end %>
-  </ul><br><br>
+  </div>
+</div>
+<br><br>
 </main>
 </body>

@@ -9,23 +9,32 @@ body {
 
 .discover-link {
   display: inline-block;
+  align-items: center;
   text-align: center;
   padding: 15px 30px;
-  background-color: #ffffff;
+  background-color: #fab323;
   color: black;
-  border-radius: 20px;
+  border-radius: 15px;
   text-decoration: none;
   font-size: 1.8em;
   font-weight: bold;
-  margin-left: -50px;
+  margin-left: 150px;
+  margin-bottom: 80px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.discover-link:hover {
+  background-color: black;
+  color:white;
 }
 
 .header h1 {
   color: #ffffff;
-  font-size: 50px;
-  margin-bottom: 25px;
+  font-size: 60px;
+  margin-bottom: 10px;
   margin-top: 10px;
-  border-bottom: 2px solid #ddd;
+  // border-bottom: 2px solid #ddd;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .icon {
@@ -69,35 +78,35 @@ body {
   font-weight: bold;
 }
 
-.team-members {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
+// .team-members {
+//   display: flex;
+//   justify-content: space-around;
+//   flex-wrap: wrap;
+// }
 
-.team-section h2 {
-  color: #000000;
-  border-bottom: 2px solid #000000;
-  padding-bottom: 2px;
-  margin-top: 20px;
-}
+// .team-section h2 {
+//   color: #000000;
+//   border-bottom: 2px solid #000000;
+//   padding-bottom: 2px;
+//   margin-top: 20px;
+// }
 
-.team-member {
-  width: 250px;
-  height: 290px;
-  padding: 40px;
-  margin-bottom: 100px;
-  margin-top: 40px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  text-align: center;
-}
+// .team-member {
+//   width: 250px;
+//   height: 290px;
+//   padding: 40px;
+//   margin-bottom: 100px;
+//   margin-top: 40px;
+//   border: 1px solid #ddd;
+//   border-radius: 5px;
+//   text-align: center;
+// }
 
 .center-image {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+    // margin-bottom: 20px;
 }
 
 .image-container {
@@ -141,20 +150,20 @@ body {
   padding: 20px;
 }
 
-.team-member h3,
-.team-member p {
-  font-size: 16px;
-  margin: 5px 0;
-  margin-top: 30px;
-  background-position: center;
-}
-.team-member .background-image {
-  width: 150px;
-  height: 150px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 50%;
-}
+// .team-member h3,
+// .team-member p {
+//   font-size: 16px;
+//   margin: 5px 0;
+//   margin-top: 30px;
+//   background-position: center;
+// }
+// .team-member .background-image {
+//   width: 150px;
+//   height: 150px;
+//   background-size: cover;
+//   background-position: center;
+//   border-radius: 50%;
+// }
 
 .carousel-item {
   height: 700px;
@@ -162,10 +171,11 @@ body {
 
 .carousel-item img {
   width: auto;
-  border-radius: 15px;
   height: auto;
   object-fit: cover;
   object-position: center top;
+  opacity: 0.9;
+  // border-radius: 15px;
 }
 
 .carousel {
@@ -178,14 +188,16 @@ body {
   color: white;
   text-align: center;
   font-size: 25px;
-  margin-bottom: 400px;
+  margin-top: 350px;
 }
 
 .carousel-caption h5 {
   color: white;
+  text-shadow:  2px 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
-  font-size: 40px;
-  margin-bottom: -500px;
+  font-size: 50px;
+  // margin-top: 350px;
+  margin-bottom: 400px;
 }
 
 .github-link {
@@ -196,24 +208,26 @@ body {
 }
 
 .white-container2 {
-  padding: 40px 20px;
-  transform: translateY(75px);
-  background-color: #ffffff;
-  margin-top: 30px;
+  // padding: 40px 20px;
+  // transform: translateY(75px);
+  background-color: transparent;
+  margin-top: 50px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  height: 600px;
-  margin-bottom: 100px;
+  // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width:100%;
+  max-width: 90%;
+  margin-bottom: 50px;
+
 }
 
-.custom-height {
-  height: 400px;
-}
+// .custom-height {
+//   height: 400px;
+// }
 
 .white-container2 .card {
   height: 200px;
   text-align: center;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .white-container2 h2 {
@@ -221,38 +235,70 @@ body {
   padding-bottom: 0px;
 }
 
-.white-container2 h2 {
-  margin-bottom: 60px;
-}
+// .white-container2 h2 {
+//   margin-bottom: 60px;
+// }
 
-.white-container2 .row {
-  margin-top: 20px;
-}
+// .white-container2 .row {
+//   margin-top: 20px;
+// }
 
 .card-body h5 {
   margin-right: 40px;
   margin-bottom: 20px;
   display: inline-block;
+  font-size: 30px;
 }
 
-.chat-section {
-  text-align: center;
+// .chat-section {
+//   text-align: center;
+// }
+
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.card-title {
+  margin-bottom: 10px;
+  flex-basis: 100%;
+}
+
+.card-text {
+  margin-bottom: 15px;
+  word-wrap: break-word; /* Allow long words to break and wrap onto the next line */
+  white-space: pre-wrap;
+  flex-basis: 100%; /* Ensure the text takes up the full width */
+
+}
+
+.card-body i {
+  margin-right: 10px;
+  flex-shrink: 0; /* Prevent icons from shrinking */
+
+}
+
+.icon-black {
+  color: black;
 }
 
 .fa-comments {
-  font-size: 24px;
-  margin-left: 20px;
+  font-size: 30px;
+  margin-left: 110px;
 }
 
 .fa-person-chalkboard {
-  font-size: 28px;
-  margin-left: 50px;
+  font-size: 32px;
+  margin-left: 160px;
   margin-bottom: 30px;
 }
 
-.fa-people-line {
+.fa-star {
   font-size: 28px;
-  margin-left: -5px;
+  margin-left: 140px;
+  color: black;
 }
 
 .card-body i {
@@ -260,6 +306,11 @@ body {
   top: 15%;
   left: 250px;
   transform: translate(-50%, -50%);
+  color: black;
+}
+
+.card-body p {
+  font-size:24px;
 }
 
 .card-body {
@@ -270,7 +321,7 @@ body {
   text-align: center;
   transform: translateY(30px);
   padding: 150px;
-  background: radial-gradient(ellipse at center bottom, #54cce4, #ffffff 70%);
+  // background: radial-gradient(ellipse at center bottom, #54cce4, #ffffff 70%);
   margin-top: 30px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -292,5 +343,10 @@ body {
 }
 
 .pale-purple-card {
-  background: radial-gradient(circle at top, #54cce4, #cef2f2);
+  // background: radial-gradient(circle at top, #54cce4, #cef2f2);
+  background-color: #fab323;
+  opacity: 0.9;
+  border-radius: 15px;
+  border: 1px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
