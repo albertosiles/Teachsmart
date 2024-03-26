@@ -55,9 +55,9 @@ puts "Profiles created"
 # file_path_vivien = Rails.root.join('db', 'seeds', 'images', 'Vivien.jpg')
 # profile_Vivien.photo.attach(io: File.open(file_path_vivien), filename: 'Vivien.jpg')
 # puts "Profile pictures created"
-require 'net/http'
 
 puts "Creating profile pictures..."
+require "open-uri"
 
 # Cloudinary URLs for the images
 cloudinary_url_julia = "https://res.cloudinary.com/di9zm7azt/image/upload/v1710754759/Julia_wuggdq.jpg"
