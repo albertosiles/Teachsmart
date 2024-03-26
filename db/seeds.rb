@@ -60,18 +60,18 @@ require 'open-uri'
 puts "Creating profile pictures..."
 
 # Cloudinary URLs for the images
-cloudinary_url_julia = "https://res.cloudinary.com/di9zm7azt/image/upload/v1711461131/development/tjm3dbo5g1grlf2t1361smiw2pru.jpg"
-cloudinary_url_albert = "https://res.cloudinary.com/di9zm7azt/image/upload/v1711471547/development/o88voqi1tnrvg5ipspvyqpfnyo7b.jpg"
-cloudinary_url_bridget = "https://res.cloudinary.com/di9zm7azt/image/upload/v1711471549/development/0nf8tcfc0h3r15s67yu3ko5ueyby.jpg"
-cloudinary_url_thomas = "https://res.cloudinary.com/di9zm7azt/image/upload/v1711471551/development/mwcr7y1cgvhgg34tzdygga06xfaz.jpg"
-cloudinary_url_vivien = "https://res.cloudinary.com/di9zm7azt/image/upload/v1711471553/development/8vaxbgedyoxhg7s20tgr68raieiy.jpg"
+cloudinary_url_julia = "https://res.cloudinary.com/di9zm7azt/image/upload/v1710754759/Julia_wuggdq.jpg"
+cloudinary_url_albert = "https://res.cloudinary.com/di9zm7azt/image/upload/v1710754759/Albert_x3hzbs.jpg"
+cloudinary_url_bridget = "https://res.cloudinary.com/di9zm7azt/image/upload/v1710754758/Bridget_er19e1.jpg"
+cloudinary_url_thomas = "https://res.cloudinary.com/di9zm7azt/image/upload/v1710754762/Thomas_p9hjkd.jpg"
+cloudinary_url_vivien = "https://res.cloudinary.com/di9zm7azt/image/upload/v1710754763/Vivien_vz2saw.jpg"
 
 # Attach Cloudinary URLs to profiles
-profile_Julia.photo.attach(io: open(cloudinary_url_julia), filename: 'Julia.jpg')
-profile_Albert.photo.attach(io: open(cloudinary_url_albert), filename: 'Albert.jpg')
-profile_Bridget.photo.attach(io: open(cloudinary_url_bridget), filename: 'Bridget.jpg')
-profile_Thomas.photo.attach(io: open(cloudinary_url_thomas), filename: 'Thomas.jpg')
-profile_Vivien.photo.attach(io: open(cloudinary_url_vivien), filename: 'Vivien.jpg')
+profile_Julia.photo.attach(io: open(cloudinary_url_julia))
+profile_Albert.photo.attach(io: open(cloudinary_url_albert))
+profile_Bridget.photo.attach(io: open(cloudinary_url_bridget))
+profile_Thomas.photo.attach(io: open(cloudinary_url_thomas))
+profile_Vivien.photo.attach(io: open(cloudinary_url_vivien))
 
 puts "Profile pictures created"
 
