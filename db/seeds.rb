@@ -57,11 +57,16 @@ profile_Vivien.photo.attach(io: File.open(file_path_vivien), filename: 'Vivien.j
 puts "Profile pictures created"
 
 puts "Creating chatrooms..."
-chat_Julia = Chatroom.create!(name: "Julia")
-chat_Albert = Chatroom.create!(name: "Albert")
-chat_Bridget = Chatroom.create!(name: "Bridget")
-chat_Thomas = Chatroom.create!(name: "Thomas")
-chat_Vivien = Chatroom.create!(name: "Vivien")
+
+User.find_each do |user|
+  Chatroom.create!(name: user.email.split('@').first.capitalize, user: user) unless user.chatroom
+end
+
+#chat_Julia = Chatroom.create!(name: "Julia", user: user_Julia)
+#chat_Albert = Chatroom.create!(name: "Albert", user: user_Albert)
+#chat_Bridget = Chatroom.create!(name: "Bridget", user: user_Bridget)
+#chat_Thomas = Chatroom.create!(name: "Thomas", user: user_Thomas)
+#chat_Vivien = Chatroom.create!(name: "Vivien", user: user_Vivien)
 puts "Chatrooms created"
 
 puts "Creating resources..."
@@ -83,7 +88,7 @@ resource_hydrological_cycle = Resource.create!(title: "Rain in the UK", descript
 resource_relational_databases = Resource.create!(title: "SQL Commands", description: "Learners explore increasingly challenging SQL commands", subject: "Computing", student_age: 15, category: "Databases", resource_type: "Worksheet", user: user_Julia)
 resource_early_history = Resource.create!(title: "The Romans", description: "Everyday life in ancient Rome", subject: "History", student_age: 13, category: "Early history", resource_type: "Video", user: user_Albert)
 resource_add_decimals = Resource.create!(title: "Add decimals", description: "Common fractions and decimals, adding decimals (tenths and hundredths)", subject: "Mathematics", student_age: 11, category: "Decimals", resource_type: "Slides", user: user_Albert)
-resource_fractions = Resource.create!(title: "Add and substract fractions", description: "Adding and subtracting fractions with unlike denominators", subject: "Mathematics", student_age: 11, category: "Fractions", resource_type: "Worksheet", user: user_Julia)
+resource_fractions = Resource.create!(title: "Add and subtract fractions", description: "Adding and subtracting fractions with unlike denominators", subject: "Mathematics", student_age: 11, category: "Fractions", resource_type: "Worksheet", user: user_Julia)
 resource_multi_digit_multiplication = Resource.create!(title: "Multi-digit multiplication", description: "Multi-digit multiplication estimation, multiplication as scaling and multiplying mixed numbers", subject: "Mathematics", student_age: 11, category: "Multiplication", resource_type: "Worksheet", user: user_Albert)
 resource_volumes = Resource.create!(title: "Calculating volumes", description: "Volume with unit cubes, rectangular prisms and volume word problems", subject: "Mathematics", student_age: 12, category: "Volumes", resource_type: "Worksheet", user: user_Vivien)
 resource_converting_units = Resource.create!(title: "Converting units of measure", description: "Converting units of time, metric units and metric units word problems", subject: "Mathematics", student_age: 12, category: "Units", resource_type: "Slides", user: user_Julia)
@@ -104,48 +109,48 @@ resource_creating_media = Resource.create!(title: "Creating media", description:
 puts "Resources created"
 
 puts "Attaching resource images"
-file_path_maths = Rails.root.join('db', 'seeds', 'images', 'math.jpg')
-resource_basic_algebra.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
-resource_fractions_and_decimals.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
-resource_charts_and_graphs.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
-resource_add_decimals.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
-resource_fractions.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
-resource_multi_digit_multiplication.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
-resource_volumes.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
-resource_converting_units.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
-resource_unknown_variable.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
-resource_complex_numbers.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
-resource_binomial_theorem.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
-resource_derivatives.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
-resource_linear_inequalities.photos.attach(io: File.open(file_path_maths), filename: 'math.jpg')
+file_path_maths = Rails.root.join('db', 'seeds', 'images', 'laptop_math.png')
+resource_basic_algebra.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+resource_fractions_and_decimals.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+resource_charts_and_graphs.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+resource_add_decimals.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+resource_fractions.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+resource_multi_digit_multiplication.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+resource_volumes.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+resource_converting_units.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+resource_unknown_variable.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+resource_complex_numbers.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+resource_binomial_theorem.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+resource_derivatives.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+resource_linear_inequalities.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
 
-file_path_computing = Rails.root.join('db', 'seeds', 'images', 'computing.jpg')
-resource_essentials_scratch.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
-resource_modeling_data.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
-resource_relational_advances_scratch.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
-resource_computer_networks.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
-resource_vector_graphics.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
-resource_python.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
-resource_data_science.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
-resource_relational_cybersecurity.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
-resource_creating_media.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
-resource_relational_databases.photos.attach(io: File.open(file_path_computing), filename: 'computing.jpg')
+file_path_computing = Rails.root.join('db', 'seeds', 'images', 'laptop_computing.png')
+resource_essentials_scratch.photos.attach(io: File.open(file_path_computing), filename: 'laptop_computing.png')
+resource_modeling_data.photos.attach(io: File.open(file_path_computing), filename: 'laptop_computing.png')
+resource_relational_advances_scratch.photos.attach(io: File.open(file_path_computing), filename: 'laptop_computing.png')
+resource_computer_networks.photos.attach(io: File.open(file_path_computing), filename: 'laptop_computing.png')
+resource_vector_graphics.photos.attach(io: File.open(file_path_computing), filename: 'laptop_computing.png')
+resource_python.photos.attach(io: File.open(file_path_computing), filename: 'laptop_computing.png')
+resource_data_science.photos.attach(io: File.open(file_path_computing), filename: 'laptop_computing.png')
+resource_relational_cybersecurity.photos.attach(io: File.open(file_path_computing), filename: 'laptop_computing.png')
+resource_creating_media.photos.attach(io: File.open(file_path_computing), filename: 'laptop_computing.png')
+resource_relational_databases.photos.attach(io: File.open(file_path_computing), filename: 'laptop_computing.png')
 
-file_path_german = Rails.root.join('db', 'seeds', 'images', 'language.jpg')
-resource_past_tense.photos.attach(io: File.open(file_path_german), filename: 'language.jpg')
+file_path_german = Rails.root.join('db', 'seeds', 'images', 'laptop_ger.png')
+resource_past_tense.photos.attach(io: File.open(file_path_german), filename: 'laptop_ger.png')
 
-file_path_geography = Rails.root.join('db', 'seeds', 'images', 'geography.jpg')
-resource_states.photos.attach(io: File.open(file_path_geography), filename: 'geography.jpg')
-resource_hydrological_cycle.photos.attach(io: File.open(file_path_geography), filename: 'geography.jpg')
+file_path_geography = Rails.root.join('db', 'seeds', 'images', 'laptop_geo.png')
+resource_states.photos.attach(io: File.open(file_path_geography), filename: 'laptop_geo.png')
+resource_hydrological_cycle.photos.attach(io: File.open(file_path_geography), filename: 'laptop_geo.png')
 
-file_path_physics = Rails.root.join('db', 'seeds', 'images', 'physics.jpg')
-resource_presentation.photos.attach(io: File.open(file_path_physics), filename: 'physics.jpg')
+file_path_physics = Rails.root.join('db', 'seeds', 'images', 'laptop_phy.png')
+resource_presentation.photos.attach(io: File.open(file_path_physics), filename: 'laptop_phy.png')
 
-file_path_english = Rails.root.join('db', 'seeds', 'images', 'english.jpg')
-resource_formal_letters.photos.attach(io: File.open(file_path_english), filename: 'english.jpg')
+file_path_english = Rails.root.join('db', 'seeds', 'images', 'laptop_eng.png')
+resource_formal_letters.photos.attach(io: File.open(file_path_english), filename: 'laptop_eng.png')
 
-file_path_history = Rails.root.join('db', 'seeds', 'images', 'history.jpg')
-resource_early_history.photos.attach(io: File.open(file_path_history), filename: 'history.jpg')
+file_path_history = Rails.root.join('db', 'seeds', 'images', 'laptop_his.png')
+resource_early_history.photos.attach(io: File.open(file_path_history), filename: 'laptop_his.png')
 puts "Images attached"
 
 

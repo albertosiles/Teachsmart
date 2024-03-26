@@ -1,4 +1,3 @@
-
 <!-- Display one image in the view --->
 <%#= cl_image_tag @resource.photo.key, height: 300, width: 400, crop: :fill %>
 
@@ -8,16 +7,12 @@
         <%#= cl_image_tag photo.key, height: 50, width: 80, crop: :fill %>
       <%# end %>
     <%# </div>  %>
-
 <!--As a background image:  -->
 <%# <div class="card-category" %>
   <%# style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @article.photo.key, height: 300, crop: :fill')">  %>
 <%# </div> %>
-
-
 <!-- Display one file in the view --->
 <%#= cl_image_tag @resource.file.key, height: 300, width: 400, crop: :fill %>
-
 <body class="resource-show">
 <main>
   <h1 class="text-center title-resource-class"><%= @resource.title %></h1>
@@ -53,7 +48,6 @@
             </div>
       </div>
       <br><br>
-
   <div class="d-flex justify-content-evenly">
     <% if @resource.user == current_user %>
     <p class="plain-links">
@@ -67,7 +61,6 @@
     </p>
     <% end %>
   </div>
-
   <br><br>
   <div class="d-flex justify-content-between">
     <% if current_user.bookmarks.exists?(resource_id: @resource.id) %>

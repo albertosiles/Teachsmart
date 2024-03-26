@@ -1,22 +1,17 @@
-
-
 main {
   padding: 35px;
   margin-left: 200px;
   margin-right: 200px;
 }
-
 .resource-show {
   background: linear-gradient(216deg, rgba(23,151,177,1) 7%, rgba(27,153,151,0.7847514005602241) 95%);
   background-size: cover;
   background-attachment: fixed;
 }
-
 .show-container {
   background-color: #f2f0e5;
   padding: 85px;
 }
-
 .circle {
 width: 210px;
 height: 210px;
@@ -30,7 +25,6 @@ padding-top: 40px;
 border: 1px solid black;
 margin-top: 40px;
 }
-
 .circle-text {
   margin: auto;
   color: black;
@@ -41,12 +35,10 @@ margin-top: 40px;
 .circle-text h3 {
   font-weight:300;
 }
-
 .circle-text h6 {
   font-weight: bold;
   font-size: 30px;
 }
-
 .title-review-class {
   color: white;
   // font-weight: bold;
@@ -62,7 +54,6 @@ margin-top: 40px;
   text-align: center;
   font-size: 48px;
 }
-
 .resource-description {
   height: auto;
   width: 800px;
@@ -74,14 +65,12 @@ margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
 }
-
 iframe {
   height: 600px;
   width: 800px;
   margin-top: -140px;
   border-radius: 10px;
 }
-
 .description-pdf-container {
   display: flex;
   flex-direction: column;
@@ -89,7 +78,6 @@ iframe {
   justify-content: center;
   height: auto;
 }
-
 .showpage-btn {
   background-color: #fab323;
   width: auto;
@@ -103,30 +91,24 @@ iframe {
   border: 1px solid black;
   margin-left: 20px;
 }
-
 .showpage-btn a {
   text-decoration: none;
   color: black;
 }
-
 .showpage-btn a:hover {
   color: white;
 }
-
 .showpage-btn:hover {
   background-color: black;
   color: white;
 }
-
 .fixed-width {
   width: 500px;
   text-align: center;
 }
-
 .plain-links {
   text-align: center;
 }
-
 .plain-links a {
   text-decoration: none;
   color: #fab323;
@@ -138,19 +120,15 @@ iframe {
 .plain-links a:hover {
   color: black;
 }
-
 .fa-comments {
   color: #fab323;
 }
-
 .fa-comments:hover {
   color: black;
 }
-
 .fa-pen-to-square {
   font-size: 40px;
 }
-
 .fa-trash {
   font-size: 40px;
 }
@@ -174,7 +152,6 @@ iframe {
   text-align: left;
   // margin-left: 350px;
 }
-
 // .review-list li {
 //   text-align: left;
 //   margin-left: 450px;
@@ -183,6 +160,13 @@ iframe {
   padding-left: 25px;
   color: black;
   text-align: left;
+}
+
+.content-review p {
+  // padding-left: 25px;
+  color: white;
+  text-align: left;
+  font-size: 24px;
 }
 
 .reviews-p {
