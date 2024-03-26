@@ -9,14 +9,15 @@
       <p class="profile-description"><%= @profile.description %></p>
       <% if current_user.resources.any? %>
         <%= link_to my_uploaded_resources_path, class: "uploaded-materials link-button" do %>
-            <h5><%= current_user.resources.count %> Uploaded materials</h5>
+            <h5><%= @user.resources.count %> Uploaded materials</h5>
         <% end %>
       <% else %>
         <br><h5 class="uploaded-materials">No materials uploaded yet</h5><br>
       <% end %>
+
       <% if current_user.bookmarks.any? %>
         <%= link_to bookmarks_path, class: "bookmarks-link-button link-button" do %>
-            <h5><%= current_user.bookmarks.count %> Bookmarked materials</h5><br>
+            <h5><%= @user.bookmarks.count %> Bookmarked materials</h5><br>
         <% end %>
       <% else %>
         <br><h5 class="uploaded-materials">No bookmarks found</h5><br>
