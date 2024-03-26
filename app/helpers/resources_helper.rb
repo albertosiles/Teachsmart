@@ -1,14 +1,13 @@
 module ResourcesHelper
   def image_for_subject(subject)
-    case subject
-    when 'Mathematics' then 'laptop_math.png'
-    when 'German' then 'laptop_ger.png'
-    when 'Geography' then 'laptop_geo.png'
-    when 'Physics' then 'laptop_phy.png'
-    when 'English' then 'laptop_eng.png'
-    when 'Computing' then 'laptop_computing.png'
-    when 'History' then 'laptop_his.png'
-    else 'laptop_class.png'
-    end
+    {
+      "History" => "https://res.cloudinary.com/di9zm7azt/image/upload/v1711396838/development/laptop_his_btsqcl.png",
+      "Mathematics" => "https://res.cloudinary.com/di9zm7azt/image/upload/v1711396842/development/laptop_math_shbk08.png",
+      "Geography" => "https://res.cloudinary.com/di9zm7azt/image/upload/v1711396833/development/laptop_geo_vcactc.png",
+      "German" => "https://res.cloudinary.com/di9zm7azt/image/upload/v1711396836/development/laptop_ger_saflr9.png",
+      "English" => "https://res.cloudinary.com/di9zm7azt/image/upload/v1711396831/development/laptop_eng_pukwkr.png",
+      "Computing" => "https://res.cloudinary.com/di9zm7azt/image/upload/v1711396827/development/laptop_computing_n3dwc6.png",
+      "Physics" => "https://res.cloudinary.com/di9zm7azt/image/upload/v1711396847/development/laptop_phy_dpjlsb.png"
+    } [subject] || "https://res.cloudinary.com/di9zm7azt/image/upload/v1711396842/development/laptop_math_shbk08.png"
   end
 end
