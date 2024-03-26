@@ -19,7 +19,12 @@
     <br>
       <div class="d-flex justify-content-center author">
         <p class="fixed-width plain-links"> <%= link_to "Author: #{@resource.user.profile.first_name} #{@resource.user.profile.last_name}", profile_path(@resource.user) %></p>
-        <p class= "fixed-width plain-links"><i class="fa-regular fa-comments"></i> <%= link_to "Chat with author", "#" %> </p>
+        <p class= "fixed-width plain-links"><i class="fa-regular fa-comments"></i>
+        <% if @resource.user&.chatroom %>
+          <%= link_to "Chat with author", chatroom_path(@resource.user.chatroom) %>
+        <% else %>
+          <p>The author is not available for chat at the moment.</p>
+        <% end %></p>
       </div><br>
       <div class="d-flex justify-content-between align-items-top">
         <div class="circle">
@@ -40,8 +45,11 @@
       <div>
           <!-- Display multiple files in the view. Needs to be placed in the desired position --->
         <%# @resource.file.each do |file| %>
+        <% if @resource.file.attached? %>
           <br><br><br><iframe src="<%= cl_image_path @resource.file.key %>.pdf" width="600px" frameborder="0" loading= "lazy"></iframe>
-        <%# end %>
+        <% else %>
+          <p class="no-file-attached">No file attached</p>
+        <% end %>
       </div>
             <div class="circle">
               <div class="circle-text">Category:<h6><br><%= @resource.category %></h6></div>
@@ -63,12 +71,12 @@
   </div>
   <br><br>
   <div class="d-flex justify-content-between">
+    <button class="showpage-btn"><%= link_to "Back to Materials", resources_path(@resources) %></button>
     <% if current_user.bookmarks.exists?(resource_id: @resource.id) %>
       <%= button_to 'Remove from Bookmarks', bookmark_path(current_user.bookmarks.find_by(resource_id: @resource.id)), method: :delete, data: { confirm: 'Are you sure you want to remove this bookmark?' }, class: "showpage-btn" %>
     <% else %>
       <%= button_to 'Bookmark', bookmark_resource_path(@resource), method: :post, class: "showpage-btn" %>
     <% end %>
-    <button class="showpage-btn"><%= link_to "Back to Teaching Materials", resources_path(@resources) %></button>
     <button class="showpage-btn"><%= link_to "Add a Review", new_resource_review_path(@resource) %></button>
   </div>
     <br>
@@ -85,7 +93,7 @@
         <% @resource.reviews.each do |review| %>
           <li>
             <% review.rating.times do %>
-              <i class="fa-solid fa-star"></i>
+              <i class="rating-resource fa-solid fa-star"></i>
             <% end %>
             <div class="review-content">
             <em ><%= review.content %></em>
