@@ -13,8 +13,9 @@ Review.destroy_all
 Bookmark.destroy_all
 Profile.destroy_all
 Resource.destroy_all
-User.destroy_all
 Chatroom.destroy_all
+User.destroy_all
+
 
 puts "Creating users..."
 user_Julia = User.create!(email: "julia@lewagon.com", password: "xxx111")
@@ -39,41 +40,57 @@ profile_Thomas = Profile.create!(user: user_Thomas, first_name: "Thomas", last_n
 profile_Vivien = Profile.create!(user: user_Vivien, first_name: "Vivien", last_name: "Smith", description: "Hi fellow teachers, I'm Viv (short for Vivien). I'm kind of new here and am happy for any helpful hints and ideas on how to create some creative lessons for my students.")
 puts "Profiles created"
 
-puts "Creating profile pictures..."
-file_path_julia = Rails.root.join('db', 'seeds', 'images', 'Julia.jpg')
-profile_Julia.photo.attach(io: File.open(file_path_julia), filename: 'Julia.jpg')
+# puts "Creating profile pictures..."
+# file_path_julia = Rails.root.join('db', 'seeds', 'images', 'Julia.jpg')
+# profile_Julia.photo.attach(io: File.open(file_path_julia), filename: 'Julia.jpg')
 
-file_path_albert = Rails.root.join('db', 'seeds', 'images', 'Albert.jpg')
-profile_Albert.photo.attach(io: File.open(file_path_albert), filename: 'Albert.jpg')
+# file_path_albert = Rails.root.join('db', 'seeds', 'images', 'Albert.jpg')
+# profile_Albert.photo.attach(io: File.open(file_path_albert), filename: 'Albert.jpg')
 
-file_path_bridget = Rails.root.join('db', 'seeds', 'images', 'Bridget.jpg')
-profile_Bridget.photo.attach(io: File.open(file_path_bridget), filename: 'Bridget.jpg')
+# file_path_bridget = Rails.root.join('db', 'seeds', 'images', 'Bridget.jpg')
+# profile_Bridget.photo.attach(io: File.open(file_path_bridget), filename: 'Bridget.jpg')
 
-file_path_thomas = Rails.root.join('db', 'seeds', 'images', 'Thomas.jpg')
-profile_Thomas.photo.attach(io: File.open(file_path_thomas), filename: 'Thomas.jpg')
+# file_path_thomas = Rails.root.join('db', 'seeds', 'images', 'Thomas.jpg')
+# profile_Thomas.photo.attach(io: File.open(file_path_thomas), filename: 'Thomas.jpg')
 
-file_path_vivien = Rails.root.join('db', 'seeds', 'images', 'Vivien.jpg')
-profile_Vivien.photo.attach(io: File.open(file_path_vivien), filename: 'Vivien.jpg')
-puts "Profile pictures created"
+# file_path_vivien = Rails.root.join('db', 'seeds', 'images', 'Vivien.jpg')
+# profile_Vivien.photo.attach(io: File.open(file_path_vivien), filename: 'Vivien.jpg')
+# puts "Profile pictures created"
 
 # puts "Creating profile pictures..."
-# require "open-uri"
+require "open-uri"
 
-# # Cloudinary URLs for the images
-# cloudinary_url_julia = "https://res.cloudinary.com/di9zm7azt/image/upload/v1710754759/Julia_wuggdq.jpg"
-# cloudinary_url_albert = "https://res.cloudinary.com/di9zm7azt/image/upload/v1710754759/Albert_x3hzbs.jpg"
-# cloudinary_url_bridget = "https://res.cloudinary.com/di9zm7azt/image/upload/v1710754758/Bridget_er19e1.jpg"
-# cloudinary_url_thomas = "https://res.cloudinary.com/di9zm7azt/image/upload/v1710754762/Thomas_p9hjkd.jpg"
-# cloudinary_url_vivien = "https://res.cloudinary.com/di9zm7azt/image/upload/v1710754763/Vivien_vz2saw.jpg"
+def download_image_from_cloudinary(url)
+  URI.open(url)
+end
 
-# # Attach Cloudinary URLs to profiles
-# profile_Julia.photo.attach(io: open(cloudinary_url_julia))
-# profile_Albert.photo.attach(io: open(cloudinary_url_albert))
-# profile_Bridget.photo.attach(io: open(cloudinary_url_bridget))
-# profile_Thomas.photo.attach(io: open(cloudinary_url_thomas))
-# profile_Vivien.photo.attach(io: open(cloudinary_url_vivien))
+# Define a method to attach an image from Cloudinary to a resource
+def attach_image_to_profile(profile, image_url)
+  file = download_image_from_cloudinary(image_url)
+  profile.photo.attach(io: file, filename: File.basename(image_url))
+end
 
-# puts "Profile pictures created"
+# Cloudinary URLs for the images
+user_photos = {
+  "Julia" => "https://res.cloudinary.com/di9zm7azt/image/upload/v1710754759/Julia_wuggdq.jpg",
+  "Albert" => "https://res.cloudinary.com/di9zm7azt/image/upload/v1710754759/Albert_x3hzbs.jpg",
+  "Bridget" => "https://res.cloudinary.com/di9zm7azt/image/upload/v1710754758/Bridget_er19e1.jpg",
+  "Thomas" => "https://res.cloudinary.com/di9zm7azt/image/upload/v1710754762/Thomas_p9hjkd.jpg",
+  "Vivien" => "https://res.cloudinary.com/di9zm7azt/image/upload/v1710754763/Vivien_vz2saw.jpg"
+}
+
+Profile.all.each do |profile|
+  # Find the subject of the resource
+  name = profile.first_name
+
+  # Get the image URL corresponding to the subject
+  image_url = user_photos[name]
+
+  # Attach the image to the resource
+  attach_image_to_profile(profile, image_url)
+end
+
+puts "Profile pictures created"
 
 puts "Creating chatrooms..."
 
