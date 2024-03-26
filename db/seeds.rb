@@ -108,6 +108,52 @@ resource_relational_cybersecurity = Resource.create!(title: "Introduction to Cyb
 resource_creating_media = Resource.create!(title: "Creating media", description: "Creating templates, layouts and edited media", subject: "Computing", student_age: 14, category: "Media", resource_type: "Slides", user: user_Thomas)
 puts "Resources created"
 
+
+# puts "Attaching resource images"
+# file_path_maths = Rails.root.join('db', 'seeds', 'images', 'laptop_math.png')
+# resource_basic_algebra.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+# resource_fractions_and_decimals.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+# resource_charts_and_graphs.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+# resource_add_decimals.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+# resource_fractions.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+# resource_multi_digit_multiplication.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+# resource_volumes.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+# resource_converting_units.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+# resource_unknown_variable.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+# resource_complex_numbers.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+# resource_binomial_theorem.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+# resource_derivatives.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+# resource_linear_inequalities.photos.attach(io: File.open(file_path_maths), filename: 'laptop_math.png')
+
+# file_path_computing = Rails.root.join('db', 'seeds', 'images', 'laptop_computing.png')
+# resource_essentials_scratch.photos.attach(io: File.open(file_path_computing), filename: 'laptop_computing.png')
+# resource_modeling_data.photos.attach(io: File.open(file_path_computing), filename: 'laptop_computing.png')
+# resource_relational_advances_scratch.photos.attach(io: File.open(file_path_computing), filename: 'laptop_computing.png')
+# resource_computer_networks.photos.attach(io: File.open(file_path_computing), filename: 'laptop_computing.png')
+# resource_vector_graphics.photos.attach(io: File.open(file_path_computing), filename: 'laptop_computing.png')
+# resource_python.photos.attach(io: File.open(file_path_computing), filename: 'laptop_computing.png')
+# resource_data_science.photos.attach(io: File.open(file_path_computing), filename: 'laptop_computing.png')
+# resource_relational_cybersecurity.photos.attach(io: File.open(file_path_computing), filename: 'laptop_computing.png')
+# resource_creating_media.photos.attach(io: File.open(file_path_computing), filename: 'laptop_computing.png')
+# resource_relational_databases.photos.attach(io: File.open(file_path_computing), filename: 'laptop_computing.png')
+
+# file_path_german = Rails.root.join('db', 'seeds', 'images', 'laptop_ger.png')
+# resource_past_tense.photos.attach(io: File.open(file_path_german), filename: 'laptop_ger.png')
+
+# file_path_geography = Rails.root.join('db', 'seeds', 'images', 'laptop_geo.png')
+# resource_states.photos.attach(io: File.open(file_path_geography), filename: 'laptop_geo.png')
+# resource_hydrological_cycle.photos.attach(io: File.open(file_path_geography), filename: 'laptop_geo.png')
+
+# file_path_physics = Rails.root.join('db', 'seeds', 'images', 'laptop_phy.png')
+# resource_presentation.photos.attach(io: File.open(file_path_physics), filename: 'laptop_phy.png')
+
+# file_path_english = Rails.root.join('db', 'seeds', 'images', 'laptop_eng.png')
+# resource_formal_letters.photos.attach(io: File.open(file_path_english), filename: 'laptop_eng.png')
+
+# file_path_history = Rails.root.join('db', 'seeds', 'images', 'laptop_his.png')
+# resource_early_history.photos.attach(io: File.open(file_path_history), filename: 'laptop_his.png')
+# puts "Images attached"
+
 puts "Creating images..."
 
 require "open-uri"
