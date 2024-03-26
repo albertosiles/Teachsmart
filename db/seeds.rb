@@ -55,6 +55,7 @@ puts "Profiles created"
 # file_path_vivien = Rails.root.join('db', 'seeds', 'images', 'Vivien.jpg')
 # profile_Vivien.photo.attach(io: File.open(file_path_vivien), filename: 'Vivien.jpg')
 # puts "Profile pictures created"
+require 'open-uri'
 
 puts "Creating profile pictures..."
 
