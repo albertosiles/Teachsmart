@@ -1,24 +1,21 @@
-<div class="container chatroom"
-  data-controller="chatroom-subscription"
-  data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
->
-  <h3>Chat with <%= @chatroom.name %></h3>
-  <br>
-
+<div class="container chatroom" data-controller="chatroom-subscription" data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
+  <div class="header">
+    <h3>Chat with <%= @chatroom.name %></h3>
+    <button class="close-button" onclick="document.querySelector('.chatroom').style.display = 'none';">Close</button>
+  </div>
   <div class="messages" data-chatroom-subscription-target="messages">
     <% @chatroom.messages.each do |message| %>
-    <%= render "messages/message", message: message %>
+      <%= render "messages/message", message: message %>
     <% end %>
   </div>
-
-<br>
-
-<%= simple_form_for [@chatroom, @message], html: {class: "d-flex", data: {chatroom_subscription_target: :form}} do |f| %>
-<%= f.input :content,
-    label: false,
-    placeholder: "Send a message",
-    wrapper_html: { class: "input-wrapper" },
-    input_html: { class: "chat-input" } %>
-  <%= f.submit "Send", class: "chat-button" %>
-<% end %>
+  <div id="new_message">
+    <%= simple_form_for [@chatroom, @message], html: {class: "d-flex", data: {chatroom_subscription_target: :form}} do |f| %>
+      <%= f.input :content,
+          label: false,
+          placeholder: "Send a message",
+          wrapper_html: { class: "input-wrapper" },
+          input_html: { class: "chat-input" } %>
+      <%= f.submit "Send", class: "chat-button" %>
+    <% end %>
+  </div>
 </div>
