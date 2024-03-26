@@ -3,21 +3,24 @@ main {
   margin-left: 200px;
   margin-right: 200px;
 }
+
 .resource-show {
   background: linear-gradient(216deg, rgba(23,151,177,1) 7%, rgba(27,153,151,0.7847514005602241) 95%);
   background-size: cover;
   background-attachment: fixed;
 }
+
 .show-container {
   background-color: #f2f0e5;
   padding: 85px;
 }
+
 .circle {
 width: 210px;
 height: 210px;
 border-radius: 50%;
 // background: radial-gradient(circle at top, rgb(84, 204, 228) , #cef2f2);
-background-color: #fab323;
+background-color: #013843;
 opacity: 0.8;
 text-align: center;
 vertical-align: middle;
@@ -25,9 +28,11 @@ padding-top: 40px;
 border: 1px solid black;
 margin-top: 40px;
 }
+
 .circle-text {
+  text-align:center;
   margin: auto;
-  color: black;
+  color: white;
   font-size: 20px;
   font-family: "Hammersmith One";
 }
@@ -35,10 +40,18 @@ margin-top: 40px;
 .circle-text h3 {
   font-weight:300;
 }
+
 .circle-text h6 {
   font-weight: bold;
   font-size: 30px;
 }
+
+.no-file-attached {
+  font-size: 24px;
+  font-family: "Mako";
+}
+
+
 .title-review-class {
   color: white;
   // font-weight: bold;
@@ -54,6 +67,7 @@ margin-top: 40px;
   text-align: center;
   font-size: 48px;
 }
+
 .resource-description {
   height: auto;
   width: 800px;
@@ -65,19 +79,22 @@ margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
 }
+
 iframe {
   height: 600px;
   width: 800px;
-  margin-top: -140px;
+  margin-top: -160px;
   border-radius: 10px;
 }
-.description-pdf-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: auto;
-}
+
+// .description-pdf-container {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   height: auto;
+// }
+
 .showpage-btn {
   background-color: #fab323;
   width: auto;
@@ -91,24 +108,30 @@ iframe {
   border: 1px solid black;
   margin-left: 20px;
 }
+
 .showpage-btn a {
   text-decoration: none;
   color: black;
 }
+
 .showpage-btn a:hover {
   color: white;
 }
+
 .showpage-btn:hover {
-  background-color: black;
+  background-color: #013843;
   color: white;
 }
+
 .fixed-width {
   width: 500px;
   text-align: center;
 }
+
 .plain-links {
   text-align: center;
 }
+
 .plain-links a {
   text-decoration: none;
   color: #fab323;
@@ -118,23 +141,29 @@ iframe {
 }
 
 .plain-links a:hover {
-  color: black;
+  color: #013843;
 }
+
 .fa-comments {
   color: #fab323;
 }
+
 .fa-comments:hover {
-  color: black;
+  color: #013843;
 }
+
 .fa-pen-to-square {
   font-size: 40px;
 }
+
 .fa-trash {
   font-size: 40px;
 }
 
-.fa-star {
+.rating-resource {
   color: #fab323;
+  margin-left: 0;
+  margin-right:5px;
 }
 
 .review-box {
