@@ -1,47 +1,60 @@
-.chatroom {
+.container.chatroom {
   background: white;
-  margin-top: 9px;
-  height: calc(100vh - 75px);
+  margin-top: 40px; /* Adjust the top margin as needed */
+  height: calc(100vh - 115px); /* Adjust the height based on the top margin and header height */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
+  border-radius: 15px;
+}
 
-  h1 {
-    border-bottom: 1px solid $gray-200;
-    margin-bottom: 0;
-    padding: 1rem;
-  }
+.container.chatroom .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $gray-200;
+  margin-bottom: 0;
+  padding: 1rem;
+  color: black;
+}
 
-  .messages {
-    height: 100%;
-    overflow: scroll;
-    padding: 1rem;
-  }
+.container.chatroom .messages {
+  height: 100%;
+  overflow: scroll;
+  padding: 1rem;
+}
 
-  #new_message {
-    border-top: 1px solid $gray-200;
-    padding: 1rem;
-  }
+.container.chatroom #new_message {
+  border-top: 1px solid $gray-200;
+  padding: 1rem;
+}
 
-  .form-group {
-      margin-bottom: 0;
-    }
-  }
+.container.chatroom .form-group {
+  margin-bottom: 0;
+}
 
-  .input-wrapper {
-    margin-right: 0.5rem;
-  }
+.container.chatroom .input-wrapper {
+  margin-right: 0.5rem;
+  width: 100%;
+}
 
-  .chat-input {
-    height: 38px;
-  }
+.container.chatroom .chat-input {
+  height: 38px;
+  width: 100%;
+}
 
-  .chat-button {
-    height: 38px;
-    background-color: rgb(129, 69, 10);
-    color: white;
-    padding: 8px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-  }
+.container.chatroom .chat-button {
+  height: 38px;
+  background-color: rgb(129, 69, 10);
+  color: white;
+  padding: 8px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.container.chatroom .close-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
