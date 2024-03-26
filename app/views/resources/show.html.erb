@@ -49,14 +49,8 @@
                 <div class="circle-text">Category: <h6><%= @resource.category %></h6></div>
               </div>
             </div>
-<<<<<<< HEAD
-        </div>
-        <br>
-  <br>
-=======
       </div>
       <br><br>
->>>>>>> 26620c9a5e30004e60562504dca3eb84a755b615
   <div class="d-flex justify-content-evenly">
       <% if @resource.user == current_user %>
       <p class="plain-links">
@@ -83,18 +77,6 @@
         <br>
         <br>
   <br>
-<<<<<<< HEAD
-  <h4 class="title-review-class">What other teachers thought:</h4><br>
-  <ul class="review-list">
-    <% @resource.reviews.each do |review| %>
-      <li>
-        <% review.rating.times do %>
-          <i class="fa-solid fa-star"></i>
-        <% end %>
-        <em class="review-content"><%= review.content %></em></li>
-    <% end %>
-    </ul>
-=======
 <div class="review-box">
   <br>
   <div class="content-review">
@@ -118,6 +100,5 @@
   </div>
 </div>
 <br><br>
->>>>>>> 26620c9a5e30004e60562504dca3eb84a755b615
 </main>
 </body>
