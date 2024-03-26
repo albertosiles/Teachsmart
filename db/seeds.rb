@@ -59,7 +59,7 @@ puts "Profiles created"
 puts "Creating profile pictures..."
 
 # Cloudinary URLs for the images
-cloudinary_url_julia = "https://res.cloudinary.com/di9zm7azt/image/upload/v1711471546/development/a0ug347792cy5kyrznbu1txbwb3n.jpg"
+cloudinary_url_julia = "https://res.cloudinary.com/di9zm7azt/image/upload/v1711461131/development/tjm3dbo5g1grlf2t1361smiw2pru.jpg"
 cloudinary_url_albert = "https://res.cloudinary.com/di9zm7azt/image/upload/v1711471547/development/o88voqi1tnrvg5ipspvyqpfnyo7b.jpg"
 cloudinary_url_bridget = "https://res.cloudinary.com/di9zm7azt/image/upload/v1711471549/development/0nf8tcfc0h3r15s67yu3ko5ueyby.jpg"
 cloudinary_url_thomas = "https://res.cloudinary.com/di9zm7azt/image/upload/v1711471551/development/mwcr7y1cgvhgg34tzdygga06xfaz.jpg"
