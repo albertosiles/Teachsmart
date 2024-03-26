@@ -39,21 +39,39 @@ profile_Thomas = Profile.create!(user: user_Thomas, first_name: "Thomas", last_n
 profile_Vivien = Profile.create!(user: user_Vivien, first_name: "Vivien", last_name: "Smith", description: "Hi fellow teachers, I'm Viv (short for Vivien). I'm kind of new here and am happy for any helpful hints and ideas on how to create some creative lessons for my students.")
 puts "Profiles created"
 
+# puts "Creating profile pictures..."
+# file_path_julia = Rails.root.join('db', 'seeds', 'images', 'Julia.jpg')
+# profile_Julia.photo.attach(io: File.open(file_path_julia), filename: 'Julia.jpg')
+
+# file_path_albert = Rails.root.join('db', 'seeds', 'images', 'Albert.jpg')
+# profile_Albert.photo.attach(io: File.open(file_path_albert), filename: 'Albert.jpg')
+
+# file_path_bridget = Rails.root.join('db', 'seeds', 'images', 'Bridget.jpg')
+# profile_Bridget.photo.attach(io: File.open(file_path_bridget), filename: 'Bridget.jpg')
+
+# file_path_thomas = Rails.root.join('db', 'seeds', 'images', 'Thomas.jpg')
+# profile_Thomas.photo.attach(io: File.open(file_path_thomas), filename: 'Thomas.jpg')
+
+# file_path_vivien = Rails.root.join('db', 'seeds', 'images', 'Vivien.jpg')
+# profile_Vivien.photo.attach(io: File.open(file_path_vivien), filename: 'Vivien.jpg')
+# puts "Profile pictures created"
+
 puts "Creating profile pictures..."
-file_path_julia = Rails.root.join('db', 'seeds', 'images', 'Julia.jpg')
-profile_Julia.photo.attach(io: File.open(file_path_julia), filename: 'Julia.jpg')
 
-file_path_albert = Rails.root.join('db', 'seeds', 'images', 'Albert.jpg')
-profile_Albert.photo.attach(io: File.open(file_path_albert), filename: 'Albert.jpg')
+# Cloudinary URLs for the images
+cloudinary_url_julia = "https://res.cloudinary.com/di9zm7azt/image/upload/v1711471546/development/a0ug347792cy5kyrznbu1txbwb3n.jpg"
+cloudinary_url_albert = "https://res.cloudinary.com/di9zm7azt/image/upload/v1711471547/development/o88voqi1tnrvg5ipspvyqpfnyo7b.jpg"
+cloudinary_url_bridget = "https://res.cloudinary.com/di9zm7azt/image/upload/v1711471549/development/0nf8tcfc0h3r15s67yu3ko5ueyby.jpg"
+cloudinary_url_thomas = "https://res.cloudinary.com/di9zm7azt/image/upload/v1711471551/development/mwcr7y1cgvhgg34tzdygga06xfaz.jpg"
+cloudinary_url_vivien = "https://res.cloudinary.com/di9zm7azt/image/upload/v1711471553/development/8vaxbgedyoxhg7s20tgr68raieiy.jpg"
 
-file_path_bridget = Rails.root.join('db', 'seeds', 'images', 'Bridget.jpg')
-profile_Bridget.photo.attach(io: File.open(file_path_bridget), filename: 'Bridget.jpg')
+# Attach Cloudinary URLs to profiles
+profile_Julia.photo.attach(io: open(cloudinary_url_julia), filename: 'Julia.jpg')
+profile_Albert.photo.attach(io: open(cloudinary_url_albert), filename: 'Albert.jpg')
+profile_Bridget.photo.attach(io: open(cloudinary_url_bridget), filename: 'Bridget.jpg')
+profile_Thomas.photo.attach(io: open(cloudinary_url_thomas), filename: 'Thomas.jpg')
+profile_Vivien.photo.attach(io: open(cloudinary_url_vivien), filename: 'Vivien.jpg')
 
-file_path_thomas = Rails.root.join('db', 'seeds', 'images', 'Thomas.jpg')
-profile_Thomas.photo.attach(io: File.open(file_path_thomas), filename: 'Thomas.jpg')
-
-file_path_vivien = Rails.root.join('db', 'seeds', 'images', 'Vivien.jpg')
-profile_Vivien.photo.attach(io: File.open(file_path_vivien), filename: 'Vivien.jpg')
 puts "Profile pictures created"
 
 puts "Creating chatrooms..."
