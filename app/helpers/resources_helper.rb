@@ -1,14 +1,14 @@
 module ResourcesHelper
   def image_for_subject(subject)
     case subject
-    when 'Mathematics' then 'math.jpg'
-    when 'German' then 'language.jpg'
-    when 'Geography' then 'geography.jpg'
-    when 'Physics' then 'physics.jpg'
-    when 'English' then 'english.jpg'
-    when 'Computing' then 'computing.jpg'
-    when 'History' then 'history.jpg'
-    else 'classroom.jpg'
+    when 'Mathematics' then 'laptop_math.png'
+    when 'German' then 'laptop_ger.png'
+    when 'Geography' then 'laptop_geo.png'
+    when 'Physics' then 'laptop_phy.png'
+    when 'English' then 'laptop_eng.png'
+    when 'Computing' then 'laptop_computing.png'
+    when 'History' then 'laptop_his.png'
+    else 'laptop_class.png'
     end
   end
 end
