@@ -11,11 +11,11 @@ main {
 
 .circles-left {
   // margin-right: 20%;
-  margin-left: 4%;
+  margin-left: 5%;
 }
 
 .circles-right {
-  margin-right: 12%;
+  margin-right:7%;
   margin-left: 4%;
 }
 
@@ -57,17 +57,17 @@ main {
 .iframe {
   // display: flex;
   margin-top: -0.5%;
-  justify-content: center; /* Center iframe horizontally */
-  align-items: center; /* Center iframe vertically */
-  padding-right: 10%;
+  justify-content: center;
+  align-items: center;
+  padding-right: 28%;
   margin-left:15%;
 }
 
 .iframe-file {
-  height: 95%; /* Adjust the height as needed */
-  width: 215%;
+  height: 95%;
+  width: 217%;
   max-height: 120%;
-  max-width:300%; /* Adjust the width as needed */
+  max-width: 300%;
   padding-bottom: 30%;
 
 }

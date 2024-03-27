@@ -35,7 +35,7 @@
       <% if @resource.file.attached? %>
         <br><iframe src="<%= cl_image_path @resource.file.key %>.pdf" class="iframe-file" frameborder="0" loading="lazy"></iframe>
       <% else %><br><br><br><br>
-        <p class="no-file-attached">No file attached</p>
+        <%# <p class="no-file-attached">No file attached</p> %>
       <% end %>
     </div>
 
