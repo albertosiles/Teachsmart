@@ -45,12 +45,13 @@ main {
 
 .container-show {
   position: relative;
-  background-image: url("laptop-show.png");
+  // background-image: url("laptop-show.png");
   // background-size: 45%;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   justify-content: space-between;
+  padding-top:15px;
 
 }
 
@@ -69,7 +70,7 @@ main {
   max-height: 120%;
   max-width: 300%;
   padding-bottom: 30%;
-
+  margin-top: -4px;
 }
 
 .d-flex.justify-content-between {
