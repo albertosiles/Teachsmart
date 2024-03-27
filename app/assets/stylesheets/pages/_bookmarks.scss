@@ -56,9 +56,10 @@
   border-color: #565e64;
 }
 
-.bookmarks-page .no-bookmarks-msg {
-  color: #999;
+.no-bookmarks-msg {
+  color: white;
   text-align: center;
+  font-size: 26px;
 }
 
 .back-link-btn {
@@ -78,7 +79,7 @@
 }
 
 .back-link a:hover {
-  background-color: black;
+  background-color: #013843;
   color: white;
 }
 
