@@ -14,12 +14,10 @@
       <% end %>
     </p>
   </div>
-
   <div class="resource-description">
     <%= @resource.description %>
   </div>
   <br><br><br><br>
-
   <div class="container-show"><br>
     <div class="circles-left">
       <div class="circle1">
@@ -29,7 +27,6 @@
         <div class="circle-text">Resource type:<h6><br><%= @resource.resource_type %></h6></div>
       </div>
     </div>
-
     <div class="iframe">
       <!-- Display multiple files in the view. Needs to be placed in the desired position --->
       <% if @resource.file.attached? %>
@@ -38,7 +35,6 @@
         <%# <p class="no-file-attached">No file attached</p> %>
       <% end %>
     </div>
-
     <div class="circles-right">
       <div class="circle3">
         <div class="circle-text">Subject:<h6><br><%= @resource.subject %></h6></div>
@@ -48,9 +44,7 @@
       </div>
     </div>
   </div>
-
   <br><br>
-
   <div class="d-flex justify-content-evenly icons">
     <% if @resource.user == current_user %>
       <p class="plain-links">
@@ -66,7 +60,6 @@
     <% end %>
   </div>
   <br><br>
-
   <div class="d-flex justify-content-between">
     <button class="showpage-btn"><%= link_to "Back to Materials", resources_path(@resources) %></button>
     <% if current_user.bookmarks.exists?(resource_id: @resource.id) %>
