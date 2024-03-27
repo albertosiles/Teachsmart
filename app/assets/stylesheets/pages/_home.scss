@@ -7,6 +7,32 @@ body {
   background-attachment: fixed;
 }
 
+.image-text {
+  position: absolute;
+  bottom: 100px;
+  align-items: center;
+  left: 45%;
+  transform: translateX(-50%);
+  text-align: center;
+  // left: 650px;
+}
+
+.image-text h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.image-text p {
+  font-size: 25px;
+  position: absolute;
+  bottom: 200px;
+  left: -50px;
+  color: white;
+  text-align: center;
+  width: 100%;
+  white-space: nowrap;
+}
+
 .discover-link {
   display: inline-block;
   align-items: center;
@@ -18,13 +44,15 @@ body {
   text-decoration: none;
   font-size: 1.8em;
   font-weight: bold;
-  margin-left: 150px;
+  margin-left: 120px;
   margin-bottom: 80px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+
+
 .discover-link:hover {
-  background-color: black;
+  background-color: #013843;
   color:white;
 }
 
@@ -37,11 +65,11 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.icon {
-  font-size: 2em;
-  color: black;
-  margin-bottom: 20px;
-}
+// .icon {
+//   font-size: 2em;
+//   color: black;
+//   margin-bottom: 20px;
+// }
 
 .header {
   background-color: transparent;
@@ -113,27 +141,6 @@ body {
   position: relative;
 }
 
-.image-text {
-  position: absolute;
-  bottom: 100px;
-  left: 650px;
-}
-
-.image-text h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.image-text p {
-  font-size: 25px;
-  position: absolute;
-  bottom: 200px;
-  left: -50px;
-  color: white;
-  text-align: center;
-  width: 100%;
-  white-space: nowrap;
-}
 
 .background-image {
   width: 100px;
@@ -280,25 +287,26 @@ body {
 
 }
 
-.icon-black {
-  color: black;
-}
 
-.fa-comments {
+.landing-comments {
   font-size: 30px;
-  margin-left: 110px;
+  // margin-left: 110px;
+  // padding-right: 30px;
+  color: black;
 }
 
 .fa-person-chalkboard {
   font-size: 32px;
-  margin-left: 160px;
-  margin-bottom: 30px;
+  // margin-left: 160px;
+  // margin-bottom: 30px;
+  // padding-right: 30px;
 }
 
-.fa-star {
+.landing-star {
   font-size: 28px;
-  margin-left: 160px;
+  // margin-left: 160px;
   color: black;
+  // padding-right: 30px;
 }
 
 .card-body i {
