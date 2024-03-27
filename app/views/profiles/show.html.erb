@@ -15,12 +15,10 @@
         <br><h5 class="uploaded-materials">No materials uploaded yet</h5><br>
       <% end %>
 
-      <% if current_user.bookmarks.any? %>
+      <% if @profile.id == current_user.profile.id %>
         <%= link_to bookmarks_path, class: "bookmarks-link-button link-button" do %>
             <h5><%= @user.bookmarks.count %> Bookmarked materials</h5><br>
         <% end %>
-      <% else %>
-        <br><h5 class="uploaded-materials">No bookmarks found</h5><br>
       <% end %>
     </div>
     <% if @profile.id == current_user.profile.id%>
