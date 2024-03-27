@@ -1,74 +1,72 @@
-<!-- Display one image in the view --->
-<%#= cl_image_tag @resource.photo.key, height: 300, width: 400, crop: :fill %>
-
- <!-- Display multiple images in the view. Needs to be placed in the desired position  --->
-    <%# <div class="uploaded-photo">
-      <% @resource.photos.each do |photo| %>
-        <%#= cl_image_tag photo.key, height: 50, width: 80, crop: :fill %>
-      <%# end %>
-    <%# </div>  %>
-<!--As a background image:  -->
-<%# <div class="card-category" %>
-  <%# style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @article.photo.key, height: 300, crop: :fill')">  %>
-<%# </div> %>
-<!-- Display one file in the view --->
-<%#= cl_image_tag @resource.file.key, height: 300, width: 400, crop: :fill %>
 <main>
-  <h1 class="text-center title-resource-class"><%= @resource.title %></h1>
-    <br>
-      <div class="d-flex justify-content-center author">
-        <p class="fixed-width plain-links"> <%= link_to "Author: #{@resource.user.profile.first_name} #{@resource.user.profile.last_name}", profile_path(@resource.user) %></p>
-        <p class= "fixed-width plain-links"><i class="fa-regular fa-comments"></i>
-        <% if @resource.user&.chatroom %>
-          <%= link_to "Chat with author", chatroom_path(@resource.user.chatroom) %>
-        <% else %>
-          <p>The author is not available for chat at the moment.</p>
-        <% end %></p>
-      </div><br>
-      <div class="d-flex justify-content-between align-items-top">
-        <div class="circle">
-          <div class="circle-text">Student age:<h6><br><%= @resource.student_age %></h6></div>
-            </div>
-            <div class="resource-description">
-              <%= @resource.description %>
-            </div>
-            <div class="circle">
-          <div class="circle-text">Subject:<h6><br><%= @resource.subject %></h6></div>
-        </div>
+  <h1 class="text-center title-resource-class"><%= @resource.title %></h1><br>
+  <div class="d-flex justify-content-center author">
+    <p class="fixed-width plain-links">
+      <%= link_to "Author: #{@resource.user.profile.first_name}
+      #{@resource.user.profile.last_name}", profile_path(@resource.user) %>
+    </p>
+    <p class="fixed-width plain-links">
+      <i class="fa-regular fa-comments"></i>
+      <% if @resource.user&.chatroom %>
+        <%= link_to "Chat with author", chatroom_path(@resource.user.chatroom) %>
+      <% else %>
+        <p>The author is not available for chat at the moment.</p>
+      <% end %>
+    </p>
+  </div>
+
+  <div class="resource-description">
+    <%= @resource.description %>
+  </div>
+  <br><br><br><br>
+
+  <div class="container-show"><br>
+    <div class="circles-left">
+      <div class="circle1">
+        <div class="circle-text">Student age:<h6><br><%= @resource.student_age %></h6></div>
       </div>
-        <br>
-      <div div class="d-flex justify-content-between align-items-top">
-      <div class="circle">
-          <div class="circle-text">Resource type:<h6><br><%= @resource.resource_type %></h6></div>
+      <div class="circle2">
+        <div class="circle-text">Resource type:<h6><br><%= @resource.resource_type %></h6></div>
       </div>
-      <div>
-          <!-- Display multiple files in the view. Needs to be placed in the desired position --->
-        <%# @resource.file.each do |file| %>
-        <% if @resource.file.attached? %>
-          <br><br><br><iframe src="<%= cl_image_path @resource.file.key %>.pdf" width="600px" frameborder="0" loading= "lazy"></iframe>
-        <% else %>
-          <p class="no-file-attached">No file attached</p>
-        <% end %>
+    </div>
+
+    <div class="iframe">
+      <!-- Display multiple files in the view. Needs to be placed in the desired position --->
+      <% if @resource.file.attached? %>
+        <br><iframe src="<%= cl_image_path @resource.file.key %>.pdf" class="iframe-file" frameborder="0" loading="lazy"></iframe>
+      <% else %><br><br><br><br>
+        <%# <p class="no-file-attached">No file attached</p> %>
+      <% end %>
+    </div>
+
+    <div class="circles-right">
+      <div class="circle3">
+        <div class="circle-text">Subject:<h6><br><%= @resource.subject %></h6></div>
       </div>
-            <div class="circle">
-              <div class="circle-text">Category:<h6><br><%= @resource.category %></h6></div>
-            </div>
+      <div class="circle4">
+        <div class="circle-text">Category:<h6><br><%= @resource.category %></h6></div>
       </div>
-      <br><br>
-  <div class="d-flex justify-content-evenly">
+    </div>
+  </div>
+
+  <br><br>
+
+  <div class="d-flex justify-content-evenly icons">
     <% if @resource.user == current_user %>
-    <p class="plain-links">
-    <%= link_to edit_resource_path(@resource) do %>
-    <i class="fa-solid fa-pen-to-square"></i>
-    <% end %>
-    </p>
-    <p class="plain-links"><%= link_to resource_path(@resource), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-    <i class="fa-solid fa-trash"></i>
-    <% end %>
-    </p>
+      <p class="plain-links">
+        <%= link_to edit_resource_path(@resource) do %>
+          <i class="fa-solid fa-pen-to-square"></i>
+        <% end %>
+      </p>
+      <p class="plain-links">
+        <%= link_to resource_path(@resource), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
+          <i class="fa-solid fa-trash"></i>
+        <% end %>
+      </p>
     <% end %>
   </div>
   <br><br>
+
   <div class="d-flex justify-content-between">
     <button class="showpage-btn"><%= link_to "Back to Materials", resources_path(@resources) %></button>
     <% if current_user.bookmarks.exists?(resource_id: @resource.id) %>
@@ -78,30 +76,25 @@
     <% end %>
     <button class="showpage-btn"><%= link_to "Add a Review", new_resource_review_path(@resource) %></button>
   </div>
-    <br>
-    <br>
-  <br>
-<div class="review-box">
-  <br>
-  <div class="content-review">
-    <h4 class="title-review-class">What other teachers thought:</h4><br>
-    <% if @resource.reviews.empty? %>
-      <p>These materials have not been reviewed yet.</p>
-    <% else %>
-      <ul class="review-list">
-        <% @resource.reviews.each do |review| %>
-          <li>
-            <% review.rating.times do %>
-              <i class="rating-resource fa-solid fa-star"></i>
-            <% end %>
-            <div class="review-content">
-            <em ><%= review.content %></em>
-            </div><br>
-          </li>
-        <% end %>
-      </ul><br>
-    <% end %>
+  <div class="review-box">
+    <div class="content-review">
+      <h4 class="title-review-class">What other teachers thought:</h4><br>
+      <% if @resource.reviews.empty? %>
+        <p>These materials have not been reviewed yet.</p>
+      <% else %>
+        <ul class="review-list">
+          <% @resource.reviews.each do |review| %>
+            <li>
+              <% review.rating.times do %>
+                <i class="rating-resource fa-solid fa-star"></i>
+              <% end %>
+              <div class="review-content">
+                <em><%= review.content %></em>
+              </div>
+            </li>
+          <% end %>
+        </ul><br>
+      <% end %>
+    </div>
   </div>
-</div>
-<br><br>
 </main>
