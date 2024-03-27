@@ -1,23 +1,42 @@
 main {
   padding: 35px;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 180px;
+  margin-right: 180px;
+  position: flex;
+  align-items: center;
 }
 
-.resource-show {
-  background: linear-gradient(216deg, rgba(23,151,177,1) 7%, rgba(27,153,151,0.7847514005602241) 95%);
-  background-size: cover;
-  background-attachment: fixed;
+.container-show {
+  position: relative;
+  background-image: url("laptop-show.png");
+  background-size:65%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.show-container {
-  background-color: #f2f0e5;
-  padding: 85px;
+.container-show {
+  width: 100%;
+  max-width: 100%;
+  // padding-top: 56.25%;
 }
+
+iframe {
+  height: 200%;
+  width: 240%;
+  max-height: 200%;
+  max-width:240%;
+  margin-left: -70%;
+  margin-top: -100%;
+  padding-bottom: 30%;
+}
+
+
+
+
 
 .circle {
-width: 210px;
-height: 210px;
+width: 220px;
+height: 220px;
 border-radius: 50%;
 // background: radial-gradient(circle at top, rgb(84, 204, 228) , #cef2f2);
 background-color: #013843;
@@ -80,12 +99,16 @@ margin-top: 40px;
   margin-right: auto;
 }
 
-iframe {
-  height: 600px;
-  width: 800px;
-  margin-top: -160px;
-  border-radius: 10px;
-}
+// .iframe-file {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   width: 80%; /* Adjust width as needed */
+//   height: 80%; /* Adjust height as needed */
+// }
+
+
 
 // .description-pdf-container {
 //   display: flex;
@@ -214,3 +237,65 @@ iframe {
   text-align: left;
   // margin-left: 30px;
 }
+
+/* For small devices (landscape phones, 576px and up) */
+// @media (min-width: 576px) {
+//   .container-show {
+//     padding: 50px; /* Adjust padding for larger screens */
+//     margin-left: 100px; /* Adjust margin for larger screens */
+//     margin-right: 100px; /* Adjust margin for larger screens */
+//   }
+
+//   .circle {
+//     width: 150px; /* Adjust circle size for larger screens */
+//     height: 150px; /* Adjust circle size for larger screens */
+//     padding-top: 20px; /* Adjust circle text padding for larger screens */
+//   }
+
+//   .circle-text h6 {
+//     font-size: 24px; /* Adjust circle text size for larger screens */
+//   }
+
+//   .resource-description {
+//     width: 600px; /* Adjust description width for larger screens */
+//     font-size: 18px; /* Adjust description font size for larger screens */
+//   }
+
+//   iframe {
+//     width: 100%; /* Make iframe responsive */
+//     height: auto; /* Make iframe responsive */
+//     max-width: 800px; /* Limit maximum width of iframe */
+//     margin-top: -120px; /* Adjust iframe margin for larger screens */
+//   }
+
+//   .review-box {
+//     margin-left: 100px; /* Adjust review box margin for larger screens */
+//     margin-right: 100px; /* Adjust review box margin for larger screens */
+//   }
+// }
+
+// /* For medium devices (tablets, 768px and up) */
+// @media (min-width: 768px) {
+//   .resource-description {
+//     width: 700px; /* Adjust description width for tablets */
+//     font-size: 20px; /* Adjust description font size for tablets */
+//   }
+
+//   .review-box {
+//     margin-left: 200px; /* Adjust review box margin for tablets */
+//     margin-right: 200px; /* Adjust review box margin for tablets */
+//   }
+// }
+
+// /* For large devices (desktops, 992px and up) */
+// @media (min-width: 992px) {
+//   .resource-description {
+//     width: 800px; /* Adjust description width for desktops */
+//     font-size: 22px; /* Adjust description font size for desktops */
+//   }
+
+//   .review-box {
+//     margin-left: 300px; /* Adjust review box margin for desktops */
+//     margin-right: 300px; /* Adjust review box margin for desktops */
+//   }
+// }
