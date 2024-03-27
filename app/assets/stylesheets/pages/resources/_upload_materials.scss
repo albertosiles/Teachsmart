@@ -48,18 +48,17 @@ h2 {
   border: 1px solid black;
 }
 
-.new-upload-body {
-  background: linear-gradient(216deg, rgba(23,151,177,1) 7%, rgba(27,153,151,0.7847514005602241) 95%);
-  background-size: cover;
-  background-attachment: fixed;
-}
-
 .form-new-upload {
   color: rgb(34, 15, 78);
 }
 
 
-.btn-upload-materials:hover,
+.btn-upload-materials:hover {
+  background-color:  #013843 ;
+  color: white;
+}
+
+
 .btn-not-now:hover {
   background-color: black;
   color: white;
