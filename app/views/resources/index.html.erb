@@ -1,5 +1,4 @@
-<body class="index-body"><br>
-<h1 class="h1-teaching-materials">Teaching materials</h1>
+<br><h1 class="h1-teaching-materials">Teaching materials</h1>
 <br><br>
 <div class="teaching-materials-container">
   <%= form_with url: resources_path, method: :get do %>
@@ -27,9 +26,7 @@
       <a href="<%= resource_path(resource) %>" class="card-link-index">
         <div class="card-resource">
           <div class="resource-image">
-            <% if resource.photos.length > 0 %>
-              <%= cl_image_tag((resource.photos.first.key), class: "img-resource-index") %>
-            <% end %>
+              <%= image_tag(image_for_subject(resource.subject), class: "img-resource-index") %>
           </div>
           <div class="card-resource-infos">
             <h2 class="h2-cards"><%= resource.title %></h2><br>
@@ -51,4 +48,3 @@
   <% end %>
 </div>
 </div><br><br>
-</body>

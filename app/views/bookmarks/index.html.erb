@@ -1,7 +1,6 @@
-<body class="bookmarks-page">
   <div class="container" style="padding-bottom: 140px; padding-left: 15px; padding-right: 15px;">
     <!-- Adding padding to the container div -->
-    <h1 class="bookmarks-heading">My Bookmarks</h1>
+    <h1 class="bookmarks-heading">My Bookmarks</h1><br>
 
     <div class="back-link mt-4 mb-4 text-center">
       <%= link_to 'Back to teaching materials', resources_path, class: "btn back-link-btn" %>
@@ -37,7 +36,6 @@
     </div>
 
     <% if @bookmarks.empty? %>
-      <p class="no-bookmarks-msg">No bookmarks found.</p>
+      <br><br><p class="no-bookmarks-msg">No bookmarks found.</p>
     <% end %>
   </div> <!-- Closing container div -->
-</body>

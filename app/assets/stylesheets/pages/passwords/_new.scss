@@ -1,5 +1,5 @@
 .container-forgot-password {
-  background: linear-gradient(216deg, rgba(23,151,177,1) 7%, rgba(27,153,151,0.7847514005602241) 95%);
+  background: radial-gradient(circle at top, rgb(84, 204, 228) , #cef2f2);
   background-size: cover;
   background-attachment: fixed;
   height: auto;
@@ -23,7 +23,7 @@
   }
 
   .btn-forgot-password:hover {
-    background-color: black;
+    background-color: #013843;
     color: white;
   }
 
@@ -35,9 +35,6 @@
   font-size: 40px;
 }
 
-.forgot-password-body {
-  background-color:#1797b1;
-}
 
 .container-forgot-password .forgot-password-form  {
   text-align: left;
