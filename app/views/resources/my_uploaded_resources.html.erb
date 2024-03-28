@@ -4,7 +4,7 @@
 <div class="card-links">
   <%= link_to "Upload Teaching Materials", new_resource_path, class: "btn btn-upload" %>
   <%= link_to "Back to Teaching Materials", resources_path, class: "btn btn-secondary" %>
-</div><br>
+</div><br><br>
 <% if @resources.any? %>
   <div class="card-upload-container">
     <% @resources.each do |resource| %>
