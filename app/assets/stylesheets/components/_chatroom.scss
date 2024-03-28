@@ -1,5 +1,8 @@
 .container.chatroom {
-  background: white;
+  background: radial-gradient(circle at top, rgb(84, 204, 228) , #cef2f2);
+  // background-size: cover;
+  // background-position: center;
+  // opacity: 0.8;
   margin-top: 40px; /* Adjust the top margin as needed */
   height: calc(100vh - 115px); /* Adjust the height based on the top margin and header height */
   display: flex;
@@ -8,6 +11,7 @@
   flex-grow: 1;
   border-radius: 15px;
 }
+
 
 .container.chatroom .header {
   display: flex;
@@ -45,9 +49,10 @@
 }
 
 .container.chatroom .chat-button {
+  font-family: "Hammersmith One";
   height: 38px;
-  background-color: rgb(129, 69, 10);
-  color: white;
+  background-color: #fab323;
+  color: #013843;
   padding: 8px 24px;
   border-radius: 8px;
   text-decoration: none;
