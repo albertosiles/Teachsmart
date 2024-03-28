@@ -1,6 +1,6 @@
   <div class="container" style="padding-bottom: 140px; padding-left: 15px; padding-right: 15px;">
     <!-- Adding padding to the container div -->
-    <h1 class="bookmarks-heading">My Bookmarks</h1><br>
+    <br><h1 class="bookmarks-heading">My Bookmarks</h1><br>
 
     <div class="back-link mt-4 mb-4 text-center">
       <%= link_to 'Back to teaching materials', resources_path, class: "btn back-link-btn" %>
@@ -13,21 +13,21 @@
             <div class="resource-image">
               <%= cl_image_tag(bookmark.resource.photos.first.key, class: "img-resource-index") %>
             </div><br>
-            <div class="card-resource-infos">
-              <h2 class="h2-resource-title"><%= bookmark.resource.title %></h2>
+            <div class="card-bookmarks-infos">
+              <h2 class="h2-bookmark-title"><%= bookmark.resource.title %></h2>
               <div class="row mt-3">
-                <div class="col">
+                <div class="col-4">
                   <p><i class="fa-solid fa-book"></i><br> <%= bookmark.resource.subject %></p>
                 </div>
-                <div class="col">
+                <div class="col-4">
                   <p><i class="fa-solid fa-user"></i><br>Age <%= bookmark.resource.student_age %></p>
                 </div>
-                <div class="col">
+                <div class="col-4">
                   <p><i class="fa-solid fa-chalkboard"></i><br> <%= bookmark.resource.resource_type %></p>
                 </div>
               </div>
               <div class="text-center mt-3">
-                <%= button_to 'Remove from bookmarks', bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure you want to remove this bookmark?' }, class: "btn btn-secondary" %>
+                <%= button_to 'Unbookmark', bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure you want to remove this bookmark?' }, class: "btn btn-secondary" %>
               </div>
             </div>
           </div>
