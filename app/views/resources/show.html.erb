@@ -66,20 +66,19 @@
   </div>
 <br>
   <div class="button-container">
-    <%# <button class="showpage-btn"><%= link_to "Back to Materials", resources_path(@resources)</button> %>
+    <%= button_to "Back to Materials", resources_path(@resources), method: :get, class: "showpage-btn" %>
 
     <% if current_user.bookmarks.exists?(resource_id: @resource.id) %>
       <%= button_to 'Unbookmark', bookmark_path(current_user.bookmarks.find_by(resource_id: @resource.id)), method: :delete, class: "unbookmark-btn", data: { confirm: 'Are you sure you want to remove this bookmark?' } %>
     <% else %>
       <%= button_to 'Bookmark', bookmark_resource_path(@resource), method: :post, class: "bookmark-btn" %>
     <% end %>
-         <%= link_to "Add a Review", new_resource_review_path(@resource), class: "review-btn" %>
   </div><br><br><br>
 <div class="review-box">
   <div class="content-review">
     <h4 class="title-review-class">What other teachers thought:</h4><br>
     <% if @resource.reviews.empty? %>
-      <p>These materials have not been reviewed yet.</p>
+      <p>These materials have not been reviewed yet.</p><br>
     <% else %>
       <ul class="review-list">
         <% @resource.reviews.each do |review| %>
@@ -96,4 +95,7 @@
     <% end %>
   </div>
 </div>
+<div class="review-button-container">
+  <%= link_to "Add a Review", new_resource_review_path(@resource), class: "review-btn" %>
+</div><br><br>
 </main>

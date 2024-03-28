@@ -134,6 +134,27 @@
   border: 1px solid black;
 }
 
+.showpage-btn {
+  font-family: "Hammersmith One";
+  background-color: #fab323; /* Default background color */
+  width: auto;
+  height: 65px;
+  color: #013843;
+  font-size: 22px;
+  border-radius: 10px;
+  padding: 14px 26px;
+  vertical-align: middle;
+  border: none;
+  text-decoration: none;
+  margin-right: 80px;
+
+}
+
+.showpage-btn:hover {
+  background-color: #013843;
+  color: white; /* Background color on hover */
+}
+
 .bookmark-btn {
   background-color: #fab323;
   width: auto;
@@ -143,6 +164,7 @@
   border-radius: 10px;
   padding: 14px 26px;
   border: none;
+  margin-left: 40px;
 }
 
 
@@ -184,16 +206,21 @@
   text-align: left;  /* Adjust margin to create space between reviews list and button */
 }
 
+.review-button-container {
+  text-align: center; /* Center the button horizontally */
+}
+
 .review-btn {
   display: inline-block; /* Make the button behave like an inline element */
   background-color: #fab323;
   color: #013843;
   font-size: 22px;
-  // border: 1px solid black;
   border-radius: 10px;
   padding: 14px 26px;
   text-decoration: none;
 }
+
+
 
 .review-btn:hover {
   background-color: #013843;

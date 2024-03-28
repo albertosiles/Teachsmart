@@ -48,6 +48,7 @@
   font-size: 10px;
   border-radius: 5px;
   cursor: pointer;
+  font-family: "Hammersmith One";
 }
 
 .bookmarks-page .remove-btn:hover {
@@ -63,11 +64,12 @@
 
 .back-link-btn {
   text-align: center; /* Center the text within the button */
+  font-family: "Hammersmith One";
 }
 
 .back-link a {
   font-size: 24px;
-  color: black;
+  color: #013843;
   background-color: #fab323;
   border-radius: 10px;
   padding: 8px 12px;
