@@ -1,22 +1,24 @@
-main {
-  padding: 35px;
+.title-resource-class {
+  color: white;
+  text-align: center;
+  font-size: 48px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.container-show {
+  display: flex;
+  // flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 20px;
 }
 
 .circles-left,
 .circles-right {
-  display:flex;
+  display: flex;
   flex-direction: column;
-  align-items: flex-start
-}
-
-.circles-left {
-  // margin-right: 20%;
-  margin-left: 5%;
-}
-
-.circles-right {
-  margin-right:7%;
-  margin-left: 4%;
+  align-items: center;
+  width: 30%;
 }
 
 
@@ -24,14 +26,16 @@ main {
 .circle2,
 .circle3,
 .circle4 {
-  width: 220px;
-  height: 220px; /* Adjust the height as needed */
-  background-color: #013843; /* Adjust the background color as needed */
-  border-radius: 50%; /* Ensure circles */
-  margin-bottom: 20px; /* Adjust the spacing between circles */
+  width: 240px;
+  height: 240px;
+  background-color: #013843;
+  border-radius: 50%;
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
 }
 
 
@@ -43,48 +47,18 @@ main {
   font-family: "Hammersmith One";
 }
 
-.container-show {
-  position: relative;
-  background-image: url("laptop-show.png");
-  // background-size: 45%;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: space-between;
-
-}
 
 .iframe {
-  // display: flex;
-  margin-top: -0.5%;
+  display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 28%;
-  margin-left:15%;
+  flex: 1;
 }
 
 .iframe-file {
-  height: 95%;
-  width: 217%;
-  max-height: 120%;
-  max-width: 300%;
-  padding-bottom: 30%;
-
-}
-
-.d-flex.justify-content-between {
-  display: flex;
-  justify-content: space-between;
-}
-
-
-
-.d-flex.justify-content-between {
-  margin-bottom: 70px;
-}
-
-.showpage-btn {
-  margin: 0 220px;
+  width: 900px;
+  height: 700px;
+  // border-radius: 10px;
 }
 
 
@@ -111,9 +85,14 @@ main {
 }
 
 .no-file-attached {
-  font-size: 24px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
   font-family: "Mako";
   text-align: center;
+  font-size: 40px;
 }
 
 
@@ -121,14 +100,9 @@ main {
   color: white;
   font-size: 32px;
   text-align: left;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.title-resource-class {
-
-  color: white;
-  text-align: center;
-  font-size: 48px;
-}
 
 .resource-description {
   height: auto;
@@ -142,69 +116,90 @@ main {
   margin-right: auto;
 }
 
-.showpage-btn {
-  background-color: #fab323;
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.unbookmark-btn {
+  background-color: #013843;
   width: auto;
   height: 65px;
-  color: black;
+  color: white;
   font-size: 22px;
   border-radius: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  vertical-align: middle;
+  padding: 14px 26px;
   border: 1px solid black;
 }
 
-.showpage-btn a {
+.bookmark-btn {
+  background-color: #fab323;
+  width: auto;
+  height: 65px;
+  color: #013843;
+  font-size: 22px;
+  border-radius: 10px;
+  padding: 14px 26px;
+  border: none;
+}
+
+
+.bookmark-btn a {
   text-decoration: none;
   color: black;
 }
 
-.showpage-btn a:hover {
+.unbookmark-btn a {
+  text-decoration: none;
   color: white;
 }
 
-.showpage-btn:hover {
+.bookmark-btn:hover {
   background-color: #013843;
   color: white;
 }
 
-.fixed-width {
-  width: 500px;
-  text-align: center;
+.unbookmark-btn:hover {
+  background-color: #fab323;
+  color: #013843;
+  border: none;
 }
 
-.plain-links {
+.review-box {
+  display: flex;
+  justify-content: column; /* Aligns items with space between them */
+  align-items: center;
   text-align: center;
+  margin-left: 500px; /* Aligns items at the start of the container vertically */
 }
 
-.plain-links a {
+.review-list {
+  display: inline-block; /* Make the list behave like an inline element */
+  list-style-type: none;
+  padding: 0;
+  line-height: 30px;
+  // margin-right: 10px; /* Add margin between the reviews list and the button */
+  text-align: left;  /* Adjust margin to create space between reviews list and button */
+}
+
+.review-btn {
+  display: inline-block; /* Make the button behave like an inline element */
+  background-color: #fab323;
+  color: #013843;
+  font-size: 22px;
+  // border: 1px solid black;
+  border-radius: 10px;
+  padding: 14px 26px;
   text-decoration: none;
-  color: #fab323;
-  font-size: 30px;
-  font-weight: 400;
-  font-family: "Hammersmith One";
 }
 
-.plain-links a:hover {
-  color: #013843;
+.review-btn:hover {
+  background-color: #013843;
+  color: white;
 }
 
-.fa-comments {
-  color: #fab323;
-}
-
-.fa-comments:hover {
-  color: #013843;
-}
-
-.fa-pen-to-square {
-  font-size: 40px;
-}
-
-.fa-trash {
-  font-size: 40px;
-}
 
 .rating-resource {
   color: #fab323;
@@ -212,22 +207,28 @@ main {
   margin-right:5px;
 }
 
-.review-box {
-  margin-top: -50px;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
+.title-review-class {
+  text-align:center;
+  margin-left: 200px;
 }
 
-.content-review {
-  text-align: left;
+// .content-review {
+//   text-align: left;
+// }
+.button-container {
+  text-align: center;
+  margin-left: 20px;
 }
 
-.review-list {
-  list-style-type: none;
-  padding: 0;
-  line-height: 30px;
+.unbookmark-btn,
+.bookmark-btn,
+.review-btn {
+  font-family: "Hammersmith One";
+  margin-right: 60px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
 }
+
 
 .review-content {
   font-size: 24px;
@@ -256,4 +257,45 @@ main {
   font-family: "Mako";
   text-align: left;
 
+}
+
+
+.fixed-width {
+  width: 500px;
+  text-align: center;
+}
+
+.plain-links {
+  text-align: center;
+
+}
+
+.plain-links a {
+  text-decoration: none;
+  color: #fab323;
+  font-size: 30px;
+  font-weight: 400;
+  font-family: "Hammersmith One";
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+
+.plain-links a:hover {
+  color: #013843;
+}
+
+.fa-comments {
+  color: #fab323;
+}
+
+.fa-comments:hover {
+  color: #013843;
+}
+
+.fa-pen-to-square {
+  font-size: 40px;
+}
+
+.fa-trash {
+  font-size: 40px;
 }
