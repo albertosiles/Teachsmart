@@ -11,33 +11,31 @@
   padding-right: 100px;
 }
 
-h2 {
-  color: orange;
-  text-align:center;
-  }
+.h2-update-materials {
+  margin-top: 10px;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
 
 .btn-update-materials {
   background-color:#fab323;
   color: black;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-right: 20px;
   font-size: 20px;
 }
 
 .btn-update-materials:hover {
-  background-color: black;
+  background-color:#013843;;
   color: white;
 }
 
-.body-update-materials {
-  background: linear-gradient(216deg, rgba(23,151,177,1) 7%, rgba(27,153,151,0.7847514005602241) 95%);
-  background-size: cover;
-  background-attachment: fixed;
-}
+
 .btn-cancel-edit {
   background-color: grey;
   color:white;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 20px;
 }
 

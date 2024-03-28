@@ -2,17 +2,18 @@
 .h1-teaching-materials {
   margin-top: 10px;
   color: white;
-  font-size: 44px;
+  font-size: 50px;
   text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .btn-filter {
+  font-family:"Hammersmith One";
   background-color: #fab323;
-  color: black;
+  color:  #013843;
   border-radius: 10px;
   width: 100px;
   font-size: 24px;
-  border: 1px solid grey;
 }
 
 .btn-filter:hover {
@@ -28,9 +29,9 @@
   color: black;
 }
 
-.col p {
-  color:black;
-}
+// .col-4 p {
+//   color:black;
+// }
 
 .teaching-materials-container {
   margin-left: 80px;
@@ -52,11 +53,7 @@
 }
 
 .card-resource {
-  // border: 1px solid black;
   border-radius: 15px;
-  // box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  // background: rgb(199, 233, 240);
-  // background: radial-gradient(circle at top, rgb(84, 204, 228) , #cef2f2);
   height: auto;
   overflow: auto;
   display: flex;
@@ -64,10 +61,13 @@
   padding: 20px;
 }
 
-.h2-cards {
+.h2-cards-index {
+  font-family: "Hammersmith One";
   color: black;
   font-size: 28px;
-  padding-bottom: 5px;;
+  padding-bottom: 5px;
+  text-align:center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .card-resource:hover {
@@ -81,13 +81,17 @@
   box-sizing: border-box;
 }
 
-.card-resource-infos p,
-.card-resource-infos i {
-  font-size: 1.2em;
-  padding-left: 5px;
-  padding-right: 5px;
+.card-resource-infos .col-4 p,
+.card-resource-infos .col-4 i {
+  font-size: 1.3em;
   text-align: center;
   color: black;
+
+}
+
+.col-4 p {
+  font-family:"Mako";
+  font-weight: bold;
 }
 
 .img-resource-index {

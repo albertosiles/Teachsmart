@@ -12,40 +12,45 @@
   font-size:22px;
 }
 
-h2 {
+.h2-upload {
+  margin-top: 10px;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   color: white;
-  text-align:center;
-  font-size:40px;
   }
 
 // p {
 //   color: white;
 // }
 
-.btn-upload-materials {
-  width: 120px;
+.btn-upload-materials,
+.btn-not-now {
+  width: 140px;
   height: 40px;
-  background-color: #fab323;
-  color: black;
-  border-radius: 5px;
   font-size: 22px;
-  border: 1px solid black;
-  margin-right: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.input-new-resource {
-  font-size: 22px;
+.btn-upload-materials {
+  background-color: #fab323;
+  color: black;
+  border-radius: 10px;
+  margin-right: 10px;
 }
 
 .btn-not-now {
-  font-size: 26px;
-  width: 140px;
-  height: 40px;
-  border-radius: 5px;
   background-color: grey;
   color: white;
+  border-radius: 10px;
+}
+
+
+
+.input-new-resource {
   font-size: 22px;
-  border: 1px solid black;
 }
 
 .form-new-upload {

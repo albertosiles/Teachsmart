@@ -4,29 +4,29 @@
 <div class="card-links">
   <%= link_to "Upload Teaching Materials", new_resource_path, class: "btn btn-upload" %>
   <%= link_to "Back to Teaching Materials", resources_path, class: "btn btn-secondary" %>
-</div><br>
+</div><br><br>
 <% if @resources.any? %>
   <div class="card-upload-container">
     <% @resources.each do |resource| %>
-        <div class="card-resource" onclick="window.location='<%= resource_path(resource) %>'" style="cursor: pointer;">
-          <div class="resource-image">
-            <%= image_tag(image_for_subject(resource.subject), class: "img-resource-index") %>
-          </div><br>
-          <div class="card-resource-infos">
-            <h2 class="h2-resource-title"><%= resource.title %></h2><br>
-            <div class="row">
-              <div class="col">
-                <p><i class="fa-solid fa-book"></i><br> <%= resource.subject %></p>
-              </div>
-              <div class="col">
-                <p><i class="fa-solid fa-user"></i><br>Age <%= resource.student_age %></p>
-              </div>
-              <div class="col">
-                <p><i class="fa-solid fa-chalkboard"></i><br> <%= resource.resource_type %></p>
-              </div>
+      <div class="card-resource" onclick="window.location='<%= resource_path(resource) %>'" style="cursor: pointer;">
+        <div class="resource-image">
+          <%= image_tag(image_for_subject(resource.subject), class: "img-resource-index") %>
+        </div><br>
+        <div class="card-uploads-infos col-4-uploads">
+          <h2 class="h2-resource-title"><%= resource.title %></h2><br>
+          <div class="row">
+            <div class="col-4">
+              <p><i class="fa-solid fa-book index-icon"></i><br> <%= resource.subject %></p>
+            </div>
+            <div class="col-4">
+              <p><i class="fa-solid fa-user index-icon"></i><br>Age <%= resource.student_age %></p>
+            </div>
+            <div class="col-4">
+              <p><i class="fa-solid fa-chalkboard index-icon"></i><br> <%= resource.resource_type %></p>
             </div>
           </div>
         </div>
+      </div>
     <% end %>
   </div>
 <% else %>

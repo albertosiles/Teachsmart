@@ -8,25 +8,13 @@
 }
 
 
-.h2-update-materials {
-  text-align: center;
-  color:white;
-  font-size: 40px;
-}
 
-.my-uploads-title {
-  margin-top: 10px;
-  text-align: center;
-  color:white;
-  font-size: 40px;
-}
-
-.link-resource-title {
-  text-decoration: none;
-  text-align: center;
-  color: rgb(34, 15, 78)
-  // cursor: default;
-}
+// .link-resource-title {
+//   text-decoration: none;
+//   text-align: center;
+//   color: rgb(34, 15, 78)
+//   // cursor: default;
+// }
 
 .card-links {
   margin-top: 15px;
@@ -50,7 +38,6 @@
   border-radius: 10px;
   padding: 10px 20px;
   font-size: 24px;
-  border: 1px solid black;
 }
 
 .btn-upload:hover {
@@ -62,18 +49,40 @@
   border-radius: 10px;
   padding: 10px 20px;
   font-size: 24px;
-  border: 1px solid black;
 }
 
 
-h1 {
+.my-uploads-title {
   margin-top: 10px;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .h2-resource-title {
+  font-family: "Hammersmith One";
   color: black;
-  font-size: 38px;
+  font-size: 28px;
+  padding-bottom: 5px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
+// .card-uploads-infos .col-4 i {
+//   font-size: 2em;
+// }
+
+.card-uploads-infos .col-4 p {
+  font-size: 1.3em;
+  text-align: center;
+}
+
+// .card-uploads-info .col-4-uploads p,
+// .card-uploads-info .col-4-uploads i {
+//   font-size: 1.3em;
+//   text-align: center;
+//   color: black;
+// }
 
 h5 {
   text-align: center;
