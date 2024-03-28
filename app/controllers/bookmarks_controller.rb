@@ -11,7 +11,7 @@ class BookmarksController < ApplicationController
     else
       @bookmark = Bookmark.new(resource: @resource, user: current_user)
       if @bookmark.save
-        redirect_to bookmarks_path, notice: 'This resource has been added to your bookmarks.'
+        redirect_back(fallback_location: root_path, notice: 'Resource successfully added to your bookmarks.')
       else
         redirect_to @resource, alert: 'Failed to add this resource to your bookmarks.'
       end
