@@ -5,7 +5,7 @@
     <div class="center-image">
         <div class="image-container">
             <!-- Carousel -->
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="10000">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="<%= asset_path('landingpage.jpg') %>" class="d-block w-100" alt="...">
@@ -40,39 +40,39 @@
             </div>
         </div>
     </div><!-- End Carousel -->
-
-    <div class="container white-container2 custom-height">
-        <%# <h2>What We Offer</h2> %>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card pale-purple-card">
-                    <%# <i class="fa-solid fa-person-chalkboard"></i> %>
-                    <div class="card-body">
-                        <h5 class="card-title">Teaching Materials</h5>
-                        <p class="card-text">Discover and share teaching materials, including lesson plans, worksheets and more.</p>
-                    </div>
+<div class="container white-container2 custom-height">
+    <%# <h2>What We Offer</h2> %>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card pale-purple-card">
+                <%# <i class="fa-solid fa-person-chalkboard"></i> %>
+                <div class="card-body">
+                    <h5 class="card-title text-center">Teaching Materials</h5>
+                    <p class="card-text text-center">Discover and share teaching materials, including lesson plans, worksheets and more.</p>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card pale-purple-card">
-                    <%# <i class="fa-solid landing-comments fa-comments"></i> %>
-                    <div class="card-body">
-                        <h5 class="card-title">Online Chat</h5>
-                        <p class="card-text">A chat platform for teachers to share and discuss educational resources in real-time.</p>
-                    </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card pale-purple-card">
+                <%# <i class="fa-solid landing-comments fa-comments"></i> %>
+                <div class="card-body">
+                    <h5 class="card-title text-center">Online Chat</h5>
+                    <p class="card-text text-center">A chat platform for teachers to share and discuss educational resources in real-time.</p>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card pale-purple-card">
-                    <%# <i class="fa-solid landing-star fa-star"></i> %>
-                    <div class="card-body">
-                        <h5 class="card-title">Rating and reviews</h5>
-                        <p class="card-text">As a member of our community, rate and review other teachers' materials.</p>
-                    </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card pale-purple-card">
+                <%# <i class="fa-solid landing-star fa-star"></i> %>
+                <div class="card-body">
+                    <h5 class="card-title text-center">Rating and reviews</h5>
+                    <p class="card-text text-center">As a member of our community, rate and review other teachers' materials.</p>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
 </body>
 <br>
     <%# <div class="container white-container">
