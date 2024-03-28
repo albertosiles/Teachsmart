@@ -1,4 +1,4 @@
-<main>
+<main><br>
   <h1 class="text-center title-resource-class"><%= @resource.title %></h1><br>
   <div class="d-flex justify-content-center author">
     <p class="fixed-width plain-links">
@@ -13,41 +13,42 @@
         <p>The author is not available for chat at the moment.</p>
       <% end %>
     </p>
-  </div>
+  </div><br>
 
   <div class="resource-description">
     <%= @resource.description %>
   </div>
 <br><br><br>
 
-  <div class="container-show"><br>
-    <div class="circles-left">
-      <div class="circle1">
-        <div class="circle-text">Student age:<h6><br><%= @resource.student_age %></h6></div>
-      </div>
-      <div class="circle2">
-        <div class="circle-text">Resource type:<h6><br><%= @resource.resource_type %></h6></div>
-      </div>
-    </div>
-
-    <div class="iframe">
-      <!-- Display multiple files in the view. Needs to be placed in the desired position --->
-      <% if @resource.file.attached? %>
-        <br><iframe src="<%= cl_image_path @resource.file.key %>.pdf" class="iframe-file" frameborder="0" loading="lazy"></iframe>
-      <% else %><br><br><br><br>
-        <%# <p class="no-file-attached">No file attached</p> %>
-      <% end %>
-    </div>
-
-    <div class="circles-right">
-      <div class="circle3">
-        <div class="circle-text">Subject:<h6><br><%= @resource.subject %></h6></div>
-      </div>
-      <div class="circle4">
-        <div class="circle-text">Category:<h6><br><%= @resource.category %></h6></div>
-      </div>
+<div class="container-show">
+  <div class="circles-left">
+    <div class="circle1">
+      <div class="circle-text">Student age:<h6><br><%= @resource.student_age %></h6></div>
+    </div><br><br><br><br><br><br><br><br>
+    <div class="circle3">
+      <div class="circle-text">Subject:<h6><br><%= @resource.subject %></h6></div>
     </div>
   </div>
+
+  <div class="iframe">
+    <!-- Display multiple files in the view. Needs to be placed in the desired position --->
+    <% if @resource.file.attached? %>
+      <br><iframe src="<%= cl_image_path @resource.file.key %>.pdf" class="iframe-file" frameborder="0" loading="lazy"></iframe>
+    <% else %><br><br><br>
+      <p class="no-file-attached">No file attached</p>
+    <% end %>
+  </div>
+
+  <div class="circles-right">
+    <div class="circle2">
+      <div class="circle-text">Resource type:<h6><br><%= @resource.resource_type %></h6></div>
+    </div><br><br><br><br><br><br><br><br>
+    <div class="circle4">
+      <div class="circle-text">Category:<h6><br><%= @resource.category %></h6></div>
+    </div>
+  </div>
+</div>
+
 
   <br><br>
 
@@ -65,36 +66,36 @@
       </p>
     <% end %>
   </div>
-  <br><br>
+<br>
 
-  <div class="d-flex justify-content-between">
-    <button class="showpage-btn"><%= link_to "Back to Materials", resources_path(@resources) %></button>
+  <div class="button-container">
+    <%# <button class="showpage-btn"><%= link_to "Back to Materials", resources_path(@resources)</button> %>
     <% if current_user.bookmarks.exists?(resource_id: @resource.id) %>
-      <%= button_to 'Remove from Bookmarks', bookmark_path(current_user.bookmarks.find_by(resource_id: @resource.id)), method: :delete, data: { confirm: 'Are you sure you want to remove this bookmark?' }, class: "showpage-btn" %>
+      <%= button_to 'Unbookmark', bookmark_path(current_user.bookmarks.find_by(resource_id: @resource.id)), method: :delete, class: "unbookmark-btn", data: { confirm: 'Are you sure you want to remove this bookmark?' } %>
     <% else %>
-      <%= button_to 'Bookmark', bookmark_resource_path(@resource), method: :post, class: "showpage-btn" %>
+      <%= button_to 'Bookmark', bookmark_resource_path(@resource), method: :post, class: "bookmark-btn" %>
     <% end %>
-    <button class="showpage-btn"><%= link_to "Add a Review", new_resource_review_path(@resource) %></button>
+         <%= link_to "Add a Review", new_resource_review_path(@resource), class: "review-btn" %>
+  </div><br><br><br>
+<div class="review-box">
+  <div class="content-review">
+    <h4 class="title-review-class">What other teachers thought:</h4><br>
+    <% if @resource.reviews.empty? %>
+      <p>These materials have not been reviewed yet.</p>
+    <% else %>
+      <ul class="review-list">
+        <% @resource.reviews.each do |review| %>
+          <li>
+            <% review.rating.times do %>
+              <i class="rating-resource fa-solid fa-star"></i>
+            <% end %>
+            <div class="review-content">
+              <em><%= review.content %></em>
+            </div><br>
+          </li>
+        <% end %>
+      </ul><br>
+    <% end %>
   </div>
-  <div class="review-box">
-    <div class="content-review">
-      <h4 class="title-review-class">What other teachers thought:</h4><br>
-      <% if @resource.reviews.empty? %>
-        <p>These materials have not been reviewed yet.</p>
-      <% else %>
-        <ul class="review-list">
-          <% @resource.reviews.each do |review| %>
-            <li>
-              <% review.rating.times do %>
-                <i class="rating-resource fa-solid fa-star"></i>
-              <% end %>
-              <div class="review-content">
-                <em><%= review.content %></em>
-              </div>
-            </li>
-          <% end %>
-        </ul><br>
-      <% end %>
-    </div>
-  </div>
+</div>
 </main>
