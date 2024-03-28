@@ -250,6 +250,11 @@ review_database_second = Review.create!(rating: 2, content: "Often confusing for
 review_romans_first = Review.create!(rating: 5, content: "Students were fascinated by the video", resource: resource_early_history, user: user_Vivien)
 review_romans_second = Review.create!(rating: 5, content: "Lots of surprising information", resource: resource_early_history, user: user_Albert)
 review_romans_third = Review.create!(rating: 4, content: "A nice introduction to build on", resource: resource_early_history, user: user_Bridget)
+review_multi_digit_first = Review.create!(rating: 4, content: "Nice additional practice for my students", resource: resource_multi_digit_multiplication, user: user_Julia)
+review_multi_digit_second = Review.create!(rating: 3, content: "Students found the layout confusing", resource: resource_multi_digit_multiplication, user: user_Thomas)
+review_multi_digit_third = Review.create!(rating: 3, content: "Maybe a little too easy", resource: resource_multi_digit_multiplication, user: user_Bridget)
+review_python_first = Review.create!(rating: 5, content: "Excellent and clear introduction to the subject", resource: resource_python, user: user_Julia)
+review_python_second = Review.create!(rating: 5, content: "Helpful for the teacher as well as the students", resource: resource_python, user: user_Vivien)
 
 puts "Reviews created"
 puts "Seeding finished"
