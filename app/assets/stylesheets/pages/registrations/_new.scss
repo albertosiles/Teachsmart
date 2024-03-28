@@ -17,20 +17,20 @@
       color:black;
       border-radius: 5px;
       padding: 10px 20px;
-      border: 1px solid grey;
     }
 
 
   .btn-signup:hover {
-    background-color: black;
+    background-color: #013843;
     color: white;
   }
 }
 
 .h2-signup {
+  color: white;
   text-align: center;
-  color:white;
-  font-size: 40px;
+  font-size: 48px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 
 }
 
