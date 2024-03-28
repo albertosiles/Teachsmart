@@ -73,13 +73,13 @@
   font-size: 22px;
 }
 
-.uploaded-materials.link-button, .bookmarks-link-button {
+.uploaded-materials.link-button,
+.bookmarks-link-button {
   color: #0e5d6d;
   text-decoration: none;
   cursor: pointer;
-  margin-left: 10px;
+  margin: 0 10px; /* Add margin on both sides */
 }
-
 
 .profile-icons {
   position: absolute;
@@ -87,8 +87,10 @@
   align-items: center;
   justify-content: center; /* Center-align the icons horizontally */
   bottom: 20px; /* Adjust bottom position */
-  right: 50%; /* Adjust right position */
+  left: 50%; /* Adjust left position */
+  transform: translateX(-50%); /* Center the icons horizontally */
 }
+
 
 .profile-icons a {
   color: #0e5d6d;
