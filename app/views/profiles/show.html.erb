@@ -21,6 +21,7 @@
       <% end %>
 
       <% if @profile.user&.chatroom %>
+        <i class="fa-regular fa-comments-profile"></i>
         <%= link_to "Chat with author", chatroom_path(@profile.user.chatroom),  class: "chat-on-profile" %>
       <% else %>
         <p>The author is not available for chat at the moment.</p>
