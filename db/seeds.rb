@@ -227,6 +227,9 @@ puts "Creating reviews..."
 review_algebra_first = Review.create!(rating: 4, content: "Well-designed with right amount of challenge", resource: resource_basic_algebra, user: user_Albert)
 review_algebra_second = Review.create!(rating: 2, content: "Too hard for my students", resource: resource_basic_algebra, user: user_Bridget)
 review_algebra_third = Review.create!(rating: 4, content: "Just what I needed at the time", resource: resource_basic_algebra, user: user_Thomas)
+review_algebra_fourth = Review.create!(rating: 3, content: "Rather difficult!", resource: resource_basic_algebra, user: user_Vivien)
+review_algebra_fifth = Review.create!(rating: 4, content: "OK for homework", resource: resource_basic_algebra, user: user_Bridget)
+review_algebra_sixth = Review.create!(rating: 5, content: "Covers everything the students need to know", resource: resource_basic_algebra, user: user_Thomas)
 review_past_first = Review.create!(rating: 5, content: "Really brings the subject to life!", resource: resource_past_tense, user: user_Vivien)
 review_past_second = Review.create!(rating: 3, content: "Supplements regular coursebook", resource: resource_past_tense, user: user_Albert)
 review_states_first = Review.create!(rating: 4, content: "Very informative. Students enjoyed it!", resource: resource_states, user: user_Bridget)
@@ -240,6 +243,8 @@ review_letters_third = Review.create!(rating: 1, content: "Students were bored",
 review_fractions_first = Review.create!(rating: 4, content: "Just the right level for my students", resource: resource_fractions_and_decimals, user: user_Bridget)
 review_fractions_second = Review.create!(rating: 4, content: "A very helpful resource. Glad I downloaded it", resource: resource_fractions_and_decimals, user: user_Thomas)
 review_fractions_third = Review.create!(rating: 3, content: "Adequate!", resource: resource_fractions_and_decimals, user: user_Vivien)
+review_fractions_fourth = Review.create!(rating: 1, content: "Not challenging enough!", resource: resource_fractions_and_decimals, user: user_Bridget)
+review_fractions_fifth = Review.create!(rating: 3, content: "Useful to fill up time in the lesson", resource: resource_fractions_and_decimals, user: user_Thomas)
 review_charts_first = Review.create!(rating: 5, content: "Essential points presented well", resource: resource_charts_and_graphs, user: user_Albert)
 review_charts_second = Review.create!(rating: 3, content: "A little advanced for my students", resource: resource_charts_and_graphs, user: user_Bridget)
 review_hydrological_first = Review.create!(rating: 4, content: "Very interesting video!", resource: resource_hydrological_cycle, user: user_Thomas)
@@ -253,8 +258,13 @@ review_romans_third = Review.create!(rating: 4, content: "A nice introduction to
 review_rounding_first = Review.create!(rating: 4, content: "Nice additional practice for my students", resource: resource_rounding, user: user_Julia)
 review_rounding_second = Review.create!(rating: 3, content: "Students found the layout confusing", resource: resource_rounding, user: user_Thomas)
 review_rounding_third = Review.create!(rating: 3, content: "Maybe a little too easy", resource: resource_rounding, user: user_Bridget)
+review_rounding_fourth = Review.create!(rating: 5, content: "Gets the concepts across very clearly", resource: resource_rounding, user: user_Julia)
+review_rounding_fifth = Review.create!(rating: 3, content: "Students struggled with parts of it", resource: resource_rounding, user: user_Albert)
+review_rounding_sixth = Review.create!(rating: 4, content: "Better than the textbook", resource: resource_rounding, user: user_Julia)
 review_python_first = Review.create!(rating: 5, content: "Excellent and clear introduction to the subject", resource: resource_python, user: user_Julia)
 review_python_second = Review.create!(rating: 5, content: "Helpful for the teacher as well as the students", resource: resource_python, user: user_Vivien)
+review_python_third = Review.create!(rating: 4, content: "Nicely presented!", resource: resource_python, user: user_Albert)
+review_python_fourth = Review.create!(rating: 4, content: "Students liked it", resource: resource_python, user: user_Thomas)
 
 puts "Reviews created"
 puts "Seeding finished"
