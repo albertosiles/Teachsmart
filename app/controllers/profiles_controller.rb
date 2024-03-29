@@ -34,8 +34,8 @@ class ProfilesController < ApplicationController
   end
 
   def show
-    @profile = Profile.find(params[:id])
-    @user = @profile.user
+    @user = User.find(params[:id])
+    @profile = @user.profile
   end
 
   private
