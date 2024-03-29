@@ -78,7 +78,7 @@
   <div class="content-review">
     <h4 class="title-review-class">What other teachers thought:</h4><br>
     <% if @resource.reviews.empty? %>
-      <p>These materials have not been reviewed yet.</p><br>
+      <p class="no-reviews-yet">These materials have not been reviewed yet.</p><br>
     <% else %>
       <ul class="review-list">
         <% @resource.reviews.each do |review| %>

@@ -217,7 +217,7 @@ body {
 
 
 .card-body {
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: column; /* Ensure elements stack vertically */
   justify-content: center; /* Center content vertically */
@@ -232,6 +232,9 @@ body {
   margin-bottom: 15px;
   word-wrap: break-word; /* Allow long words to break and wrap onto the next line */
   white-space: pre-wrap;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .card-body i {
