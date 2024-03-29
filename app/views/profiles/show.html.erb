@@ -19,6 +19,12 @@
             <h5><%= @user.bookmarks.count %> Bookmarked materials</h5><br>
         <% end %>
       <% end %>
+
+      <% if @profile.user&.chatroom %>
+        <%= link_to "Chat with author", chatroom_path(@profile.user.chatroom),  class: "chat-on-profile" %>
+      <% else %>
+        <p>The author is not available for chat at the moment.</p>
+      <% end %>
     </div>
     <% if @profile.id == current_user.profile.id%>
     <div class="profile-icons">
